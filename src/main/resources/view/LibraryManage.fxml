@@ -8,44 +8,44 @@
 
 <AnchorPane prefHeight="652.0" prefWidth="649.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="seu.controller.LibraryManage">
    <children>
-      <Text layoutX="7.0" layoutY="131.0" strokeType="OUTSIDE" strokeWidth="0.0" text="图书查询：" wrappingWidth="145.240234375">
+      <Text layoutX="40.0" layoutY="134.0" strokeType="OUTSIDE" strokeWidth="0.0" text="图书查询：" wrappingWidth="145.240234375">
          <font>
             <Font size="24.0" />
          </font></Text>
-      <Text layoutX="7.0" layoutY="289.0" strokeType="OUTSIDE" strokeWidth="0.0" text="图书增加：" wrappingWidth="125.240234375">
+      <Text layoutX="40.0" layoutY="248.0" strokeType="OUTSIDE" strokeWidth="0.0" text="图书增加：" wrappingWidth="125.240234375">
          <font>
             <Font size="24.0" />
          </font></Text>
-      <Text layoutX="7.0" layoutY="507.0" strokeType="OUTSIDE" strokeWidth="0.0" text="图书删除：" wrappingWidth="137.240234375">
+      <Text layoutX="40.0" layoutY="465.0" strokeType="OUTSIDE" strokeWidth="0.0" text="图书删除：" wrappingWidth="125.24023313820362">
          <font>
             <Font size="24.0" />
          </font></Text>
-      <TextField fx:id="bookNameFind" layoutX="152.0" layoutY="107.0" />
-      <Button fx:id="bookFind" layoutX="399.0" layoutY="107.0" mnemonicParsing="false" onAction="#bookFind" prefHeight="30.0" prefWidth="62.0" text="查询" />
-      <Text layoutX="152.0" layoutY="87.0" strokeType="OUTSIDE" strokeWidth="0.0" text="请输入书籍名称：">
+      <TextField fx:id="bookNameFind" layoutX="177.0" layoutY="114.0" />
+      <Button fx:id="bookFind" layoutX="385.0" layoutY="110.0" mnemonicParsing="false" onAction="#bookFind" prefHeight="30.0" prefWidth="62.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #00BFFF;" text="查询" />
+      <Text fill="#4cb5ed" layoutX="177.0" layoutY="105.0" strokeType="OUTSIDE" strokeWidth="0.0" text="请输入书籍名称" wrappingWidth="160.9999986514449">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <Text layoutX="144.0" layoutY="310.0" strokeType="OUTSIDE" strokeWidth="0.0" text="书籍代码：">
          <font>
             <Font size="24.0" />
          </font>
       </Text>
-      <Text layoutX="115.0" layoutY="320.0" strokeType="OUTSIDE" strokeWidth="0.0" text="书籍代码：">
+      <TextField fx:id="bookID" layoutX="272.0" layoutY="286.0" />
+      <Text layoutX="144.0" layoutY="393.0" strokeType="OUTSIDE" strokeWidth="0.0" text="书籍名称：">
          <font>
             <Font size="24.0" />
          </font>
       </Text>
-      <TextField fx:id="bookID" layoutX="243.0" layoutY="296.0" />
-      <Text layoutX="115.0" layoutY="403.0" strokeType="OUTSIDE" strokeWidth="0.0" text="书籍名称：">
+      <TextField fx:id="bookIName" layoutX="272.0" layoutY="369.0" />
+      <Button fx:id="bookAdd" layoutX="485.0" layoutY="399.0" mnemonicParsing="false" onAction="#bookAdd" prefHeight="30.0" prefWidth="62.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #00BFFF;" text="确认" />
+      <Text layoutX="144.0" layoutY="523.0" strokeType="OUTSIDE" strokeWidth="0.0" text="书籍代码：">
          <font>
             <Font size="24.0" />
          </font>
       </Text>
-      <TextField fx:id="bookIName" layoutX="243.0" layoutY="379.0" />
-      <Button fx:id="bookAdd" layoutX="516.0" layoutY="379.0" mnemonicParsing="false" onAction="#bookAdd" prefHeight="30.0" prefWidth="62.0" text="确认" />
-      <Text layoutX="115.0" layoutY="548.0" strokeType="OUTSIDE" strokeWidth="0.0" text="书籍代码：">
-         <font>
-            <Font size="24.0" />
-         </font>
-      </Text>
-      <TextField fx:id="bookIDDel" layoutX="235.0" layoutY="524.0" />
-      <Button fx:id="bookDel" layoutX="472.0" layoutY="524.0" mnemonicParsing="false" onAction="#bookDel" prefHeight="30.0" prefWidth="62.0" text="确认" />
+      <TextField fx:id="bookIDDel" layoutX="272.0" layoutY="502.0" />
+      <Button fx:id="bookDel" layoutX="485.0" layoutY="525.0" mnemonicParsing="false" onAction="#bookDel" prefHeight="30.0" prefWidth="62.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #00BFFF;" text="确认" />
    </children>
 </AnchorPane>

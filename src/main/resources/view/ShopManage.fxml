@@ -17,19 +17,19 @@
             <Font size="24.0" />
          </font></Text>
       <TextField fx:id="commodityID" layoutX="279.0" layoutY="141.0" />
-      <Button fx:id="find" layoutX="527.0" layoutY="141.0" mnemonicParsing="false" onAction="#find" text="查询" />
+      <Button fx:id="find" layoutX="527.0" layoutY="141.0" mnemonicParsing="false" onAction="#find" style="-fx-background-color: #FFFFFF; -fx-border-color: #00BFFF;" text="查询" />
       <Text layoutX="111.0" layoutY="403.0" strokeType="OUTSIDE" strokeWidth="0.0" text="商品代码：" wrappingWidth="105.24022606760263">
          <font>
             <Font size="18.0" />
          </font>
       </Text>
-      <TextField fx:id="addCommodityID" layoutX="216.0" layoutY="381.0" prefHeight="30.0" prefWidth="99.0" />
+      <TextField fx:id="addCommodityID" layoutX="216.0" layoutY="385.0" prefHeight="23.0" prefWidth="99.0" />
       <Text layoutX="357.0" layoutY="403.0" strokeType="OUTSIDE" strokeWidth="0.0" text="库存增加：" wrappingWidth="99.00000018440187">
          <font>
             <Font size="18.0" />
          </font>
       </Text>
-      <TextField fx:id="addCommodityName11" layoutX="478.0" layoutY="381.0" prefHeight="30.0" prefWidth="99.0" />
-      <Button fx:id="find1" layoutX="527.0" layoutY="452.0" mnemonicParsing="false" onAction="#find" text="确认" />
+      <TextField fx:id="addCommodityName11" layoutX="478.0" layoutY="385.0" prefHeight="23.0" prefWidth="99.0" />
+      <Button fx:id="find1" layoutX="527.0" layoutY="452.0" mnemonicParsing="false" onAction="#find" prefHeight="30.0" prefWidth="50.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #00BFFF;" text="确认" />
    </children>
 </AnchorPane>

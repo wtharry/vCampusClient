@@ -27,7 +27,7 @@
                         <Font size="24.0" />
                      </font>
                   </Text>
-                  <Button fx:id="searchBooks" layoutX="483.0" layoutY="283.0" mnemonicParsing="false" onAction="#searchBooks" text="查询" />
+                  <Button fx:id="searchBooks" layoutX="483.0" layoutY="283.0" mnemonicParsing="false" onAction="#searchBooks" prefHeight="23.0" prefWidth="45.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #00BFFF;" text="查询" />
                </children></AnchorPane>
       </content>
     </Tab>

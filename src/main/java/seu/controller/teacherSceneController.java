@@ -6,8 +6,12 @@ package seu.controller;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
 import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.scene.layout.AnchorPane;
+import javafx.stage.Stage;
 
 import java.io.IOException;
 public class teacherSceneController {
@@ -30,5 +34,21 @@ public class teacherSceneController {
         teacherView.getChildren().clear();
         Parent child = FXMLLoader.load(getClass().getResource("/view//courseManagePane.fxml"));
         teacherView.getChildren().add(child);
+    }
+
+    public void exit(ActionEvent actionEvent) throws IOException {
+        ((Node)(actionEvent.getSource())).getScene().getWindow().hide();
+        Parent root = FXMLLoader.load(getClass()
+                .getResource("/view//MyScene.fxml"));
+        Stage stg = new Stage();
+        stg.setTitle("虚拟校园登陆");
+        Scene Scene = new Scene(root, 600, 400);
+        stg.setScene(Scene);
+        Scene.getStylesheets().add(
+                getClass().getResource("/view//login.css")
+                        .toExternalForm());
+        stg.getIcons().add(new Image("/images/01.png"));
+        stg.setResizable(false);
+        stg.show();
     }
 }

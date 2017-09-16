@@ -22,6 +22,7 @@ import javafx.scene.control.*;
 
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
 public class MyController implements Initializable
@@ -73,6 +74,8 @@ public class MyController implements Initializable
                             Stage stg = new Stage();//创建舞台；
                             stg.setTitle("学生服务界面");
                             stg.setScene(scene); //将场景载入舞台；
+
+
                             scene.getStylesheets().add(
                                     getClass().getResource("/view//Student.css")
                                             .toExternalForm());
@@ -98,11 +101,11 @@ public class MyController implements Initializable
 
                             Scene scene = new Scene(target); //创建场景；
                             Stage stg = new Stage();//创建舞台；
-                            scene.getStylesheets().add(
-                                    getClass().getResource("/view//login.css")
-                                            .toExternalForm());
                             stg.setTitle("教师服务界面");
                             stg.setScene(scene); //将场景载入舞台；
+                            scene.getStylesheets().add(
+                                    getClass().getResource("/view//Teacher.css")
+                                            .toExternalForm());
                             stg.setResizable(false);
                             stg.show(); //显示窗口；
                         }
@@ -121,7 +124,7 @@ public class MyController implements Initializable
                             Scene scene = new Scene(target); //创建场景；
                             Stage stg = new Stage();//创建舞台；
                             scene.getStylesheets().add(
-                                    getClass().getResource("/view//login.css")
+                                    getClass().getResource("/view//Teacher.css")
                                             .toExternalForm());
                             stg.setTitle("管理员管理界面");
                             stg.setScene(scene); //将场景载入舞台；
