@@ -2,68 +2,85 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="652.0" prefWidth="649.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="seu.view.classManageController">
+
+<AnchorPane prefHeight="652.0" prefWidth="649.0" stylesheets="@Teacher.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="seu.controller.classManageController">
+
    <children>
-      <Text layoutX="14.0" layoutY="351.0" strokeType="OUTSIDE" strokeWidth="0.0" text="      课程代码：" wrappingWidth="182.0">
+      <Text layoutX="182.0" layoutY="173.0" strokeType="OUTSIDE" strokeWidth="0.0" text="      课程代码：" wrappingWidth="182.0">
          <font>
-            <Font size="24.0" />
+            <Font size="18.0" />
          </font>
       </Text>
-      <TextField fx:id="courseID" layoutX="208.0" layoutY="327.0" prefHeight="30.0" prefWidth="54.0" />
-      <Button fx:id="change" layoutX="422.0" layoutY="484.0" mnemonicParsing="false" onAction="#changeConfirm" prefHeight="38.0" prefWidth="121.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #00BFFF;" text="确认修改">
+      <TextField fx:id="courseID" layoutX="302.0" layoutY="152.0" prefHeight="30.0" prefWidth="54.0" />
+      <Button fx:id="change" layoutX="504.0" layoutY="288.0" mnemonicParsing="false" onAction="#changeConfirm" prefHeight="30.0" prefWidth="105.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #00BFFF;" text="确认修改">
          <font>
             <Font size="18.0" />
          </font>
       </Button>
       <Pane prefHeight="55.0" prefWidth="649.0" style="-fx-background-color: #87CEFA;" />
-      <Text layoutX="286.0" layoutY="350.0" strokeType="OUTSIDE" strokeWidth="0.0" text="      课程名称：" wrappingWidth="182.0">
+      <Text layoutX="374.0" layoutY="173.0" strokeType="OUTSIDE" strokeWidth="0.0" text="      课程名称：" wrappingWidth="182.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <TextField fx:id="courseName" layoutX="503.0" layoutY="152.0" prefHeight="30.0" prefWidth="54.0" />
+      <Text layoutX="212.0" layoutY="235.0" strokeType="OUTSIDE" strokeWidth="0.0" text="课程学分：" wrappingWidth="121.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <TextField fx:id="coursecredit" layoutX="302.0" layoutY="214.0" prefHeight="30.0" prefWidth="54.0" />
+      <TextField fx:id="courseperiod" layoutX="503.0" layoutY="214.0" prefHeight="30.0" prefWidth="54.0" />
+      <Text layoutX="405.0" layoutY="235.0" strokeType="OUTSIDE" strokeWidth="0.0" text="课程学时：" wrappingWidth="121.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <Text layoutX="91.0" layoutY="406.0" strokeType="OUTSIDE" strokeWidth="0.0" text="删除课程：" wrappingWidth="182.0">
          <font>
             <Font size="24.0" />
          </font>
       </Text>
-      <TextField fx:id="courseName" layoutX="474.0" layoutY="327.0" prefHeight="30.0" prefWidth="54.0" />
-      <Text layoutX="57.0" layoutY="413.0" strokeType="OUTSIDE" strokeWidth="0.0" text="课程学分：" wrappingWidth="121.0">
+      <Text layoutX="180.0" layoutY="460.0" strokeType="OUTSIDE" strokeWidth="0.0" text="      课程代码：" wrappingWidth="182.0">
          <font>
-            <Font size="24.0" />
+            <Font size="18.0" />
          </font>
       </Text>
-      <TextField fx:id="coursecredit" layoutX="208.0" layoutY="389.0" prefHeight="30.0" prefWidth="54.0" />
-      <TextField fx:id="courseperiod" layoutX="474.0" layoutY="389.0" prefHeight="30.0" prefWidth="54.0" />
-      <Text layoutX="333.0" layoutY="413.0" strokeType="OUTSIDE" strokeWidth="0.0" text="课程学时：" wrappingWidth="121.0">
-         <font>
-            <Font size="24.0" />
-         </font>
-      </Text>
-      <Text layoutX="27.0" layoutY="80.0" strokeType="OUTSIDE" strokeWidth="0.0" text="删除课程：" wrappingWidth="182.0">
-         <font>
-            <Font size="24.0" />
-         </font>
-      </Text>
-      <Text layoutX="-14.0" layoutY="133.0" strokeType="OUTSIDE" strokeWidth="0.0" text="      课程代码：" wrappingWidth="182.0">
-         <font>
-            <Font size="24.0" />
-         </font>
-      </Text>
+
       <TextField fx:id="courseIDDel" layoutX="181.0" layoutY="109.0" prefHeight="30.0" prefWidth="224.0" />
-      <Button fx:id="findClass1" layoutX="431.0" layoutY="105.0" mnemonicParsing="false" onAction="#findClass" prefHeight="38.0" prefWidth="121.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #00BFFF;" text="确认删除">
+      <Button fx:id="del" layoutX="431.0" layoutY="105.0" mnemonicParsing="false" onAction="#delConfirm" prefHeight="38.0" prefWidth="121.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #00BFFF;" text="确认删除">
+
          <font>
             <Font size="18.0" />
          </font>
       </Button>
-      <Button fx:id="add" layoutX="61.0" layoutY="484.0" mnemonicParsing="false" onAction="#addConfirm" prefHeight="38.0" prefWidth="121.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #00BFFF;" text="确认添加">
+      <Button fx:id="add" layoutX="301.0" layoutY="288.0" mnemonicParsing="false" onAction="#addConfirm" prefHeight="30.0" prefWidth="105.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #00BFFF;" text="确认添加">
          <font>
             <Font size="18.0" />
          </font>
       </Button>
-      <Text layoutX="30.0" layoutY="253.0" strokeType="OUTSIDE" strokeWidth="0.0" text="修改/添加课程：" wrappingWidth="182.0">
+      <Text layoutX="91.0" layoutY="112.0" strokeType="OUTSIDE" strokeWidth="0.0" text="修改/添加课程：" wrappingWidth="182.0">
          <font>
             <Font size="24.0" />
          </font>
       </Text>
+      <ImageView fitHeight="101.0" fitWidth="105.0" layoutX="91.0" layoutY="485.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fitHeight="80.0" fitWidth="89.0" layoutX="14.0" layoutY="64.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="/images/addcourse.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="80.0" fitWidth="89.0" layoutX="14.0" layoutY="357.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="/images/deletecourse.png" />
+         </image>
+      </ImageView>
    </children>
 </AnchorPane>

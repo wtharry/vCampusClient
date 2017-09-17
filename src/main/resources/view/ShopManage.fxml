@@ -2,36 +2,63 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="652.0" prefWidth="649.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="seu.controller.ShopManage">
+<AnchorPane prefHeight="652.0" prefWidth="649.0" stylesheets="@Teacher.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="seu.controller.ShopManage">
    <children>
-      <Text layoutX="30.0" layoutY="155.0" strokeType="OUTSIDE" strokeWidth="0.0" text="商品查询（输入商品代码）：" wrappingWidth="328.240234375">
+      <Text layoutX="127.0" layoutY="258.0" strokeType="OUTSIDE" strokeWidth="0.0" text="商品查询：" wrappingWidth="131.240234375">
          <font>
             <Font size="24.0" />
          </font></Text>
-      <Text layoutX="30.0" layoutY="334.0" strokeType="OUTSIDE" strokeWidth="0.0" text="商品增加：" wrappingWidth="138.24022975564003">
+      <Text layoutX="127.0" layoutY="376.0" strokeType="OUTSIDE" strokeWidth="0.0" text="商品增加：" wrappingWidth="138.24022975564003">
          <font>
             <Font size="24.0" />
          </font></Text>
-      <TextField fx:id="commodityID" layoutX="278.0" layoutY="197.0" />
-      <Button fx:id="find" layoutX="526.0" layoutY="196.0" mnemonicParsing="false" onAction="#find" style="-fx-background-color: #FFFFFF; -fx-border-color: #00BFFF;" text="查询" />
-      <Text layoutX="111.0" layoutY="403.0" strokeType="OUTSIDE" strokeWidth="0.0" text="商品代码：" wrappingWidth="105.24022606760263">
+      <TextField fx:id="commodityID" layoutX="277.0" layoutY="238.0" />
+      <Button fx:id="find" layoutX="478.0" layoutY="234.0" mnemonicParsing="false" onAction="#find" prefHeight="32.0" prefWidth="57.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #00BFFF;" text="查询" />
+      <Text layoutX="177.0" layoutY="430.0" strokeType="OUTSIDE" strokeWidth="0.0" text="商品代码：" wrappingWidth="105.24022606760263">
          <font>
             <Font size="18.0" />
          </font>
       </Text>
-      <TextField fx:id="addCommodityID" layoutX="216.0" layoutY="385.0" prefHeight="23.0" prefWidth="99.0" />
-      <Text layoutX="357.0" layoutY="403.0" strokeType="OUTSIDE" strokeWidth="0.0" text="库存增加：" wrappingWidth="99.00000018440187">
+      <TextField fx:id="addCommodityID" layoutX="277.0" layoutY="412.0" prefHeight="23.0" prefWidth="161.0" />
+      <Text layoutX="177.0" layoutY="479.0" strokeType="OUTSIDE" strokeWidth="0.0" text="库存增加：" wrappingWidth="99.00000018440187">
          <font>
             <Font size="18.0" />
          </font>
       </Text>
-      <TextField fx:id="addCommodityName11" layoutX="478.0" layoutY="385.0" prefHeight="23.0" prefWidth="99.0" />
-      <Button fx:id="find1" layoutX="527.0" layoutY="452.0" mnemonicParsing="false" onAction="#find" prefHeight="30.0" prefWidth="50.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #00BFFF;" text="确认" />
+      <TextField fx:id="addCommodityName11" layoutX="277.0" layoutY="462.0" prefHeight="23.0" prefWidth="161.0" />
+      <Button fx:id="find1" layoutX="478.0" layoutY="495.0" mnemonicParsing="false" onAction="#find" prefHeight="32.0" prefWidth="57.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #00BFFF;" text="确认" />
       <Pane prefHeight="55.0" prefWidth="649.0" style="-fx-background-color: #87CEFA;" />
+      <ImageView fitHeight="80.0" fitWidth="79.0" layoutX="14.0" layoutY="67.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="/images/manage5.png" />
+         </image>
+      </ImageView>
+      <Text layoutX="102.0" layoutY="120.0" strokeType="OUTSIDE" strokeWidth="0.0" text="商店管理" wrappingWidth="228.240234375">
+         <font>
+            <Font size="35.0" />
+         </font>
+      </Text>
+      <ImageView fitHeight="65.0" fitWidth="57.0" layoutX="54.0" layoutY="218.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="/images/goodsfind.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="79.0" fitWidth="79.0" layoutX="43.0" layoutY="327.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="/images/addgoods.png" />
+         </image>
+      </ImageView>
+      <Text fill="LIGHTSKYBLUE" layoutX="277.0" layoutY="236.0" strokeType="OUTSIDE" strokeWidth="0.0" text="请输入商品代码" wrappingWidth="176.240234375">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
    </children>
 </AnchorPane>

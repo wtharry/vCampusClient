@@ -10,9 +10,9 @@
     <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" style="-fx-background-color: #F5F5F5;" stylesheets="@Teacher.css">
          <children>
             <Button fx:id="teacherInfo" layoutY="14.0" mnemonicParsing="false" onAction="#showTeacherInfo" prefHeight="30.0" prefWidth="123.0" text="教师信息" />
-            <Button fx:id="classManage" layoutY="171.0" mnemonicParsing="false" onAction="#classManage" prefHeight="30.0" prefWidth="123.0" text="班级管理" />
-            <Button fx:id="courseManage" layoutY="343.0" mnemonicParsing="false" onAction="#CourseManage" prefHeight="30.0" prefWidth="123.0" text="课程管理" />
-            <Button fx:id="exit" layoutY="503.0" mnemonicParsing="false" onAction="#exit" prefHeight="30.0" prefWidth="123.0" text="退出登录" />
+            <Button fx:id="classManage" layoutY="180.0" mnemonicParsing="false" onAction="#classManage" prefHeight="30.0" prefWidth="123.0" text="班级管理" />
+            <Button fx:id="courseManage" layoutY="385.0" mnemonicParsing="false" onAction="#CourseManage" prefHeight="30.0" prefWidth="123.0" text="课程管理" />
+            <Button fx:id="exit" layoutY="593.0" mnemonicParsing="false" onAction="#exit" prefHeight="30.0" prefWidth="123.0" text="退出登录" />
          </children></AnchorPane>
     <AnchorPane fx:id="teacherView" minHeight="0.0" minWidth="0.0" prefHeight="652.0" prefWidth="649.0" style="-fx-background-color: #FFFFFF;">
          <children>
