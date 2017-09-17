@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
@@ -9,29 +10,33 @@
 <AnchorPane prefHeight="652.0" prefWidth="642.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="seu.controller.schoolrollPaneController">
    <children>
       <TextField fx:id="studentIDField" layoutX="454.0" layoutY="129.0" prefHeight="30.0" prefWidth="148.0" />
-      <TextField fx:id="classIDField" layoutX="110.0" layoutY="366.0" prefHeight="30.0" prefWidth="148.0" />
+      <TextField fx:id="classIDField" layoutX="110.0" layoutY="281.0" prefHeight="30.0" prefWidth="148.0" />
       <TextField fx:id="dormitoryIDField" layoutX="454.0" layoutY="189.0" prefHeight="30.0" prefWidth="148.0" />
       <TextField fx:id="balanceField" layoutX="110.0" layoutY="189.0" prefHeight="30.0" prefWidth="148.0" />
-      <TextField fx:id="classNameField" layoutX="444.0" layoutY="366.0" prefHeight="30.0" prefWidth="148.0" />
-      <TextField fx:id="majorField" layoutX="110.0" layoutY="427.0" prefHeight="30.0" prefWidth="148.0" />
-      <TextField fx:id="classNameField1" layoutX="444.0" layoutY="427.0" prefHeight="30.0" prefWidth="148.0" />
-      <TextField fx:id="teacherField" layoutX="110.0" layoutY="484.0" prefHeight="30.0" prefWidth="148.0" />
-      <TextField fx:id="passwordField" layoutX="110.0" layoutY="251.0" prefHeight="30.0" prefWidth="148.0" text="**************" />
-      <Button fx:id="changInfo" layoutX="37.0" layoutY="576.0" mnemonicParsing="false" onAction="#changeInfo" prefHeight="30.0" prefWidth="102.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #00BFFF;" text="修改信息" />
-      <Button fx:id="changePassword" layoutX="378.0" layoutY="576.0" mnemonicParsing="false" onAction="#changePassword" prefHeight="30.0" prefWidth="102.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #00BFFF;" text="修改密码" />
-      <Button fx:id="checkInfo" layoutX="192.0" layoutY="576.0" mnemonicParsing="false" onAction="#checkInfo" prefHeight="30.0" prefWidth="102.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #00BFFF;" text="确认修改" />
-      <Button fx:id="passswordChecked" layoutX="528.0" layoutY="576.0" mnemonicParsing="false" onAction="#passwordChecked" prefHeight="30.0" prefWidth="102.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #00BFFF;" text="确认修改" />
+      <TextField fx:id="classNameField" layoutX="454.0" layoutY="281.0" prefHeight="30.0" prefWidth="148.0" />
+      <TextField fx:id="majorField" layoutX="110.0" layoutY="332.0" prefHeight="30.0" prefWidth="148.0" />
+      <TextField fx:id="classSizeField" layoutX="454.0" layoutY="331.0" prefHeight="30.0" prefWidth="148.0" />
+      <TextField fx:id="teacherField" layoutX="110.0" layoutY="381.0" prefHeight="30.0" prefWidth="148.0" />
+      <Button fx:id="changInfo" layoutX="354.0" layoutY="380.0" mnemonicParsing="false" onAction="#changeInfo" prefHeight="30.0" prefWidth="102.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #00BFFF;" text="修改信息" />
+      <Button fx:id="changePassword" layoutX="14.0" layoutY="436.0" mnemonicParsing="false" onAction="#changePassword" prefHeight="30.0" prefWidth="102.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #00BFFF;" text="修改密码" />
+      <Button fx:id="checkInfo" layoutX="500.0" layoutY="380.0" mnemonicParsing="false" onAction="#checkInfo" prefHeight="30.0" prefWidth="102.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #00BFFF;" text="确认修改" />
+      <Button fx:id="passswordChecked" layoutX="500.0" layoutY="594.0" mnemonicParsing="false" onAction="#passwordChecked" prefHeight="30.0" prefWidth="102.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #00BFFF;" text="确认修改" />
       <Text layoutX="62.0" layoutY="150.0" strokeType="OUTSIDE" strokeWidth="0.0" text="姓名" wrappingWidth="34.99999959766865" />
       <TextField fx:id="nameField" layoutX="110.0" layoutY="129.0" prefHeight="30.0" prefWidth="148.0" />
       <Text layoutX="405.0" layoutY="150.0" strokeType="OUTSIDE" strokeWidth="0.0" text="学号" />
       <Text layoutX="41.0" layoutY="210.0" strokeType="OUTSIDE" strokeWidth="0.0" text="账号余额" wrappingWidth="61.30029296875" />
       <Text layoutX="396.0" layoutY="210.0" strokeType="OUTSIDE" strokeWidth="0.0" text="宿舍号" wrappingWidth="48.30029296875" />
-      <Text layoutX="64.0" layoutY="272.0" strokeType="OUTSIDE" strokeWidth="0.0" text="密码" />
-      <Text layoutX="34.0" layoutY="387.0" strokeType="OUTSIDE" strokeWidth="0.0" text="班级代码" />
-      <Text layoutX="375.0" layoutY="387.0" strokeType="OUTSIDE" strokeWidth="0.0" text="班级名称" />
-      <Text layoutX="60.0" layoutY="448.0" strokeType="OUTSIDE" strokeWidth="0.0" text="主修" />
-      <Text layoutX="375.0" layoutY="448.0" strokeType="OUTSIDE" strokeWidth="0.0" text="班级大小" />
-      <Text layoutX="33.0" layoutY="505.0" strokeType="OUTSIDE" strokeWidth="0.0" text="教师代码" />
+      <Text layoutX="30.0" layoutY="302.0" strokeType="OUTSIDE" strokeWidth="0.0" text="班级代码" />
+      <Text layoutX="375.0" layoutY="302.0" strokeType="OUTSIDE" strokeWidth="0.0" text="班级名称" />
+      <Text layoutX="65.0" layoutY="353.0" strokeType="OUTSIDE" strokeWidth="0.0" text="主修" />
+      <Text layoutX="375.0" layoutY="352.0" strokeType="OUTSIDE" strokeWidth="0.0" text="班级大小" />
+      <Text layoutX="35.0" layoutY="402.0" strokeType="OUTSIDE" strokeWidth="0.0" text="教师代码" />
       <Pane prefHeight="55.0" prefWidth="649.0" style="-fx-background-color: #87CEFA;" />
+      <Text layoutX="42.0" layoutY="513.0" strokeType="OUTSIDE" strokeWidth="0.0" text="旧密码：" wrappingWidth="75.0" />
+      <Text layoutX="42.0" layoutY="566.0" strokeType="OUTSIDE" strokeWidth="0.0" text="新密码：" wrappingWidth="75.00000354647636" />
+      <Text layoutX="367.0" layoutY="566.0" strokeType="OUTSIDE" strokeWidth="0.0" text="新密码确认" wrappingWidth="75.00000354647636" />
+      <PasswordField fx:id="oldPassword" layoutX="110.0" layoutY="492.0" prefHeight="30.0" prefWidth="148.0" />
+      <PasswordField fx:id="newPassword" layoutX="110.0" layoutY="545.0" prefHeight="30.0" prefWidth="148.0" />
+      <PasswordField fx:id="newPasswordConfirm" layoutX="454.0" layoutY="545.0" prefHeight="30.0" prefWidth="148.0" />
    </children>
 </AnchorPane>

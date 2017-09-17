@@ -7,7 +7,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="652.0" prefWidth="649.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="seu.view.classManageController">
+<AnchorPane prefHeight="652.0" prefWidth="649.0" xmlns="http://javafx.com/javafx/8.0.112" xmlns:fx="http://javafx.com/fxml/1" fx:controller="seu.controller.courseManageController">
    <children>
       <Text layoutX="14.0" layoutY="351.0" strokeType="OUTSIDE" strokeWidth="0.0" text="      课程代码：" wrappingWidth="182.0">
          <font>
@@ -50,7 +50,7 @@
          </font>
       </Text>
       <TextField fx:id="courseIDDel" layoutX="181.0" layoutY="109.0" prefHeight="30.0" prefWidth="224.0" />
-      <Button fx:id="findClass1" layoutX="431.0" layoutY="105.0" mnemonicParsing="false" onAction="#findClass" prefHeight="38.0" prefWidth="121.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #00BFFF;" text="确认删除">
+      <Button fx:id="del" layoutX="431.0" layoutY="105.0" mnemonicParsing="false" onAction="#delConfirm" prefHeight="38.0" prefWidth="121.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #00BFFF;" text="确认删除">
          <font>
             <Font size="18.0" />
          </font>

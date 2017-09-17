@@ -11,7 +11,7 @@
    <children>
       <TabPane layoutY="191.0" prefHeight="460.0" prefWidth="649.0" tabClosingPolicy="UNAVAILABLE">
         <tabs>
-          <Tab fx:id="selectCourse" text="学生选课">
+          <Tab fx:id="selectCourse" onSelectionChanged="#selectCourse" text="学生选课">
             <content>
                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
 
@@ -29,7 +29,7 @@
             </content>
 
         </Tab>
-          <Tab fx:id="courseResult" text="选课结果">
+          <Tab fx:id="courseResult" onSelectionChanged="#courseResult" text="选课结果">
             <content>
 
                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
