@@ -1,37 +1,87 @@
 package seu;
 
-import de.felixroske.jfxsupport.AbstractJavaFxApplicationSupport;
+import javafx.application.Application;
+import javafx.event.EventHandler;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 import javafx.scene.image.Image;
+import javafx.stage.WindowEvent;
+import javafx.util.Callback;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.ConfigurableApplicationContext;
 
-import static javafx.application.Application.launch;
+@SpringBootApplication
+public class Main extends Application {
 
+    private ConfigurableApplicationContext springContext;
+    private Parent rootNode;
 
-public class Main  extends AbstractJavaFxApplicationSupport {
-  @Override
-    public void start(Stage primaryStage) {
-        try {
-            Parent root = FXMLLoader.load(getClass()
-                    .getResource("/view//MyScene.fxml"));
-            primaryStage.setTitle("虚拟校园登陆");
-            Scene Scene = new Scene(root, 600, 400);
-            primaryStage.setScene(Scene);
-            Scene.getStylesheets().add(
-                    getClass().getResource("/view//login.css")
-                            .toExternalForm());
-            primaryStage.getIcons().add(new Image("/images/01.png"));
-            primaryStage.setResizable(false);
-            primaryStage.show();
-        } catch(Exception e) {
-            e.printStackTrace();
-        }
+    public static void main(final String[] args) {
+        Application.launch(args);
     }
 
-    public static void main(String[] args) {
+//    public static void main(String[] args) {
+//        launch( args);
+//    }
 
-        launch( args);
+    @Override
+    public void init() throws Exception {
+        springContext = SpringApplication.run(Main.class);
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/view//MyScene.fxml"));
+        fxmlLoader.setControllerFactory(new Callback<Class<?>, Object>() {
+            @Override
+            public Object call(Class<?> requiredType) {
+                return springContext.getBean(requiredType);
+            }
+        });
+        rootNode = (Parent) fxmlLoader.load();
     }
+
+    @Override
+    public void start(Stage primaryStage) throws Exception {
+//        stage.setOnCloseRequest(new EventHandler<WindowEvent>() {
+//            @Override
+//            public void handle(WindowEvent windowEvent) {
+//                Server.runFlag = false;
+//            }
+//        });
+//        primaryStage.setScene(new Scene(rootNode));
+        Scene Scene = new Scene(rootNode, 600, 400);
+        primaryStage.setScene(Scene);
+        Scene.getStylesheets().add(
+                getClass().getResource("/view//login.css")
+                        .toExternalForm());
+        primaryStage.getIcons().add(new Image("/images/01.png"));
+        primaryStage.setResizable(false);
+        primaryStage.show();
+    }
+
+    @Override
+    public void stop() throws Exception {
+        springContext.close();
+    }
+
+
+//    @Override
+//    public void start(Stage primaryStage) {
+//        try {
+//            Parent root = FXMLLoader.load(getClass()
+//                    .getResource("/view//MyScene.fxml"));
+//            primaryStage.setTitle("虚拟校园登陆");
+//            Scene Scene = new Scene(root, 600, 400);
+//            primaryStage.setScene(Scene);
+//            Scene.getStylesheets().add(
+//                    getClass().getResource("/view//login.css")
+//                            .toExternalForm());
+//            primaryStage.getIcons().add(new Image("/images/01.png"));
+//            primaryStage.setResizable(false);
+//            primaryStage.show();
+//        } catch(Exception e) {
+//            e.printStackTrace();
+//        }
+//    }
+
 }
