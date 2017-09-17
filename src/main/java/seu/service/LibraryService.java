@@ -47,6 +47,10 @@ public class LibraryService {
         return (int) client.send(new ClientRequest(serviceName, "deleteBook", new Class[]{int.class}, new Object[]{bookID})).getData();
     }
 
+    public List<Library> getBookByBookName(String bookName) {
+        return (List<Library>) client.send(new ClientRequest(serviceName, "getBookByBookName", new Class[]{String.class}, new Object[]{bookName})).getData();
+    }
+
     //学生通过图书id获取所借图书信息
     public Library getBookByBookId(int id) {
         return (Library) client.send(new ClientRequest(serviceName, "getBookByBookId", new Class[]{int.class}, new Object[]{id})).getData();
