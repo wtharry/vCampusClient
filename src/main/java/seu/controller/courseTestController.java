@@ -2,6 +2,7 @@ package seu.controller;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
 import javafx.event.Event;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
@@ -12,15 +13,7 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.util.Callback;
 
-
-import javafx.event.ActionEvent;
-
-/**
- * Created by Q on 2017/9/14.
- */
-public class courseController {
-
-
+public class courseTestController {
     @FXML
     private TableView<studentSelectCourseTable> courseTable;
 
@@ -45,7 +38,7 @@ public class courseController {
 
 
 
-    private  ObservableList<studentCourseSelecTable> couLists;
+    private ObservableList<studentCourseSelecTable> couLists;
 
     public ObservableList<studentSelectCourseTable> getCourseData() {
 
@@ -189,4 +182,5 @@ public class courseController {
 
     public void courseResult(Event event) {this.showCourseResultTable(this.getCourseResultData());
     }
+
 }

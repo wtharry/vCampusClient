@@ -56,7 +56,7 @@ public class studentController {
 
     public void showLibraryInfo(ActionEvent actionEvent) throws IOException {
         changeView.getChildren().clear();
-        Parent child = FXMLLoader.load(getClass().getResource("/view//totalLibrary.fxml"));
+        Parent child = FXMLLoader.load(getClass().getResource("/view//LibraryTest.fxml"));
         changeView.getChildren().add(child);
 
     }
@@ -73,7 +73,7 @@ public class studentController {
 
     public void showCourseInfo(ActionEvent actionEvent) throws IOException {
         changeView.getChildren().clear();
-        Parent child = FXMLLoader.load(getClass().getResource("/view//course.fxml"));
+        Parent child = FXMLLoader.load(getClass().getResource("/view//CourseTest.fxml"));
         changeView.getChildren().add(child);
 
 
