@@ -11,6 +11,7 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
+import org.springframework.stereotype.Component;
 
 import java.io.IOException;
 
@@ -20,6 +21,7 @@ import static com.sun.org.apache.xerces.internal.utils.SecuritySupport.getResour
  * Created by Q on 2017/9/9.
  */
 
+@Component
 public class studentController {
 
     @FXML
