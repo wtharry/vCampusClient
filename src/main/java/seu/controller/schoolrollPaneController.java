@@ -1,6 +1,7 @@
 package seu.controller;
 
 import javafx.event.ActionEvent;
+
 import javafx.fxml.FXML;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
@@ -8,10 +9,9 @@ import javafx.scene.control.TextField;
 //import seu.service.ClassService;
 //import seu.domain.Student;
 
-/**
- * Created by Q on 2017/9/11.
- */
+import org.springframework.stereotype.Component;
 
+@Component
 
 public class schoolrollPaneController {
     @FXML

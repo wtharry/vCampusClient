@@ -1,7 +1,9 @@
 package seu.controller;
 
 import javafx.event.ActionEvent;
+import org.springframework.stereotype.Component;
 
+@Component
 public class TeacherManage {
     public void teacherPhoneNumberAdd(ActionEvent actionEvent) {
     }
