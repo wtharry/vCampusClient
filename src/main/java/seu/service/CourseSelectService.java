@@ -1,5 +1,6 @@
 package seu.service;
 
+import javafx.beans.value.ObservableValue;
 import org.springframework.stereotype.Service;
 import seu.domain.Course;
 import seu.domain.CourseSelect;
@@ -14,7 +15,7 @@ return 0;
     }
 
     //学生删除所选课程
-    public int deleteCourseSelectByCourseIDAndStudentID( int studentID ,  int courseID) {
+    public int deleteCourseSelectByCourseIDAndStudentID(int studentID , ObservableValue<Integer> courseID) {
 return 0;
     }
 

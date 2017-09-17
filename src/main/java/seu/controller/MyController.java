@@ -74,7 +74,7 @@ public class MyController implements Initializable
 
             if (group.getSelectedToggle() == student) {
 
-                //StudentService Stu;
+                //StudentService Stu= new StudentService();
                 // int stuID=Integer.valueOf(accountNumber.getText()).intValue();
                 //if(Stu.login( stuID,password.getText()))
                 //{
@@ -105,6 +105,8 @@ public class MyController implements Initializable
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
+
+
                 //}
                 /*else
                 {
@@ -141,7 +143,7 @@ public class MyController implements Initializable
                     if(group.getSelectedToggle()==teacher)
                     {
 
-                        //TeacherService Tea;
+                        //TeacherService Tea=new TeacherService();
                         // int TeacherID=Integer.valueOf(accountNumber.getText()).intValue();
                         //if(Tea.login( stuID,password.getText()))
                         //{
@@ -201,7 +203,7 @@ public class MyController implements Initializable
                     if(group.getSelectedToggle()==admin)
                     {
 
-                        //AdminService Adm;
+                        //AdminService Adm=new AdminService();
                         // int AdminID=Integer.valueOf(accountNumber.getText()).intValue();
                         //if(Tea.login( AdminID,password.getText()))
                         //{

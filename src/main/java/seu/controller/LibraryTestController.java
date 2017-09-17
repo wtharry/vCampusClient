@@ -13,6 +13,9 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.util.Callback;
 import org.springframework.stereotype.Component;
+import seu.service.LibraryService;
+
+import java.text.SimpleDateFormat;
 
 @Component
 public class LibraryTestController {
@@ -25,35 +28,55 @@ public class LibraryTestController {
     @FXML
     private TableColumn<studentLibraryTable, Integer> bookID;
 
+   private  ObservableList<studentLibraryTable> bookLists= FXCollections.observableArrayList();
 
-    private ObservableList<studentLibraryTable> bookLists;
 
-    /*public void initialize(URL location, ResourceBundle resources) {
-        this.showBooksTable(this.getBooksData());
-    }*/
+
+
+
+    private int studentID;
+
 
 
     public ObservableList<studentLibraryTable> getBooksData() {
+           /*
+         LibraryService lib = new LibraryService();
+        for(int i=0;i< lib. getBooksByStudentId(this.studentID).getSize();i++)
+       {
+             SimpleDateFormat sdf=new SimpleDateFormat("yyyy-MM-dd");
+             String date=sdf.format( lib. getBooksByStudentId(this.studentID).get(i).getStartDate());
+             studentLibraryTable stu = new studentLibraryTable( lib. getBooksByStudentId(this.studentID).get(i).getBookName(),
+             lib. getBooksByStudentId(this.studentID).get(i).getBookID(),date)
 
-        studentLibraryTable stu1 = new studentLibraryTable("上学记", 001, "2017.09.01");
+
+         bookLists.add(stu);
+           return bookLists;
+         }
+         */
+
+     studentLibraryTable stu1 = new studentLibraryTable("上学记", 001, "2017.09.01");
+
+
         studentLibraryTable stu2 = new studentLibraryTable("拿破仑传", 002, "2017.09.02");
+
         studentLibraryTable stu3 = new studentLibraryTable("李鸿章传", 003, "2017.09.03");
 
 
-        bookLists = FXCollections.observableArrayList(stu1, stu2, stu3);
+       bookLists.add(0,stu1);
+       bookLists.add(1,stu2);
+       bookLists.add(2,stu3);
+
         return bookLists;
     }
 
 
-    public void showBooksTable(ObservableList<studentLibraryTable> bookLists) {
+    public void showBooksTable(final ObservableList<studentLibraryTable> bookLists) {
         bookName.setCellValueFactory(new PropertyValueFactory<studentLibraryTable, String>("bookName"));
         bookID.setCellValueFactory(new PropertyValueFactory<studentLibraryTable, Integer>("bookID"));
         startDate.setCellValueFactory(new PropertyValueFactory<studentLibraryTable, String>("startDate"));
-
-
         returnBook.setCellValueFactory(new PropertyValueFactory<studentLibraryTable, String>("DUMMY"));
 
-        Callback<TableColumn<studentLibraryTable, String>, TableCell<studentLibraryTable, String>> cellFactory
+      Callback<TableColumn<studentLibraryTable, String>, TableCell<studentLibraryTable, String>> cellFactory
                 = //
                 new Callback<TableColumn<studentLibraryTable, String>, TableCell<studentLibraryTable, String>>() {
                     @Override
@@ -69,10 +92,11 @@ public class LibraryTestController {
                                     setGraphic(null);
                                     setText(null);
                                 } else {
-                                    btn.setOnAction(new EventHandler<ActionEvent>(){
+                                            btn.setOnAction(new EventHandler<ActionEvent>(){
                                         @Override
                                         public void handle(ActionEvent event) {
                                             System.out.println("Button clicked");
+                                            System.out.println(getIndex());
                                             show(getIndex());
                                         }
                                     });
@@ -86,31 +110,40 @@ public class LibraryTestController {
                     }
                 };
 
-
-
         returnBook.setCellFactory(cellFactory);
-
-
-
-
-
 
         studentBookTable.setItems(this.getBooksData());
     }
 
-    public void show(int a) {
-        bookLists.remove(a);
+    public void searchBooks(ActionEvent actionEvent) {
+
+       // LibraryService lib = new LibraryService();
+        //
+
+    }
+
+    public void returnTab(Event event) {
+
+        this.showBooksTable(this.getBooksData());
+        bookLists.remove(2,5);
+         //  LibraryService lib = new LibraryService();
+        //int end=lib. getBooksByStudentId(this.studentID).getSize()*2-1;
+        //int start=lib. getBooksByStudentId(this.studentID).getSize()-1;
+        //bookLists.remove(start,end);
+        studentBookTable.refresh();
+    }
+
+    public void getStudentID( int id)
+    {
+        studentID=id;
+    }
+    public void show(int index)
+    {
+        bookLists.remove(index);
         studentBookTable.refresh();
 
     }
 
-    ;
 
-    public void searchBooks(ActionEvent actionEvent) {
-    }
-
-    public void returnTab(Event event) {
-        this.showBooksTable(this.getBooksData());
-    }
 
 }

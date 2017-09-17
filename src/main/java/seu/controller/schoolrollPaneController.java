@@ -56,7 +56,7 @@ public class schoolrollPaneController {
 
     private String password;
 
-    private int ID;
+    private int studentID;
 
 
     public void changeInfo(ActionEvent actionEvent) {
@@ -84,7 +84,7 @@ public class schoolrollPaneController {
     public void checkInfo(ActionEvent actionEvent) {
 
         /*
-        Student stu(Integer.valueOf(studentIDField.getText()),nameField.getText(),Integer.valueOf(classIDField.getText()),
+        Student stu=new Student(Integer.valueOf(studentIDField.getText()),nameField.getText(),Integer.valueOf(classIDField.getText()),
         Integer.valueOf(dormitoryIDField.getText()),Integer.valueOf(balanceField.getText()),this.password);
         StudentService stus;
         stus.updateStudent(stu);
@@ -93,11 +93,11 @@ public class schoolrollPaneController {
     }
 
     public void passwordChecked(ActionEvent actionEvent) {
-        //StudentService Stu;
+        //StudentService Stu= new StudentService();
         //
-        //if(Stu.login( ID,oldPassword.getText()&&newPassword.getText()==newPasswordConfirm.getText())
+        //if(Stu.login( studentID,oldPassword.getText()&&newPassword.getText()==newPasswordConfirm.getText())
         //{
-       //    Stu.updateStudentPassword(ID,newPassword.getText());
+       //    Stu.updateStudentPassword(studentID,newPassword.getText());
         // }
 
 
@@ -108,9 +108,9 @@ public class schoolrollPaneController {
         studentIDField.setText(String.valueOf(id));
         studentIDField.setEditable(false);
         password=pw;
-        ID=id;
+        studentID=id;
 
-        /* StudentService stu;
+        /* StudentService stu= StudentService();
          nameField.setText(stu.queryStudentByStudentId(id).getStudentName());
          nameField.setEditable(false);
 
@@ -123,7 +123,7 @@ public class schoolrollPaneController {
         balanceField.setText(String.valueOf(stu.queryStudentByStudentId(id).getBalance()));
         balanceField.setEditable(false);
 
-        ClassService cla;
+        ClassService cla = new ClassService();
 
         classIDField.setText(String.valueOf(cla.queryClassByStudentId(id).getClassId()));
         classIDField.setEditable(false);

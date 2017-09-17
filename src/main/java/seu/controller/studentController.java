@@ -43,12 +43,12 @@ public class studentController {
     @FXML
     private Button commodity;
 
-    private int ID;
+    private int studentID;
     private String password;
 
     public studentController() throws IOException {
         ImageView delICON = new ImageView(getClass().getResource("/images/information.png").toString());
-        /*schoolroll.setGraphic(deICON);*/
+
 
     }
 
@@ -58,7 +58,7 @@ public class studentController {
         FXMLLoader loader=new FXMLLoader(getClass().getResource("/view//schoolrollPane.fxml"));
         Parent child =loader.load();
         schoolrollPaneController schroll =loader.<schoolrollPaneController>getController();
-        schroll.setData(this.ID,password);
+        schroll.setData(this.studentID,password);
 
         changeView.getChildren().add(child);
 
@@ -68,7 +68,10 @@ public class studentController {
 
     public void showLibraryInfo(ActionEvent actionEvent) throws IOException {
         changeView.getChildren().clear();
-        Parent child = FXMLLoader.load(getClass().getResource("/view//LibraryTest.fxml"));
+        FXMLLoader loader=new FXMLLoader(getClass().getResource("/view//LibraryTest.fxml"));
+        Parent child =loader.load();
+        LibraryTestController lib =loader.<     LibraryTestController>getController();
+     lib.getStudentID(this.studentID);
         changeView.getChildren().add(child);
 
     }
@@ -76,7 +79,10 @@ public class studentController {
 
     public void showDormitoryInfo(ActionEvent actionEvent) throws IOException {
         changeView.getChildren().clear();
-        Parent child = FXMLLoader.load(getClass().getResource("/view//dormitoryPane.fxml"));
+        FXMLLoader loader=new FXMLLoader(getClass().getResource("/view//dormitoryPane.fxml"));
+        Parent child =loader.load();
+        dormitoryPaneController dor =loader.<       dormitoryPaneController>getController();
+        dor.setInfo(this.studentID);
 
 
         changeView.getChildren().add(child);
@@ -85,7 +91,10 @@ public class studentController {
 
     public void showCourseInfo(ActionEvent actionEvent) throws IOException {
         changeView.getChildren().clear();
-        Parent child = FXMLLoader.load(getClass().getResource("/view//CourseTest.fxml"));
+        FXMLLoader loader=new FXMLLoader(getClass().getResource("/view//CourseTest.fxml"));
+        Parent child =loader.load();
+        courseTestController cou =loader.<        courseTestController>getController();
+        cou.getstudentID(this.studentID);
         changeView.getChildren().add(child);
 
 
@@ -93,7 +102,12 @@ public class studentController {
 
     public void showCommodityInfo(ActionEvent actionEvent) throws IOException {
         changeView.getChildren().clear();
-        Parent child = FXMLLoader.load(getClass().getResource("/view//commodityPane.fxml"));
+        FXMLLoader loader=new FXMLLoader(getClass().getResource("/view//commodityPane.fxml"));
+        Parent child =loader.load();
+        commodityPaneController shop =loader.<       commodityPaneController>getController();
+        shop.getStudentID(this.studentID);
+        shop.setBalance(this.studentID);
+
         changeView.getChildren().add(child);
 
 
@@ -103,7 +117,7 @@ public class studentController {
 
     public void getData( int id,String pw)
     {
-       this.ID=id;
+       this.studentID=id;
        this.password=pw;
     }
 
