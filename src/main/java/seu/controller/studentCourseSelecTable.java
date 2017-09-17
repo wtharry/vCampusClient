@@ -1,8 +1,11 @@
 package seu.controller;
 
+import org.springframework.stereotype.Component;
+
 /**
  * Created by Q on 2017/9/13.
  */
+@Component
 public class studentCourseSelecTable {
     private String courseName;
     private int courseID,credit,period,teacherID,grades;
@@ -14,6 +17,9 @@ public class studentCourseSelecTable {
         this.period = period;
         this.teacherID = teacherID;
         this.grades = grades;
+    }
+
+    public studentCourseSelecTable() {
     }
 
     public String getCourseName() {

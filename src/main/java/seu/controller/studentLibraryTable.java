@@ -1,8 +1,11 @@
 package seu.controller;
 
+import org.springframework.stereotype.Component;
+
 /**
  * Created by Q on 2017/9/13.
  */
+@Component
 public class studentLibraryTable {
     private String bookName;
     private int bookID;
@@ -12,6 +15,9 @@ public class studentLibraryTable {
         this.bookName = bookName;
         this.bookID = bookID;
         this.startDate = startDate;
+    }
+
+    public studentLibraryTable() {
     }
 
     public String getBookName() {
