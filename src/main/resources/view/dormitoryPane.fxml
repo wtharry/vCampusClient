@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
@@ -8,17 +10,27 @@
 
 <AnchorPane prefHeight="652.0" prefWidth="649.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="seu.controller.dormitoryPaneController">
    <children>
-      <TextField fx:id="dormitoryID" layoutX="211.0" layoutY="100.0" onAction="#getDormitoryID" />
-      <TextField fx:id="dormitoryScore" layoutX="211.0" layoutY="289.0" onAction="#getDormitoryScore" prefHeight="23.0" prefWidth="161.0" />
-      <Text layoutX="112.0" layoutY="117.0" strokeType="OUTSIDE" strokeWidth="0.0" text="宿舍号:" wrappingWidth="74.0">
+      <TextField fx:id="dormitoryID" layoutX="211.0" layoutY="208.0" onAction="#getDormitoryID" />
+      <TextField fx:id="dormitoryScore" layoutX="211.0" layoutY="268.0" onAction="#getDormitoryScore" prefHeight="23.0" prefWidth="161.0" />
+      <Text layoutX="112.0" layoutY="225.0" strokeType="OUTSIDE" strokeWidth="0.0" text="宿舍号:" wrappingWidth="74.0">
          <font>
             <Font size="17.0" />
          </font></Text>
       <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
-      <Text layoutX="112.0" layoutY="306.0" strokeType="OUTSIDE" strokeWidth="0.0" text="宿舍分:" wrappingWidth="67.99999701976776">
+      <Text layoutX="112.0" layoutY="285.0" strokeType="OUTSIDE" strokeWidth="0.0" text="宿舍分:" wrappingWidth="67.99999701976776">
          <font>
             <Font size="17.0" />
          </font></Text>
       <Pane layoutY="-5.0" prefHeight="55.0" prefWidth="649.0" style="-fx-background-color: #87CEFA;" />
+      <Text layoutX="127.0" layoutY="116.0" strokeType="OUTSIDE" strokeWidth="0.0" text="学生宿舍信息" wrappingWidth="228.240234375">
+         <font>
+            <Font size="35.0" />
+         </font>
+      </Text>
+      <ImageView fitHeight="81.0" fitWidth="85.0" layoutX="24.0" layoutY="62.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="/images/dormitory.png" />
+         </image>
+      </ImageView>
    </children>
 </AnchorPane>

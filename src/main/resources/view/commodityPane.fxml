@@ -127,17 +127,17 @@
       <Pane prefHeight="55.0" prefWidth="649.0" style="-fx-background-color: #87CEFA;" />
       <ImageView fitHeight="64.0" fitWidth="69.0" layoutX="21.0" layoutY="92.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../images/water.png" />
+            <Image url="/images/water.png" />
          </image>
       </ImageView>
       <ImageView fitHeight="64.0" fitWidth="69.0" layoutX="237.0" layoutY="92.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../images/drink.png" />
+            <Image url="/images/drink.png" />
          </image>
       </ImageView>
       <ImageView fitHeight="64.0" fitWidth="64.0" layoutX="446.0" layoutY="92.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../images/cafe.png" />
+            <Image url="/images/cafe.png" />
          </image>
       </ImageView>
       <Text layoutX="517.0" layoutY="111.0" strokeType="OUTSIDE" strokeWidth="0.0" text="咖啡  ¥3.0" wrappingWidth="96.99999633431435">
@@ -158,17 +158,17 @@
       <TextField fx:id="colaBoughtAmount1" layoutX="539.0" layoutY="128.0" prefHeight="30.0" prefWidth="41.0" scaleX="0.7" scaleY="0.7" />
       <ImageView fitHeight="64.0" fitWidth="57.0" layoutX="25.0" layoutY="251.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../images/bread.png" />
+            <Image url="/images/bread.png" />
          </image>
       </ImageView>
       <ImageView fitHeight="64.0" fitWidth="69.0" layoutX="237.0" layoutY="249.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../images/noodle.png" />
+            <Image url="/images/noodle.png" />
          </image>
       </ImageView>
       <ImageView fitHeight="64.0" fitWidth="87.0" layoutX="446.0" layoutY="249.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../images/eat.png" />
+            <Image url="/images/eat.png" />
          </image>
       </ImageView>
       <Text layoutX="511.0" layoutY="258.0" strokeType="OUTSIDE" strokeWidth="0.0" text="零食  ¥3.0" wrappingWidth="96.99999633431435">
@@ -189,17 +189,17 @@
       </Button>
       <ImageView fitHeight="57.0" fitWidth="69.0" layoutX="25.0" layoutY="391.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../images/pen.png" />
+            <Image url="/images/pen.png" />
          </image>
       </ImageView>
       <ImageView fitHeight="64.0" fitWidth="85.0" layoutX="237.0" layoutY="388.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../images/book2.png" />
+            <Image url="/images/book2.png" />
          </image>
       </ImageView>
       <ImageView fitHeight="71.0" fitWidth="69.0" layoutX="444.0" layoutY="386.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../images/gift.png" />
+            <Image url="/images/gift.png" />
          </image>
       </ImageView>
       <Text layoutX="513.0" layoutY="410.0" strokeType="OUTSIDE" strokeWidth="0.0" text="礼品  ¥2.0" wrappingWidth="110.00000262260437">
@@ -220,7 +220,7 @@
       </Button>
       <ImageView fitHeight="64.0" fitWidth="69.0" layoutX="486.0" layoutY="481.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../images/shopcar.png" />
+            <Image url="/images/shopcar.png" />
          </image>
       </ImageView>
    </children>

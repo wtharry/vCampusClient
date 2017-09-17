@@ -2,52 +2,79 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="652.0" prefWidth="649.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="seu.controller.LibraryManage">
+<AnchorPane prefHeight="652.0" prefWidth="649.0" stylesheets="@Teacher.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="seu.controller.LibraryManage">
    <children>
-      <Text layoutX="40.0" layoutY="134.0" strokeType="OUTSIDE" strokeWidth="0.0" text="图书查询：" wrappingWidth="145.240234375">
+      <Text layoutX="132.0" layoutY="223.0" strokeType="OUTSIDE" strokeWidth="0.0" text="图书查询：" wrappingWidth="145.240234375">
          <font>
             <Font size="24.0" />
          </font></Text>
-      <Text layoutX="40.0" layoutY="248.0" strokeType="OUTSIDE" strokeWidth="0.0" text="图书增加：" wrappingWidth="125.240234375">
+      <Text layoutX="132.0" layoutY="354.0" strokeType="OUTSIDE" strokeWidth="0.0" text="图书增加：" wrappingWidth="125.240234375">
          <font>
             <Font size="24.0" />
          </font></Text>
-      <Text layoutX="40.0" layoutY="465.0" strokeType="OUTSIDE" strokeWidth="0.0" text="图书删除：" wrappingWidth="125.24023313820362">
+      <Text layoutX="132.0" layoutY="517.0" strokeType="OUTSIDE" strokeWidth="0.0" text="图书删除：" wrappingWidth="125.24023313820362">
          <font>
             <Font size="24.0" />
          </font></Text>
-      <TextField fx:id="bookNameFind" layoutX="177.0" layoutY="114.0" />
-      <Button fx:id="bookFind" layoutX="385.0" layoutY="110.0" mnemonicParsing="false" onAction="#bookFind" prefHeight="30.0" prefWidth="62.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #00BFFF;" text="查询" />
-      <Text fill="#4cb5ed" layoutX="177.0" layoutY="105.0" strokeType="OUTSIDE" strokeWidth="0.0" text="请输入书籍名称" wrappingWidth="160.9999986514449">
+      <TextField fx:id="bookNameFind" layoutX="258.0" layoutY="203.0" />
+      <Button fx:id="bookFind" layoutX="466.0" layoutY="199.0" mnemonicParsing="false" onAction="#bookFind" prefHeight="30.0" prefWidth="62.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #00BFFF;" text="查询" />
+      <Text fill="#4cb5ed" layoutX="258.0" layoutY="194.0" strokeType="OUTSIDE" strokeWidth="0.0" text="请输入书籍名称" wrappingWidth="160.9999986514449">
          <font>
             <Font size="18.0" />
          </font>
       </Text>
-      <Text layoutX="144.0" layoutY="310.0" strokeType="OUTSIDE" strokeWidth="0.0" text="书籍代码：">
+      <Text layoutX="225.0" layoutY="400.0" strokeType="OUTSIDE" strokeWidth="0.0" text="书籍代码：">
          <font>
-            <Font size="24.0" />
+            <Font size="18.0" />
          </font>
       </Text>
-      <TextField fx:id="bookID" layoutX="272.0" layoutY="286.0" />
-      <Text layoutX="144.0" layoutY="393.0" strokeType="OUTSIDE" strokeWidth="0.0" text="书籍名称：">
+      <TextField fx:id="bookID" layoutX="353.0" layoutY="382.0" />
+      <Text layoutX="225.0" layoutY="448.0" strokeType="OUTSIDE" strokeWidth="0.0" text="书籍名称：">
          <font>
-            <Font size="24.0" />
+            <Font size="18.0" />
          </font>
       </Text>
-      <TextField fx:id="bookIName" layoutX="272.0" layoutY="369.0" />
-      <Button fx:id="bookAdd" layoutX="485.0" layoutY="399.0" mnemonicParsing="false" onAction="#bookAdd" prefHeight="30.0" prefWidth="62.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #00BFFF;" text="确认" />
-      <Text layoutX="144.0" layoutY="523.0" strokeType="OUTSIDE" strokeWidth="0.0" text="书籍代码：">
+      <TextField fx:id="bookIName" layoutX="353.0" layoutY="430.0" />
+      <Button fx:id="bookAdd" layoutX="566.0" layoutY="456.0" mnemonicParsing="false" onAction="#bookAdd" prefHeight="30.0" prefWidth="62.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #00BFFF;" text="确认" />
+      <Text layoutX="225.0" layoutY="575.0" strokeType="OUTSIDE" strokeWidth="0.0" text="书籍代码：">
          <font>
-            <Font size="24.0" />
+            <Font size="18.0" />
          </font>
       </Text>
-      <TextField fx:id="bookIDDel" layoutX="272.0" layoutY="502.0" />
-      <Button fx:id="bookDel" layoutX="485.0" layoutY="525.0" mnemonicParsing="false" onAction="#bookDel" prefHeight="30.0" prefWidth="62.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #00BFFF;" text="确认" />
+      <TextField fx:id="bookIDDel" layoutX="353.0" layoutY="557.0" />
+      <Button fx:id="bookDel" layoutX="566.0" layoutY="577.0" mnemonicParsing="false" onAction="#bookDel" prefHeight="30.0" prefWidth="62.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #00BFFF;" text="确认" />
       <Pane prefHeight="55.0" prefWidth="649.0" style="-fx-background-color: #87CEFA;" />
+      <ImageView fitHeight="80.0" fitWidth="79.0" layoutX="24.0" layoutY="77.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="/images/manage7.png" />
+         </image>
+      </ImageView>
+      <Text layoutX="112.0" layoutY="130.0" strokeType="OUTSIDE" strokeWidth="0.0" text="图书馆管理" wrappingWidth="228.240234375">
+         <font>
+            <Font size="35.0" />
+         </font>
+      </Text>
+      <ImageView fitHeight="79.0" fitWidth="62.0" layoutX="59.0" layoutY="184.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="/images/find5.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="79.0" fitWidth="79.0" layoutX="51.0" layoutY="305.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="/images/addbook.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="55.0" fitWidth="62.0" layoutX="63.0" layoutY="480.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="/images/deletebook.png" />
+         </image>
+      </ImageView>
    </children>
 </AnchorPane>
