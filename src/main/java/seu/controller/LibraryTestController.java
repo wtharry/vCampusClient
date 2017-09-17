@@ -6,15 +6,14 @@ import javafx.event.ActionEvent;
 import javafx.event.Event;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
-import javafx.scene.control.*;
+import javafx.scene.control.Button;
+import javafx.scene.control.TableCell;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.util.Callback;
 
-/**
- * Created by Q on 2017/9/14.
- */
-public class totalLibrary {
-
+public class LibraryTestController {
     @FXML
     private TableView<studentLibraryTable> studentBookTable;
 
@@ -112,10 +111,4 @@ public class totalLibrary {
         this.showBooksTable(this.getBooksData());
     }
 
-
-
-
 }
-
-
-

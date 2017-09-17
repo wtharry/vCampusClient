@@ -2,14 +2,15 @@
 
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="seu.controller.dormitoryPaneController">
+<AnchorPane prefHeight="652.0" prefWidth="649.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="seu.controller.dormitoryPaneController">
    <children>
-      <TextField fx:id="dormitoryID" layoutX="211.0" layoutY="64.0" onAction="#getDormitoryID" />
+      <TextField fx:id="dormitoryID" layoutX="211.0" layoutY="100.0" onAction="#getDormitoryID" />
       <TextField fx:id="dormitoryScore" layoutX="211.0" layoutY="289.0" onAction="#getDormitoryScore" prefHeight="23.0" prefWidth="161.0" />
-      <Text layoutX="112.0" layoutY="81.0" strokeType="OUTSIDE" strokeWidth="0.0" text="宿舍号:" wrappingWidth="74.0">
+      <Text layoutX="112.0" layoutY="117.0" strokeType="OUTSIDE" strokeWidth="0.0" text="宿舍号:" wrappingWidth="74.0">
          <font>
             <Font size="17.0" />
          </font></Text>
@@ -18,5 +19,6 @@
          <font>
             <Font size="17.0" />
          </font></Text>
+      <Pane layoutY="-5.0" prefHeight="55.0" prefWidth="649.0" style="-fx-background-color: #87CEFA;" />
    </children>
 </AnchorPane>
