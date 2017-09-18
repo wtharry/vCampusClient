@@ -16,4 +16,13 @@ public class classManageController {
 
     public void confirm(ActionEvent actionEvent) {
     }
+
+    public void changeConfirm(ActionEvent actionEvent) {
+    }
+
+    public void delConfirm(ActionEvent actionEvent) {
+    }
+
+    public void addConfirm(ActionEvent actionEvent) {
+    }
 }
