@@ -8,10 +8,10 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="652.0" prefWidth="649.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="seu.controller.dormitoryPaneController">
+<AnchorPane prefHeight="652.0" prefWidth="649.0" stylesheets="@Student.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="seu.controller.dormitoryPaneController">
    <children>
       <TextField fx:id="dormitoryID" layoutX="211.0" layoutY="208.0" onAction="#getDormitoryID" />
-      <TextField fx:id="dormitoryScore" layoutX="211.0" layoutY="268.0" onAction="#getDormitoryScore" prefHeight="23.0" prefWidth="161.0" />
+      <TextField fx:id="dormitoryScore" layoutX="211.0" layoutY="268.0" onAction="#getDormitoryScore" prefHeight="30.0" prefWidth="202.0" />
       <Text layoutX="112.0" layoutY="225.0" strokeType="OUTSIDE" strokeWidth="0.0" text="宿舍号:" wrappingWidth="74.0">
          <font>
             <Font size="17.0" />

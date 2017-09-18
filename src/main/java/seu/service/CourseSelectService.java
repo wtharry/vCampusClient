@@ -1,6 +1,9 @@
 package seu.service;
 
+
+import javafx.beans.value.ObservableValue;
 import org.springframework.beans.factory.annotation.Autowired;
+
 import org.springframework.stereotype.Service;
 import seu.domain.Course;
 import seu.domain.CourseSelect;
@@ -31,8 +34,10 @@ public class CourseSelectService {
     }
 
     //学生删除所选课程
-    public int deleteCourseSelectByCourseIDAndStudentID(int studentID, int courseID) {
+
+    public int deleteCourseSelectByCourseIDAndStudentID(int studentID, ObservableValue<Integer> courseID) {
         return (int) client.send(new ClientRequest(serviceName, "deleteCourseSelectByCourseIDAndStudentID", new Class[]{int.class, int.class}, new Object[]{studentID, courseID})).getData();
+
     }
 
     //学生更新选课信息

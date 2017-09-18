@@ -11,7 +11,7 @@
 
 <AnchorPane prefHeight="652.0" prefWidth="649.0" stylesheets="@Teacher.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="seu.controller.DormitoryManage">
    <children>
-      <Text layoutX="284.0" layoutY="244.0" strokeType="OUTSIDE" strokeWidth="0.0" text="宿舍分数查询：" wrappingWidth="189.240234375">
+      <Text layoutX="327.0" layoutY="245.0" strokeType="OUTSIDE" strokeWidth="0.0" text="宿舍号：" wrappingWidth="73.29895842075348">
          <font>
             <Font size="18.0" />
          </font></Text>
@@ -19,9 +19,8 @@
          <font>
             <Font size="18.0" />
          </font></Text>
-      <TextField fx:id="dormitoryIDChange" layoutX="419.0" layoutY="281.0" prefHeight="23.0" prefWidth="105.0" />
-      <TextField fx:id="dormitoryIDFind" layoutX="419.0" layoutY="226.0" prefHeight="23.0" prefWidth="105.0" />
-      <Button fx:id="findConfirm" layoutX="547.0" layoutY="222.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="68.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #00BFFF;" text="确认" />
+      <TextField fx:id="dormitoryScoreChange" layoutX="419.0" layoutY="281.0" prefHeight="23.0" prefWidth="105.0" />
+      <TextField fx:id="dormitoryID" layoutX="419.0" layoutY="226.0" prefHeight="23.0" prefWidth="105.0" />
       <Button fx:id="changeConfirm" layoutX="547.0" layoutY="278.0" mnemonicParsing="false" onAction="#changeConfirm" prefHeight="30.0" prefWidth="68.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #00BFFF;" text="确认" />
       <Text layoutX="172.0" layoutY="380.0" strokeType="OUTSIDE" strokeWidth="0.0" text="增加宿舍：" wrappingWidth="129.240234375">
          <font>
@@ -39,7 +38,7 @@
             <Font size="18.0" />
          </font>
       </Text>
-      <TextField fx:id="scoreAdd" layoutX="419.0" layoutY="461.0" onAction="#scoreAdd" prefHeight="23.0" prefWidth="105.0" />
+      <TextField fx:id="scoreAdd" layoutX="419.0" layoutY="461.0"  prefHeight="23.0" prefWidth="105.0" />
       <Button fx:id="addConfirm" layoutX="547.0" layoutY="488.0" mnemonicParsing="false" onAction="#addConfirm" prefHeight="30.0" prefWidth="68.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #00BFFF;" text="确认" />
       <Text layoutX="174.0" layoutY="552.0" strokeType="OUTSIDE" strokeWidth="0.0" text="删除宿舍：" wrappingWidth="129.240234375">
          <font>
@@ -54,7 +53,7 @@
       <TextField fx:id="deleteDormity" layoutX="421.0" layoutY="572.0" prefHeight="23.0" prefWidth="105.0" />
       <Button fx:id="deleteDormitoryConfirm" layoutX="548.0" layoutY="612.0" mnemonicParsing="false" onAction="#deleteDormitoryConfirm" prefHeight="30.0" prefWidth="68.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #00BFFF;" text="确认" />
       <Pane prefHeight="55.0" prefWidth="649.0" style="-fx-background-color: #87CEFA;" />
-      <Text layoutX="172.0" layoutY="204.0" strokeType="OUTSIDE" strokeWidth="0.0" text="信息查询：" wrappingWidth="129.240234375">
+      <Text layoutX="172.0" layoutY="204.0" strokeType="OUTSIDE" strokeWidth="0.0" text="修改信息：" wrappingWidth="129.240234375">
          <font>
             <Font size="24.0" />
          </font>
