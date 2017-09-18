@@ -9,7 +9,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="652.0" prefWidth="649.0" stylesheets="@Teacher.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="seu.controller.TeacherManage">
+<AnchorPane fx:id="teacherManagePane" prefHeight="652.0" prefWidth="649.0" stylesheets="@Teacher.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="seu.controller.TeacherManage">
    <children>
       <Text layoutX="122.0" layoutY="202.0" strokeType="OUTSIDE" strokeWidth="0.0" text="教师信息查询：" wrappingWidth="188.99999901652336">
          <font>
@@ -23,27 +23,27 @@
          <font>
             <Font size="24.0" />
          </font></Text>
-      <Text fill="#33abe8" layoutX="355.0" layoutY="349.0" strokeType="OUTSIDE" strokeWidth="0.0" text="请输入教师基本信息" wrappingWidth="158.240234375">
+      <Text fill="#33abe8" layoutX="354.0" layoutY="324.0" strokeType="OUTSIDE" strokeWidth="0.0" text="请输入教师基本信息" wrappingWidth="158.240234375">
          <font>
             <Font size="14.0" />
          </font></Text>
-      <Text layoutX="297.0" layoutY="371.0" strokeType="OUTSIDE" strokeWidth="0.0" text="工号：" wrappingWidth="58.24023048579693">
+      <Text layoutX="296.0" layoutY="346.0" strokeType="OUTSIDE" strokeWidth="0.0" text="工号：" wrappingWidth="58.24023048579693">
          <font>
             <Font size="18.0" />
          </font></Text>
-      <Text layoutX="297.0" layoutY="406.0" strokeType="OUTSIDE" strokeWidth="0.0" text="姓名：" wrappingWidth="58.240234375">
+      <Text layoutX="296.0" layoutY="381.0" strokeType="OUTSIDE" strokeWidth="0.0" text="姓名：" wrappingWidth="58.240234375">
          <font>
             <Font size="18.0" />
          </font></Text>
-      <Text layoutX="261.0" layoutY="443.0" strokeType="OUTSIDE" strokeWidth="0.0" text="联系电话：" wrappingWidth="99.99999666959047">
+      <Text layoutX="261.0" layoutY="422.0" strokeType="OUTSIDE" strokeWidth="0.0" text="联系电话：" wrappingWidth="99.99999666959047">
          <font>
             <Font size="18.0" />
          </font></Text>
-      <TextField layoutX="347.0" layoutY="182.0" prefHeight="23.0" prefWidth="100.0" />
+      <TextField fx:id="teacherIDSearch" layoutX="347.0" layoutY="182.0" prefHeight="23.0" prefWidth="100.0" />
       <TextField fx:id="teacherIDDel" layoutX="347.0" layoutY="542.0" prefHeight="23.0" prefWidth="100.0" />
-      <TextField fx:id="teacherIDAdd" layoutX="357.0" layoutY="353.0" prefHeight="23.0" prefWidth="121.0" />
-      <TextField fx:id="teacherPhoneNumberAdd" layoutX="357.0" layoutY="425.0" onAction="#teacherPhoneNumberAdd" prefHeight="23.0" prefWidth="121.0" />
-      <TextField fx:id="teacherNameAdd" layoutX="357.0" layoutY="391.0" prefHeight="23.0" prefWidth="121.0" />
+      <TextField fx:id="teacherIDAdd" layoutX="356.0" layoutY="328.0" prefHeight="23.0" prefWidth="121.0" />
+      <TextField fx:id="teacherPhoneNumberAdd" layoutX="356.0" layoutY="400.0" prefHeight="23.0" prefWidth="121.0" />
+      <TextField fx:id="teacherNameAdd" layoutX="356.0" layoutY="366.0" prefHeight="23.0" prefWidth="121.0" />
       <Button fx:id="teacherInfoFind" layoutX="504.0" layoutY="182.0" mnemonicParsing="false" onAction="#teacherInfoFind" prefHeight="23.0" prefWidth="50.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #00BFFF;" text="确认" />
       <Button fx:id="delConfirm" layoutX="504.0" layoutY="542.0" mnemonicParsing="false" onAction="#delConfirm" prefHeight="23.0" prefWidth="50.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #00BFFF;" text="确认" />
       <Button fx:id="teacherAddConfirm" layoutX="504.0" layoutY="456.0" mnemonicParsing="false" onAction="#teacherAddConfirm" prefHeight="0.0" prefWidth="50.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #00BFFF;" text="确认" />
@@ -82,5 +82,11 @@
             <Image url="/images/deletetea.png" />
          </image>
       </ImageView>
+      <Text layoutX="261.0" layoutY="460.0" strokeType="OUTSIDE" strokeWidth="0.0" text="登录密码：" wrappingWidth="99.99999666959047">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <TextField fx:id="passwordAdd" layoutX="356.0" layoutY="438.0" prefHeight="23.0" prefWidth="121.0" />
    </children>
 </AnchorPane>

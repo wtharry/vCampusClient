@@ -12,12 +12,19 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.util.Callback;
+import org.springframework.beans.factory.annotation.Autowired;
 import seu.service.CourseSelectService;
 import org.springframework.stereotype.Component;
 import seu.domain.Course;
+import seu.service.CourseService;
 
 @Component
 public class courseTestController {
+    @Autowired
+    CourseService courseService;
+
+    @Autowired
+    CourseSelectService     courseSelectService;
     @FXML
     private TableView<studentSelectCourseTable> courseTable;
 
@@ -46,24 +53,19 @@ public class courseTestController {
 
     public ObservableList<studentSelectCourseTable> getCourseData() {
 
-       /* CourseService cou = new CourseService();
-        cou.queryAll();
-        for(int i=0;i<cou.queryAll().getSize();i++)
+
+        courseService.queryAll();
+        for(int i=0;i<courseService.queryAll().size();i++)
        {
-               studentSelectCourseTable cou= new studentSelectCourseTable(cou.getCourseAll().get(i).getCourseName(),
-               cou.getCourseAll().get(i).getCourseID(), cou.getCourseAll().get(i).getCredit(),cou.getCourseAll().get(i).getPeriod(),
-               cou.getCourseAll().get(i).getTeacherID());
+               studentSelectCourseTable cou= new studentSelectCourseTable(courseService.queryAll().get(i).getCourseName(),
+                       courseService.queryAll().get(i).getCourseId(), courseService.queryAll().get(i).getCredit(),courseService.queryAll().get(i).getPeriod(),
+                       courseService.queryAll().get(i).getTeacherId());
 
                couLists.add(cou);
                return couLists;
-         }*/
+         }
 
-        studentSelectCourseTable stu1 = new studentSelectCourseTable("高等数学", 001, 5,64,233);
-        studentSelectCourseTable stu2 = new studentSelectCourseTable("中等数学", 002, 5,64,332);
-        studentSelectCourseTable stu3 = new studentSelectCourseTable("低等数学", 003, 5,64,323);
-       couLists.add(stu1);
-       couLists.add(stu2);
-       couLists.add(stu3);
+
 
 
         return couLists;
@@ -125,12 +127,12 @@ public class courseTestController {
 
 
         this.showCourseTable(this.getCourseData());
-        couLists.remove(2,5);
 
-         //  CourseService cou = new CourseService();
-        //int end=cou.queryAll().getSize()*2-1;
-        //int start=cou.queryAll().getSize()-1;
-        //couLists.remove(start,end);
+
+
+        int end=courseService.queryAll().size()*2-1;
+        int start=courseService.queryAll().size()-1;
+       couLists.remove(start,end);
         courseTable.refresh();
 
     }
@@ -140,25 +142,17 @@ public class courseTestController {
     public ObservableList<studentCourseSelecTable> getCourseResultData() {
 
 
-         /* CourseSelectService cou = new CourseSelectService();
 
-        for(int i=0;i<cou.queryCourseByStudentId(studentID).getSize();i++)
+
+        for(int i=0;i<  courseSelectService.queryCourseByStudentId(studentID).size();i++)
        {
-              studentCourseSelecTable stu = new   studentCourseSelecTable(cou.queryCourseByStudentId(studentID).get(i).getCourseName(),
-              cou.queryCourseByStudentId(studentID).get(i).getCourseID(), cou.queryCourseByStudentId(studentID).get(i).getCredit(),cou.queryCourseByStudentId(studentID).get(i).getPeriod(),
-              cou.queryCourseByStudentId(studentID).getTeacherID());
+              studentCourseSelecTable stu = new   studentCourseSelecTable(  courseSelectService.queryCourseByStudentId(studentID).get(i).getCourseName(),
+                      courseSelectService.queryCourseByStudentId(studentID).get(i).getCourseId(),   courseSelectService.queryCourseByStudentId(studentID).get(i).getCredit(),  courseSelectService.queryCourseByStudentId(studentID).get(i).getPeriod(),
+                      courseSelectService.queryCourseByStudentId(studentID).get(i).getTeacherId(), courseSelectService.queryGradeByCourseIDAndStudentID(studentID,courseSelectService.queryCourseByStudentId(studentID).get(i).getCourseId()));
 
             couResultLists.add(stu);
               return  couResultLists;
-         }*/
-        studentCourseSelecTable stu1 = new studentCourseSelecTable("大学物理", 001, 5,64,233,100);
-        studentCourseSelecTable stu2 = new studentCourseSelecTable("高等物理", 002, 5,64,332,95);
-        studentCourseSelecTable stu3 = new studentCourseSelecTable("量子力学", 003, 5,64,323,0);
-
-
-        couResultLists.add(stu1);
-        couResultLists.add(stu2);
-        couResultLists.add(stu3);
+         }
 
         return  couResultLists;
     }
@@ -194,10 +188,10 @@ public class courseTestController {
                                         @Override
                                         public void handle(ActionEvent event) {
                                             System.out.println("Button clicked");
-                                            studentCourseSelecTable person = getTableView().getItems().get(getIndex());
+
                                             show(getIndex());
-                                            // CourseSelectService cou = new CourseSelectService();
-                                            //cou.deleteCourseSelectByCourseIDAndStudentID(studentID,CourseID.getCellObservableValue(getIndex()));
+
+
                                         }
                                     });
                                     setGraphic(btn);
@@ -220,20 +214,19 @@ public class courseTestController {
     {
         couResultLists.remove(a);
         resultTable.refresh();
-      // CourseSelectService cou=new CourseSelectService();
-       //cou.deleteCourseSelectByCourseIDAndStudentID(studentID,courseID.getCellObservableValue(a));
+        courseSelectService.deleteCourseSelectByCourseIDAndStudentID(studentID,courseID.getCellObservableValue(a));
 
 
     }
 
     public void courseResult(Event event) {
         this.showCourseResultTable(this.getCourseResultData());
-        couResultLists.remove(2,5);
 
-        //  CourseService cou = new CourseService();
-        //int end=cou.queryAll().getSize()*2-1;
-        //int start=cou.queryAll().getSize()-1;
-        //couLists.remove(start,end);
+
+
+        int end=  courseSelectService.queryCourseByStudentId(this.studentID).size()*2-1;
+        int start=  courseSelectService.queryCourseByStudentId(this.studentID).size()-1;
+        couLists.remove(start,end);
         resultTable.refresh();
 
     }

@@ -42,13 +42,7 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception {
-//        stage.setOnCloseRequest(new EventHandler<WindowEvent>() {
-//            @Override
-//            public void handle(WindowEvent windowEvent) {
-//                Server.runFlag = false;
-//            }
-//        });
-//        primaryStage.setScene(new Scene(rootNode));
+
         Scene Scene = new Scene(rootNode, 600, 400);
         primaryStage.setScene(Scene);
         Scene.getStylesheets().add(
@@ -65,23 +59,6 @@ public class Main extends Application {
     }
 
 
-//    @Override
-//    public void start(Stage primaryStage) {
-//        try {
-//            Parent root = FXMLLoader.load(getClass()
-//                    .getResource("/view//MyScene.fxml"));
-//            primaryStage.setTitle("虚拟校园登陆");
-//            Scene Scene = new Scene(root, 600, 400);
-//            primaryStage.setScene(Scene);
-//            Scene.getStylesheets().add(
-//                    getClass().getResource("/view//login.css")
-//                            .toExternalForm());
-//            primaryStage.getIcons().add(new Image("/images/01.png"));
-//            primaryStage.setResizable(false);
-//            primaryStage.show();
-//        } catch(Exception e) {
-//            e.printStackTrace();
-//        }
-//    }
+
 
 }

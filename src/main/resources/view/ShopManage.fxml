@@ -11,29 +11,12 @@
 
 <AnchorPane prefHeight="652.0" prefWidth="649.0" stylesheets="@Teacher.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="seu.controller.ShopManage">
    <children>
-      <Text layoutX="127.0" layoutY="258.0" strokeType="OUTSIDE" strokeWidth="0.0" text="商品查询：" wrappingWidth="131.240234375">
+      <Text layoutX="133.0" layoutY="295.0" strokeType="OUTSIDE" strokeWidth="0.0" text="商品查询：" wrappingWidth="131.240234375">
          <font>
             <Font size="24.0" />
          </font></Text>
-      <Text layoutX="127.0" layoutY="376.0" strokeType="OUTSIDE" strokeWidth="0.0" text="商品增加：" wrappingWidth="138.24022975564003">
-         <font>
-            <Font size="24.0" />
-         </font></Text>
-      <TextField fx:id="commodityID" layoutX="277.0" layoutY="238.0" />
-      <Button fx:id="find" layoutX="478.0" layoutY="234.0" mnemonicParsing="false" onAction="#find" prefHeight="32.0" prefWidth="57.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #00BFFF;" text="查询" />
-      <Text layoutX="177.0" layoutY="430.0" strokeType="OUTSIDE" strokeWidth="0.0" text="商品代码：" wrappingWidth="105.24022606760263">
-         <font>
-            <Font size="18.0" />
-         </font>
-      </Text>
-      <TextField fx:id="addCommodityID" layoutX="277.0" layoutY="412.0" prefHeight="23.0" prefWidth="161.0" />
-      <Text layoutX="177.0" layoutY="479.0" strokeType="OUTSIDE" strokeWidth="0.0" text="库存增加：" wrappingWidth="99.00000018440187">
-         <font>
-            <Font size="18.0" />
-         </font>
-      </Text>
-      <TextField fx:id="addCommodityName11" layoutX="277.0" layoutY="462.0" prefHeight="23.0" prefWidth="161.0" />
-      <Button fx:id="find1" layoutX="478.0" layoutY="495.0" mnemonicParsing="false" onAction="#find" prefHeight="32.0" prefWidth="57.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #00BFFF;" text="确认" />
+      <TextField fx:id="commodityIDSearch" layoutX="279.0" layoutY="271.0" />
+      <Button fx:id="find" layoutX="495.0" layoutY="270.0" mnemonicParsing="false" onAction="#find" prefHeight="32.0" prefWidth="57.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #00BFFF;" text="查询" />
       <Pane prefHeight="55.0" prefWidth="649.0" style="-fx-background-color: #87CEFA;" />
       <ImageView fitHeight="80.0" fitWidth="79.0" layoutX="14.0" layoutY="67.0" pickOnBounds="true" preserveRatio="true">
          <image>
@@ -45,20 +28,41 @@
             <Font size="35.0" />
          </font>
       </Text>
-      <ImageView fitHeight="65.0" fitWidth="57.0" layoutX="54.0" layoutY="218.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="65.0" fitWidth="57.0" layoutX="53.0" layoutY="238.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="/images/goodsfind.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="79.0" fitWidth="79.0" layoutX="43.0" layoutY="327.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="/images/addgoods.png" />
-         </image>
-      </ImageView>
-      <Text fill="LIGHTSKYBLUE" layoutX="277.0" layoutY="236.0" strokeType="OUTSIDE" strokeWidth="0.0" text="请输入商品代码" wrappingWidth="176.240234375">
+      <Text fill="LIGHTSKYBLUE" layoutX="279.0" layoutY="256.0" strokeType="OUTSIDE" strokeWidth="0.0" text="请输入商品代码" wrappingWidth="176.240234375">
          <font>
             <Font size="18.0" />
          </font>
       </Text>
+      <Text layoutX="133.0" layoutY="396.0" strokeType="OUTSIDE" strokeWidth="0.0" text="商品代码" wrappingWidth="131.240234375">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <TextField fx:id="commodityID" layoutX="233.0" layoutY="374.0" prefHeight="30.0" prefWidth="108.0" />
+      <Text layoutX="390.0" layoutY="395.0" strokeType="OUTSIDE" strokeWidth="0.0" text="商品名称" wrappingWidth="107.99999272823334">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <TextField fx:id="commodityName" layoutX="498.0" layoutY="373.0" prefHeight="30.0" prefWidth="108.0" />
+      <Text layoutX="133.0" layoutY="454.0" strokeType="OUTSIDE" strokeWidth="0.0" text="商品价格" wrappingWidth="97.240234375">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <TextField fx:id="commodityPrize" layoutX="233.0" layoutY="432.0" prefHeight="30.0" prefWidth="108.0" />
+      <Text layoutX="390.0" layoutY="454.0" strokeType="OUTSIDE" strokeWidth="0.0" text="商品库存" wrappingWidth="107.99999272823334">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <TextField fx:id="commodityInventory" layoutX="498.0" layoutY="432.0" prefHeight="30.0" prefWidth="108.0" />
+      <Button fx:id="changeInfo" layoutX="133.0" layoutY="519.0" mnemonicParsing="false" onAction="#changeInfo" prefHeight="32.0" prefWidth="91.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #00BFFF;" text="修改信息" />
+      <Button fx:id="confirm" layoutX="542.0" layoutY="519.0" mnemonicParsing="false" onAction="#confirm" prefHeight="32.0" prefWidth="57.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #00BFFF;" text="确认" />
    </children>
 </AnchorPane>

@@ -21,6 +21,7 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
@@ -29,6 +30,9 @@ import javafx.scene.layout.VBox;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 import seu.controller.studentController;
+import seu.service.AdminService;
+import seu.service.StudentService;
+import seu.service.TeacherService;
 //import seu.service.StudentService;
 
 
@@ -36,6 +40,14 @@ import seu.controller.studentController;
 @Component
 public class MyController implements Initializable
     {
+        @Autowired
+        StudentService studentService;
+
+        @Autowired
+        TeacherService  teacherService;
+
+        @Autowired
+        AdminService  adminService;
 
         @FXML
         private Button signIn;
@@ -74,10 +86,10 @@ public class MyController implements Initializable
 
             if (group.getSelectedToggle() == student) {
 
-                //StudentService Stu= new StudentService();
-                // int stuID=Integer.valueOf(accountNumber.getText()).intValue();
-                //if(Stu.login( stuID,password.getText()))
-                //{
+
+                int stuID=Integer.valueOf(accountNumber.getText()).intValue();
+                if(studentService.login( stuID,password.getText())==1)
+                {
 
                 ((Node) (event.getSource())).getScene().getWindow().hide();
                 System.out.println("Button Clicked!");
@@ -87,7 +99,7 @@ public class MyController implements Initializable
                     Parent target = (Parent) loader.load();
 
                   studentController stu =loader.<studentController>getController();
-                  stu.getData(Integer.valueOf(accountNumber.getText()).intValue(),password.getText());
+                  stu.getData(Integer.valueOf(accountNumber.getText()),password.getText());
                     //载入窗口B的定义文件；<span style="white-space:pre"> </span>
                     Scene scene = new Scene(target); //创建场景；
                     Stage stg = new Stage();//创建舞台；
@@ -107,8 +119,8 @@ public class MyController implements Initializable
                 }
 
 
-                //}
-                /*else
+                }
+                else
                 {
                     Stage window = new Stage();
                     window.setTitle("title");
@@ -136,23 +148,26 @@ public class MyController implements Initializable
                     window.setScene(scene);
                     //使用showAndWait()先处理这个窗口，而如果不处理，main中的那个窗口不能响应
                     window.showAndWait();
-                }*/
+                }
             }
 
 
                     if(group.getSelectedToggle()==teacher)
                     {
 
-                        //TeacherService Tea=new TeacherService();
-                        // int TeacherID=Integer.valueOf(accountNumber.getText()).intValue();
-                        //if(Tea.login( stuID,password.getText()))
-                        //{
+
+                         int TeacherID=Integer.valueOf(accountNumber.getText()).intValue();
+                        if(teacherService.login( TeacherID,password.getText())==1)
+                        {
 
                         ((Node)(event.getSource())).getScene().getWindow().hide();
                         System.out.println("teacher");
                         try {
-                            Parent target = FXMLLoader.load(getClass().getResource("/view//teacherScene.fxml"));//载入窗口B的定义文件；<span style="white-space:pre"> </span>
 
+                            FXMLLoader loader=new FXMLLoader(getClass().getResource("/view//teacherScene.fxml"));
+                            Parent target = (Parent) loader.load();
+                            teacherSceneController tea =loader.< teacherSceneController>getController();
+                            tea.setData(Integer.valueOf(accountNumber.getText()).intValue(),password.getText());
                             Scene scene = new Scene(target); //创建场景；
                             Stage stg = new Stage();//创建舞台；
                             stg.setTitle("教师服务界面");
@@ -168,8 +183,8 @@ public class MyController implements Initializable
                             e.printStackTrace();
                         }
 
-                        //}
-                /*else
+                        }
+                else
                 {
                     Stage window = new Stage();
                     window.setTitle("title");
@@ -197,20 +212,26 @@ public class MyController implements Initializable
                     window.setScene(scene);
                     //使用showAndWait()先处理这个窗口，而如果不处理，main中的那个窗口不能响应
                     window.showAndWait();
-                }*/
+                }
                     }
 
                     if(group.getSelectedToggle()==admin)
                     {
 
-                        //AdminService Adm=new AdminService();
-                        // int AdminID=Integer.valueOf(accountNumber.getText()).intValue();
-                        //if(Tea.login( AdminID,password.getText()))
-                        //{
+
+                         int AdminID=Integer.valueOf(accountNumber.getText()).intValue();
+                        if(adminService.login( AdminID,password.getText())==1)
+                        {
                         ((Node)(event.getSource())).getScene().getWindow().hide();
                         System.out.println("admin");
                         try {
-                            Parent target = FXMLLoader.load(getClass().getResource("/view//admin.fxml"));//载入窗口B的定义文件；<span style="white-space:pre"> </span>
+
+                            FXMLLoader loader=new FXMLLoader(getClass().getResource("/view//admin.fxml"));
+                            Parent target = (Parent) loader.load();
+
+                            AdminController adm =loader.<    AdminController>getController();
+                            adm.setData(Integer.valueOf(accountNumber.getText()).intValue(),password.getText());
+
                             Scene scene = new Scene(target); //创建场景；
                             Stage stg = new Stage();//创建舞台；
                             scene.getStylesheets().add(
@@ -226,8 +247,8 @@ public class MyController implements Initializable
                             e.printStackTrace();
                         }
 
-                        //}
-                /*else
+                        }
+                else
                 {
                     Stage window = new Stage();
                     window.setTitle("title");
@@ -255,7 +276,7 @@ public class MyController implements Initializable
                     window.setScene(scene);
                     //使用showAndWait()先处理这个窗口，而如果不处理，main中的那个窗口不能响应
                     window.showAndWait();
-                }*/
+                }
                     }
 
         }
@@ -279,13 +300,9 @@ public class MyController implements Initializable
 
         public int getID()
         {
+
             return Integer.valueOf(accountNumber.getText()).intValue();
         }
-
-
-
-
-
 
     }
 

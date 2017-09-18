@@ -12,8 +12,10 @@ import javafx.scene.control.TextField;
 import javafx.scene.layout.VBox;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import seu.service.ShopService;
+import seu.service.StudentService;
 
 
 /**
@@ -22,6 +24,11 @@ import seu.service.ShopService;
 @Component
 public class commodityPaneController {
 
+    @Autowired
+    StudentService studentService;
+
+    @Autowired
+    ShopService shopService;
     @FXML
     private TextField balance;
 
@@ -58,11 +65,10 @@ public class commodityPaneController {
 
   public void setBalance(int stuID)
   {
-    /*
-    StudentService stu=new StudentService();
-   balance.setText(String.valueOf( stu.queryStudentByStudentId(stuID).getBalance()));
 
-     */
+
+   balance.setText(String.valueOf( studentService.queryStudentByStudentId(stuID).getBalance()));
+
   }
 
     public void subWater(ActionEvent actionEvent) {
@@ -220,365 +226,341 @@ public class commodityPaneController {
         }
     }
 
-    public void confirmBuy(ActionEvent actionEvent) {
+    public int confirmBuy(ActionEvent actionEvent) {
 
-       /*ShopService shop= new ShopService();
-       //-------------------------------------------------------------------------
-       for(int q=0;q<Integer.valueOf (waterBoughtAmount.getText());q++)
-       {
-       if(shop.purchase(this.studentID,01))
-       {}
-       else
-       {
 
-        Stage window = new Stage();
-        window.setTitle("提示");
-        //modality要使用Modality.APPLICATION_MODEL
-        window.initModality(Modality.APPLICATION_MODAL);
-        window.setMinWidth(300);
-        window.setMinHeight(150);
+        //-------------------------------------------------------------------------
+        for (int q = 0; q < Integer.valueOf(waterBoughtAmount.getText()); q++) {
+            if (shopService.purchase(this.studentID, 01) == 1) {
+            } else {
 
-        Button button = new Button("确认");
-        button.setOnAction(new EventHandler<ActionEvent>() {
-            @Override
-            public void handle(ActionEvent event) {
-                ((Node)(event.getSource())).getScene().getWindow().hide();
+                Stage window = new Stage();
+                window.setTitle("提示");
+                //modality要使用Modality.APPLICATION_MODEL
+                window.initModality(Modality.APPLICATION_MODAL);
+                window.setMinWidth(300);
+                window.setMinHeight(150);
+
+                Button button = new Button("确认");
+                button.setOnAction(new EventHandler<ActionEvent>() {
+                    @Override
+                    public void handle(ActionEvent event) {
+                        ((Node) (event.getSource())).getScene().getWindow().hide();
+                    }
+
+                });
+
+                Label label = new Label("余额不足");
+
+                VBox layout = new VBox(10);
+                layout.getChildren().addAll(label, button);
+                layout.setAlignment(Pos.CENTER);
+
+                Scene scene = new Scene(layout);
+                window.setScene(scene);
+                //使用showAndWait()先处理这个窗口，而如果不处理，main中的那个窗口不能响应
+                window.showAndWait();
+                return 0;
             }
+        }
 
-        });
+        // -------------------------------------------------------------------------
+        for (int w = 0; w < Integer.valueOf(colaBoughtAmount.getText()); w++) {
+            if (shopService.purchase(this.studentID, 02) == 1) {
+            } else {
 
-        Label label = new Label("余额不足");
+                Stage window = new Stage();
+                window.setTitle("提示");
+                //modality要使用Modality.APPLICATION_MODEL
+                window.initModality(Modality.APPLICATION_MODAL);
+                window.setMinWidth(300);
+                window.setMinHeight(150);
 
-        VBox layout = new VBox(10);
-        layout.getChildren().addAll(label , button);
-        layout.setAlignment(Pos.CENTER);
+                Button button = new Button("确认");
+                button.setOnAction(new EventHandler<ActionEvent>() {
+                    @Override
+                    public void handle(ActionEvent event) {
+                        ((Node) (event.getSource())).getScene().getWindow().hide();
+                    }
 
-        Scene scene = new Scene(layout);
-        window.setScene(scene);
-        //使用showAndWait()先处理这个窗口，而如果不处理，main中的那个窗口不能响应
-        window.showAndWait();
+                });
+
+                Label label = new Label("余额不足");
+
+                VBox layout = new VBox(10);
+                layout.getChildren().addAll(label, button);
+                layout.setAlignment(Pos.CENTER);
+
+                Scene scene = new Scene(layout);
+                window.setScene(scene);
+                //使用showAndWait()先处理这个窗口，而如果不处理，main中的那个窗口不能响应
+                window.showAndWait();
+
+                return 0;
+            }
+        }
+
+        //------------------------------------------------------------------------
+        for (int e = 0; e < Integer.valueOf(coffeeBoughtAmount.getText()); e++) {
+            if (shopService.purchase(this.studentID, 03) == 1) {
+            } else {
+
+                Stage window = new Stage();
+                window.setTitle("提示");
+                //modality要使用Modality.APPLICATION_MODEL
+                window.initModality(Modality.APPLICATION_MODAL);
+                window.setMinWidth(300);
+                window.setMinHeight(150);
+
+                Button button = new Button("确认");
+                button.setOnAction(new EventHandler<ActionEvent>() {
+                    @Override
+                    public void handle(ActionEvent event) {
+                        ((Node) (event.getSource())).getScene().getWindow().hide();
+                    }
+
+                });
+
+                Label label = new Label("余额不足");
+
+                VBox layout = new VBox(10);
+                layout.getChildren().addAll(label, button);
+                layout.setAlignment(Pos.CENTER);
+
+                Scene scene = new Scene(layout);
+                window.setScene(scene);
+                //使用showAndWait()先处理这个窗口，而如果不处理，main中的那个窗口不能响应
+                window.showAndWait();
+
+                return 0;
+            }
+        }
+
+        //------------------------------------------------------------------------
+        for (int r = 0; r < Integer.valueOf(breadBoughtAmount.getText()); r++) {
+            if (shopService.purchase(this.studentID, 04) == 1) {
+            } else {
+
+                Stage window = new Stage();
+                window.setTitle("提示");
+                //modality要使用Modality.APPLICATION_MODEL
+                window.initModality(Modality.APPLICATION_MODAL);
+                window.setMinWidth(300);
+                window.setMinHeight(150);
+
+                Button button = new Button("确认");
+                button.setOnAction(new EventHandler<ActionEvent>() {
+                    @Override
+                    public void handle(ActionEvent event) {
+                        ((Node) (event.getSource())).getScene().getWindow().hide();
+                    }
+
+                });
+
+                Label label = new Label("余额不足");
+
+                VBox layout = new VBox(10);
+                layout.getChildren().addAll(label, button);
+                layout.setAlignment(Pos.CENTER);
+
+                Scene scene = new Scene(layout);
+                window.setScene(scene);
+                //使用showAndWait()先处理这个窗口，而如果不处理，main中的那个窗口不能响应
+                window.showAndWait();
+
+                return 0;
+            }
+        }
+
+        //------------------------------------------------------------------------
+        for (int t = 0; t < Integer.valueOf(noodlesBoughtAmount.getText()); t++) {
+            if (shopService.purchase(this.studentID, 05) == 1) {
+            } else {
+
+                Stage window = new Stage();
+                window.setTitle("提示");
+                //modality要使用Modality.APPLICATION_MODEL
+                window.initModality(Modality.APPLICATION_MODAL);
+                window.setMinWidth(300);
+                window.setMinHeight(150);
+
+                Button button = new Button("确认");
+                button.setOnAction(new EventHandler<ActionEvent>() {
+                    @Override
+                    public void handle(ActionEvent event) {
+                        ((Node) (event.getSource())).getScene().getWindow().hide();
+                    }
+
+                });
+
+                Label label = new Label("余额不足");
+
+                VBox layout = new VBox(10);
+                layout.getChildren().addAll(label, button);
+                layout.setAlignment(Pos.CENTER);
+
+                Scene scene = new Scene(layout);
+                window.setScene(scene);
+                //使用showAndWait()先处理这个窗口，而如果不处理，main中的那个窗口不能响应
+                window.showAndWait();
+
+                return 0;
+            }
+        }
+        //------------------------------------------------------------------------
+        for (int y = 0; y < Integer.valueOf(snacksBoughtAmount.getText()); y++) {
+            if (shopService.purchase(this.studentID, 06) == 1) {
+            } else {
+
+                Stage window = new Stage();
+                window.setTitle("提示");
+                //modality要使用Modality.APPLICATION_MODEL
+                window.initModality(Modality.APPLICATION_MODAL);
+                window.setMinWidth(300);
+                window.setMinHeight(150);
+
+                Button button = new Button("确认");
+                button.setOnAction(new EventHandler<ActionEvent>() {
+                    @Override
+                    public void handle(ActionEvent event) {
+                        ((Node) (event.getSource())).getScene().getWindow().hide();
+                    }
+
+                });
+
+                Label label = new Label("余额不足");
+
+                VBox layout = new VBox(10);
+                layout.getChildren().addAll(label, button);
+                layout.setAlignment(Pos.CENTER);
+
+                Scene scene = new Scene(layout);
+                window.setScene(scene);
+                //使用showAndWait()先处理这个窗口，而如果不处理，main中的那个窗口不能响应
+                window.showAndWait();
+
+                return 0;
+            }
+        }
+
+        //------------------------------------------------------------------------
+        for (int u = 0; u < Integer.valueOf(penBoughtAmount.getText()); u++) {
+            if (shopService.purchase(this.studentID, 07) == 1) {
+            } else {
+
+                Stage window = new Stage();
+                window.setTitle("提示");
+                //modality要使用Modality.APPLICATION_MODEL
+                window.initModality(Modality.APPLICATION_MODAL);
+                window.setMinWidth(300);
+                window.setMinHeight(150);
+
+                Button button = new Button("确认");
+                button.setOnAction(new EventHandler<ActionEvent>() {
+                    @Override
+                    public void handle(ActionEvent event) {
+                        ((Node) (event.getSource())).getScene().getWindow().hide();
+                    }
+
+                });
+
+                Label label = new Label("余额不足");
+
+                VBox layout = new VBox(10);
+                layout.getChildren().addAll(label, button);
+                layout.setAlignment(Pos.CENTER);
+
+                Scene scene = new Scene(layout);
+                window.setScene(scene);
+                //使用showAndWait()先处理这个窗口，而如果不处理，main中的那个窗口不能响应
+                window.showAndWait();
+
+                return 0;
+            }
+        }
+
+
+        //------------------------------------------------------------------------
+        for (int o = 0; o < Integer.valueOf(noteBoughtAmount.getText()); o++) {
+            if (shopService.purchase(this.studentID, 8) == 1) {
+            } else {
+
+                Stage window = new Stage();
+                window.setTitle("提示");
+                //modality要使用Modality.APPLICATION_MODEL
+                window.initModality(Modality.APPLICATION_MODAL);
+                window.setMinWidth(300);
+                window.setMinHeight(150);
+
+                Button button = new Button("确认");
+                button.setOnAction(new EventHandler<ActionEvent>() {
+                    @Override
+                    public void handle(ActionEvent event) {
+                        ((Node) (event.getSource())).getScene().getWindow().hide();
+                    }
+
+                });
+
+                Label label = new Label("余额不足");
+
+                VBox layout = new VBox(10);
+                layout.getChildren().addAll(label, button);
+                layout.setAlignment(Pos.CENTER);
+
+                Scene scene = new Scene(layout);
+                window.setScene(scene);
+                //使用showAndWait()先处理这个窗口，而如果不处理，main中的那个窗口不能响应
+                window.showAndWait();
+
+                return 0;
+            }
+        }
+
+
+        //------------------------------------------------------------------------
+        for (int p = 0; p < Integer.valueOf(giftsBoughtAmount.getText()); p++) {
+            if (shopService.purchase(this.studentID, 9) == 1) {
+            } else {
+
+                Stage window = new Stage();
+                window.setTitle("提示");
+                //modality要使用Modality.APPLICATION_MODEL
+                window.initModality(Modality.APPLICATION_MODAL);
+                window.setMinWidth(300);
+                window.setMinHeight(150);
+
+                Button button = new Button("确认");
+                button.setOnAction(new EventHandler<ActionEvent>() {
+                    @Override
+                    public void handle(ActionEvent event) {
+                        ((Node) (event.getSource())).getScene().getWindow().hide();
+                    }
+
+                });
+
+                Label label = new Label("余额不足");
+
+                VBox layout = new VBox(10);
+                layout.getChildren().addAll(label, button);
+                layout.setAlignment(Pos.CENTER);
+
+                Scene scene = new Scene(layout);
+                window.setScene(scene);
+                //使用showAndWait()先处理这个窗口，而如果不处理，main中的那个窗口不能响应
+                window.showAndWait();
+
+                return 0;
+            }
+        }
+        balance.setText(String.valueOf(studentService.queryStudentByStudentId(this.studentID).getBalance()));
         return 0;
-       }
-       }
-
- // -------------------------------------------------------------------------
-        for(int w=0;w<Integer.valueOf (colaBoughtAmount.getText());w++)
-       {
-       if(shop.purchase(this.studentID,02))
-       {}
-       else
-       {
-
-        Stage window = new Stage();
-        window.setTitle("提示");
-        //modality要使用Modality.APPLICATION_MODEL
-        window.initModality(Modality.APPLICATION_MODAL);
-        window.setMinWidth(300);
-        window.setMinHeight(150);
-
-        Button button = new Button("确认");
-        button.setOnAction(new EventHandler<ActionEvent>() {
-            @Override
-            public void handle(ActionEvent event) {
-                ((Node)(event.getSource())).getScene().getWindow().hide();
-            }
-
-        });
-
-        Label label = new Label("余额不足");
-
-        VBox layout = new VBox(10);
-        layout.getChildren().addAll(label , button);
-        layout.setAlignment(Pos.CENTER);
-
-        Scene scene = new Scene(layout);
-        window.setScene(scene);
-        //使用showAndWait()先处理这个窗口，而如果不处理，main中的那个窗口不能响应
-        window.showAndWait();
-        break;
-            return 0;
-       }
-       }
-
-  //------------------------------------------------------------------------
-   for(int e=0;e<Integer.valueOf (coffeeBoughtAmount.getText());e++)
-       {
-       if(shop.purchase(this.studentID,03))
-       {}
-       else
-       {
-
-        Stage window = new Stage();
-        window.setTitle("提示");
-        //modality要使用Modality.APPLICATION_MODEL
-        window.initModality(Modality.APPLICATION_MODAL);
-        window.setMinWidth(300);
-        window.setMinHeight(150);
-
-        Button button = new Button("确认");
-        button.setOnAction(new EventHandler<ActionEvent>() {
-            @Override
-            public void handle(ActionEvent event) {
-                ((Node)(event.getSource())).getScene().getWindow().hide();
-            }
-
-        });
-
-        Label label = new Label("余额不足");
-
-        VBox layout = new VBox(10);
-        layout.getChildren().addAll(label , button);
-        layout.setAlignment(Pos.CENTER);
-
-        Scene scene = new Scene(layout);
-        window.setScene(scene);
-        //使用showAndWait()先处理这个窗口，而如果不处理，main中的那个窗口不能响应
-        window.showAndWait();
-        break;
-            return 0;
-       }
-       }
-
-       //------------------------------------------------------------------------
-       for(int r=0;r<Integer.valueOf (breadBoughtAmount.getText());r++)
-       {
-       if(shop.purchase(this.studentID,04))
-       {}
-       else
-       {
-
-        Stage window = new Stage();
-        window.setTitle("提示");
-        //modality要使用Modality.APPLICATION_MODEL
-        window.initModality(Modality.APPLICATION_MODAL);
-        window.setMinWidth(300);
-        window.setMinHeight(150);
-
-        Button button = new Button("确认");
-        button.setOnAction(new EventHandler<ActionEvent>() {
-            @Override
-            public void handle(ActionEvent event) {
-                ((Node)(event.getSource())).getScene().getWindow().hide();
-            }
-
-        });
-
-        Label label = new Label("余额不足");
-
-        VBox layout = new VBox(10);
-        layout.getChildren().addAll(label , button);
-        layout.setAlignment(Pos.CENTER);
-
-        Scene scene = new Scene(layout);
-        window.setScene(scene);
-        //使用showAndWait()先处理这个窗口，而如果不处理，main中的那个窗口不能响应
-        window.showAndWait();
-        break;
-            return 0;
-       }
-       }
-
-        //------------------------------------------------------------------------
-       for(int t=0;t<Integer.valueOf (noodlesBoughtAmount.getText());t++)
-       {
-       if(shop.purchase(this.studentID,05))
-       {}
-       else
-       {
-
-        Stage window = new Stage();
-        window.setTitle("提示");
-        //modality要使用Modality.APPLICATION_MODEL
-        window.initModality(Modality.APPLICATION_MODAL);
-        window.setMinWidth(300);
-        window.setMinHeight(150);
-
-        Button button = new Button("确认");
-        button.setOnAction(new EventHandler<ActionEvent>() {
-            @Override
-            public void handle(ActionEvent event) {
-                ((Node)(event.getSource())).getScene().getWindow().hide();
-            }
-
-        });
-
-        Label label = new Label("余额不足");
-
-        VBox layout = new VBox(10);
-        layout.getChildren().addAll(label , button);
-        layout.setAlignment(Pos.CENTER);
-
-        Scene scene = new Scene(layout);
-        window.setScene(scene);
-        //使用showAndWait()先处理这个窗口，而如果不处理，main中的那个窗口不能响应
-        window.showAndWait();
-        break;
-            return 0;
-       }
-       }
-        //------------------------------------------------------------------------
-       for(int y=0;y<Integer.valueOf (snacksBoughtAmount.getText());y++)
-       {
-       if(shop.purchase(this.studentID,06))
-       {}
-       else
-       {
-
-        Stage window = new Stage();
-        window.setTitle("提示");
-        //modality要使用Modality.APPLICATION_MODEL
-        window.initModality(Modality.APPLICATION_MODAL);
-        window.setMinWidth(300);
-        window.setMinHeight(150);
-
-        Button button = new Button("确认");
-        button.setOnAction(new EventHandler<ActionEvent>() {
-            @Override
-            public void handle(ActionEvent event) {
-                ((Node)(event.getSource())).getScene().getWindow().hide();
-            }
-
-        });
-
-        Label label = new Label("余额不足");
-
-        VBox layout = new VBox(10);
-        layout.getChildren().addAll(label , button);
-        layout.setAlignment(Pos.CENTER);
-
-        Scene scene = new Scene(layout);
-        window.setScene(scene);
-        //使用showAndWait()先处理这个窗口，而如果不处理，main中的那个窗口不能响应
-        window.showAndWait();
-        break;
-            return 0;
-       }
-       }
-
-        //------------------------------------------------------------------------
-       for(int u=0;u<Integer.valueOf (penBoughtAmount.getText());u++)
-       {
-       if(shop.purchase(this.studentID,07))
-       {}
-       else
-       {
-
-        Stage window = new Stage();
-        window.setTitle("提示");
-        //modality要使用Modality.APPLICATION_MODEL
-        window.initModality(Modality.APPLICATION_MODAL);
-        window.setMinWidth(300);
-        window.setMinHeight(150);
-
-        Button button = new Button("确认");
-        button.setOnAction(new EventHandler<ActionEvent>() {
-            @Override
-            public void handle(ActionEvent event) {
-                ((Node)(event.getSource())).getScene().getWindow().hide();
-            }
-
-        });
-
-        Label label = new Label("余额不足");
-
-        VBox layout = new VBox(10);
-        layout.getChildren().addAll(label , button);
-        layout.setAlignment(Pos.CENTER);
-
-        Scene scene = new Scene(layout);
-        window.setScene(scene);
-        //使用showAndWait()先处理这个窗口，而如果不处理，main中的那个窗口不能响应
-        window.showAndWait();
-        break;
-            return 0;
-       }
-       }
-
-
-        //------------------------------------------------------------------------
-       for(int o=0;o<Integer.valueOf (noteBoughtAmount.getText());o++)
-       {
-       if(shop.purchase(this.studentID,08))
-       {}
-       else
-       {
-
-        Stage window = new Stage();
-        window.setTitle("提示");
-        //modality要使用Modality.APPLICATION_MODEL
-        window.initModality(Modality.APPLICATION_MODAL);
-        window.setMinWidth(300);
-        window.setMinHeight(150);
-
-        Button button = new Button("确认");
-        button.setOnAction(new EventHandler<ActionEvent>() {
-            @Override
-            public void handle(ActionEvent event) {
-                ((Node)(event.getSource())).getScene().getWindow().hide();
-            }
-
-        });
-
-        Label label = new Label("余额不足");
-
-        VBox layout = new VBox(10);
-        layout.getChildren().addAll(label , button);
-        layout.setAlignment(Pos.CENTER);
-
-        Scene scene = new Scene(layout);
-        window.setScene(scene);
-        //使用showAndWait()先处理这个窗口，而如果不处理，main中的那个窗口不能响应
-        window.showAndWait();
-        break;
-            return 0;
-       }
-       }
-
-
-        //------------------------------------------------------------------------
-       for(int p=0;p<Integer.valueOf (giftsBoughtAmount.getText());p++)
-       {
-       if(shop.purchase(this.studentID,09))
-       {}
-       else
-       {
-
-        Stage window = new Stage();
-        window.setTitle("提示");
-        //modality要使用Modality.APPLICATION_MODEL
-        window.initModality(Modality.APPLICATION_MODAL);
-        window.setMinWidth(300);
-        window.setMinHeight(150);
-
-        Button button = new Button("确认");
-        button.setOnAction(new EventHandler<ActionEvent>() {
-            @Override
-            public void handle(ActionEvent event) {
-                ((Node)(event.getSource())).getScene().getWindow().hide();
-            }
-
-        });
-
-        Label label = new Label("余额不足");
-
-        VBox layout = new VBox(10);
-        layout.getChildren().addAll(label , button);
-        layout.setAlignment(Pos.CENTER);
-
-        Scene scene = new Scene(layout);
-        window.setScene(scene);
-        //使用showAndWait()先处理这个窗口，而如果不处理，main中的那个窗口不能响应
-        window.showAndWait();
-        break;
-            return 0;
-       }
-       }
-
-         StudentService stu=new StudentService();
-   balance.setText(String.valueOf( stu.queryStudentByStudentId(this.studentID).getBalance()))
-*/
-
     }
+
+
+
+
+
+
 
     public void getStudentID(int id)
     {

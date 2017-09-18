@@ -71,7 +71,7 @@ public class studentController {
         FXMLLoader loader=new FXMLLoader(getClass().getResource("/view//LibraryTest.fxml"));
         Parent child =loader.load();
         LibraryTestController lib =loader.<     LibraryTestController>getController();
-     lib.getStudentID(this.studentID);
+        lib.getStudentID(this.studentID);
         changeView.getChildren().add(child);
 
     }

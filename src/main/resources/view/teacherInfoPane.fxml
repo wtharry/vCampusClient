@@ -15,7 +15,7 @@
             <Font size="18.0" />
          </font>
       </Text>
-      <TextField fx:id="teacherID" layoutX="266.0" layoutY="210.0" />
+      <TextField fx:id="teacherIDtext" layoutX="266.0" layoutY="210.0" />
       <TextField fx:id="teacherName" layoutX="266.0" layoutY="301.0" />
       <Text layoutX="140.0" layoutY="319.0" strokeType="OUTSIDE" strokeWidth="0.0" text="教师姓名：" wrappingWidth="113.3359375">
          <font>

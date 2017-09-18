@@ -12,6 +12,7 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.util.Callback;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import seu.service.LibraryService;
 
@@ -19,6 +20,9 @@ import java.text.SimpleDateFormat;
 
 @Component
 public class LibraryTestController {
+
+    @Autowired
+    LibraryService libraryService;
     @FXML
     private TableView<studentLibraryTable> studentBookTable;
 
@@ -31,40 +35,26 @@ public class LibraryTestController {
    private  ObservableList<studentLibraryTable> bookLists= FXCollections.observableArrayList();
 
 
-
-
-
     private int studentID;
 
 
 
     public ObservableList<studentLibraryTable> getBooksData() {
-           /*
-         LibraryService lib = new LibraryService();
-        for(int i=0;i< lib. getBooksByStudentId(this.studentID).getSize();i++)
+
+
+        for(int i=0;i< (libraryService.getBooksByStudentId(this.studentID).size());i++)
        {
              SimpleDateFormat sdf=new SimpleDateFormat("yyyy-MM-dd");
-             String date=sdf.format( lib. getBooksByStudentId(this.studentID).get(i).getStartDate());
-             studentLibraryTable stu = new studentLibraryTable( lib. getBooksByStudentId(this.studentID).get(i).getBookName(),
-             lib. getBooksByStudentId(this.studentID).get(i).getBookID(),date)
+             String date=sdf.format( libraryService. getBooksByStudentId(this.studentID).get(i).getStartDate());
+             studentLibraryTable stu = new studentLibraryTable( libraryService. getBooksByStudentId(this.studentID).get(i).getBookName(),
+                     libraryService. getBooksByStudentId(this.studentID).get(i).getBookId(),date);
 
-
-         bookLists.add(stu);
+           bookLists.add(stu);
            return bookLists;
          }
-         */
-
-     studentLibraryTable stu1 = new studentLibraryTable("上学记", 001, "2017.09.01");
 
 
-        studentLibraryTable stu2 = new studentLibraryTable("拿破仑传", 002, "2017.09.02");
 
-        studentLibraryTable stu3 = new studentLibraryTable("李鸿章传", 003, "2017.09.03");
-
-
-       bookLists.add(0,stu1);
-       bookLists.add(1,stu2);
-       bookLists.add(2,stu3);
 
         return bookLists;
     }
@@ -126,10 +116,10 @@ public class LibraryTestController {
 
         this.showBooksTable(this.getBooksData());
         bookLists.remove(2,5);
-         //  LibraryService lib = new LibraryService();
-        //int end=lib. getBooksByStudentId(this.studentID).getSize()*2-1;
-        //int start=lib. getBooksByStudentId(this.studentID).getSize()-1;
-        //bookLists.remove(start,end);
+
+        int end=libraryService. getBooksByStudentId(this.studentID).size()*2-1;
+        int start=libraryService. getBooksByStudentId(this.studentID).size()-1;
+        bookLists.remove(start,end);
         studentBookTable.refresh();
     }
 

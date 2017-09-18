@@ -3,13 +3,18 @@ package seu.controller;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.TextField;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+import seu.service.DormitoryService;
 
 /**
  * Created by Q on 2017/9/11.
  */
 @Component
 public class dormitoryPaneController {
+
+ @Autowired
+ DormitoryService dormitoryService;
     @FXML
    private TextField dormitoryID;
 
@@ -27,8 +32,8 @@ public class dormitoryPaneController {
 
     public void setInfo(int stuID)
     {
-      //  DormitoryService dor=new Dormitory();
-        //dormitoryID.setText(String.valueOf(dor.getDormitoryByStudentId().getDormitoryID()));
-       // dormitoryID.setText(String.valueOf(dor.getDormitoryByStudentId().getScore()));
+
+        dormitoryID.setText(String.valueOf(dormitoryService.getDormitoryByStudentId(stuID).getDormitoryId()));
+        dormitoryScore.setText(String.valueOf(dormitoryService.getDormitoryByStudentId(stuID).getScore()));
     }
 }
