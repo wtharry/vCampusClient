@@ -72,6 +72,8 @@ public class studentController {
         Parent child =loader.load();
         LibraryTestController lib =loader.<     LibraryTestController>getController();
         lib.getStudentID(this.studentID);
+        System.out.print("跳转");
+        System.out.print(this.studentID);
         changeView.getChildren().add(child);
 
     }
@@ -81,6 +83,8 @@ public class studentController {
         changeView.getChildren().clear();
         FXMLLoader loader=new FXMLLoader(getClass().getResource("/view//dormitoryPane.fxml"));
         Parent child =loader.load();
+
+
         dormitoryPaneController dor =loader.<       dormitoryPaneController>getController();
         dor.setInfo(this.studentID);
 

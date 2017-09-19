@@ -22,7 +22,7 @@ import java.util.Date;
 @Component
 public class LibraryManage {
     @Autowired
-    LibraryService libraryService;
+    LibraryService libraryService=new LibraryService();
 
 
     @FXML

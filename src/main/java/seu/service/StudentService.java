@@ -11,7 +11,7 @@ import java.util.List;
 @Service
 public class StudentService {
 
-    private Client client;
+    private Client client=new Client();
 
     @Autowired
     public void setClient(Client client) {

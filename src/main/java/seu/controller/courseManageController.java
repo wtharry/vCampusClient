@@ -25,7 +25,7 @@ public class courseManageController {
 
 
     @Autowired
-    CourseService courseService;
+    CourseService courseService=new CourseService();
     @FXML
     private TextField courseID;
 

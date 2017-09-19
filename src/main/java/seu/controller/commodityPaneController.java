@@ -25,10 +25,10 @@ import seu.service.StudentService;
 public class commodityPaneController {
 
     @Autowired
-    StudentService studentService;
+    StudentService studentService=new StudentService();
 
     @Autowired
-    ShopService shopService;
+    ShopService shopService=new ShopService();
     @FXML
     private TextField balance;
 
@@ -231,8 +231,9 @@ public class commodityPaneController {
 
         //-------------------------------------------------------------------------
         for (int q = 0; q < Integer.valueOf(waterBoughtAmount.getText()); q++) {
-            if (shopService.purchase(this.studentID, 01) == 1) {
-            } else {
+            if (shopService.purchase(this.studentID, 1) == 1) {
+            }
+            else {
 
                 Stage window = new Stage();
                 window.setTitle("提示");

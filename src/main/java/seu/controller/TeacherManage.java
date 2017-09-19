@@ -24,7 +24,7 @@ import java.io.IOException;
 @Component
 public class TeacherManage {
     @FXML
-    TeacherService teacherService;
+    TeacherService teacherService=new TeacherService();
 
     @FXML
     private TextField teacherIDDel;

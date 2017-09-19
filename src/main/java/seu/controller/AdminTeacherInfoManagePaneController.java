@@ -21,7 +21,7 @@ import java.io.IOException;
 @Component
 public class AdminTeacherInfoManagePaneController {
     @Autowired
-    TeacherService teacherService;
+    TeacherService teacherService=new TeacherService();
 
     @FXML
     private TextField teacherIDtext;

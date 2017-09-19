@@ -23,7 +23,7 @@ import static java.lang.String.valueOf;
 public class DormitoryManage {
 
     @Autowired
-    DormitoryService dormitoryService;
+    DormitoryService dormitoryService=new DormitoryService();
 
     @FXML
     private TextField dormitoryAdd;

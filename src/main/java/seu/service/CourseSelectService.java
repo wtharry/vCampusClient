@@ -15,7 +15,7 @@ import java.util.List;
 @Service
 public class CourseSelectService {
 
-    private Client client;
+    private Client client=new Client();
 
     @Autowired
     public void setClient(Client client) {
@@ -29,14 +29,14 @@ public class CourseSelectService {
     }
 
     //学生添加选课
-    public int insertCourseSelect(final int studentID, final int courseID) {
+    public int insertCourseSelect( int studentID, int courseID) {
         return (int) client.send(new ClientRequest(serviceName, "insertCourseSelect", new Class[]{int.class, int.class}, new Object[]{studentID, courseID})).getData();
     }
 
     //学生删除所选课程
 
-    public int deleteCourseSelectByCourseIDAndStudentID(int studentID, ObservableValue<Integer> courseID) {
-        return (int) client.send(new ClientRequest(serviceName, "deleteCourseSelectByCourseIDAndStudentID", new Class[]{int.class, int.class}, new Object[]{studentID, courseID})).getData();
+    public int deleteCourseSelectByCourseIDAndStudentID(final int studentID, int courseID) {
+        return (int) client.send(new ClientRequest(serviceName, "deleteCourseSelectByCourseIDAndStudentID", new Class[]{int.class, int .class}, new Object[]{studentID, courseID})).getData();
 
     }
 

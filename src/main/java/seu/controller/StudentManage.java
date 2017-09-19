@@ -25,7 +25,7 @@ import java.io.IOException;
 @Component
 public class StudentManage {
     @Autowired
-    StudentService studentService;
+    StudentService studentService=new StudentService();
 
     @FXML
     private AnchorPane studentManage;
