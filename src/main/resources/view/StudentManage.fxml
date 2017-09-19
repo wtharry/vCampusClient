@@ -11,95 +11,141 @@
 
 <AnchorPane fx:id="studentManage" prefHeight="652.0" prefWidth="649.0" stylesheets="@Teacher.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="seu.controller.StudentManage">
    <children>
-      <Text layoutX="104.0" layoutY="202.0" strokeType="OUTSIDE" strokeWidth="0.0" text="查询学生信息:" wrappingWidth="154.24022752046585">
-         <font>
-            <Font size="24.0" />
-         </font></Text>
-      <Text layoutX="104.0" layoutY="560.0" strokeType="OUTSIDE" strokeWidth="0.0" text="删除学生：" wrappingWidth="154.24023154377937">
-         <font>
-            <Font size="24.0" />
-         </font></Text>
-      <Text fill="#33abe8" layoutX="270.0" layoutY="586.0" strokeType="OUTSIDE" strokeWidth="0.0" text="请输入学号" wrappingWidth="118.24022752046585">
+      <Text fill="#171717" layoutX="96.0" layoutY="557.0" strokeType="OUTSIDE" strokeWidth="0.0" text="学号：" wrappingWidth="81.2402261053212">
          <font>
             <Font size="18.0" />
          </font></Text>
-      <Text layoutX="104.0" layoutY="338.0" strokeType="OUTSIDE" strokeWidth="0.0" text="添加学生：" wrappingWidth="154.24023154377937">
-         <font>
-            <Font size="24.0" />
-         </font></Text>
-      <Text fill="#33abe8" layoutX="269.0" layoutY="332.0" strokeType="OUTSIDE" strokeWidth="0.0" text="请输入学生基本信息" wrappingWidth="182.99999345093966">
+      <Text layoutX="101.0" layoutY="296.0" strokeType="OUTSIDE" strokeWidth="0.0" text="学号：" wrappingWidth="61.24023565649986">
          <font>
             <Font size="18.0" />
          </font></Text>
-      <Text layoutX="213.0" layoutY="374.0" strokeType="OUTSIDE" strokeWidth="0.0" text="学号：" wrappingWidth="61.24023565649986">
+      <Text layoutX="328.0" layoutY="292.0" strokeType="OUTSIDE" strokeWidth="0.0" text="姓名：" wrappingWidth="81.24022822082043">
          <font>
             <Font size="18.0" />
          </font></Text>
-      <Text layoutX="416.0" layoutY="373.0" strokeType="OUTSIDE" strokeWidth="0.0" text="姓名：" wrappingWidth="81.24022822082043">
+      <Text layoutX="82.0" layoutY="355.0" strokeType="OUTSIDE" strokeWidth="0.0" text="班级号：" wrappingWidth="81.24023565649986">
          <font>
             <Font size="18.0" />
          </font></Text>
-      <Text layoutX="194.0" layoutY="427.0" strokeType="OUTSIDE" strokeWidth="0.0" text="班级号：" wrappingWidth="81.24023565649986">
-         <font>
-            <Font size="18.0" />
-         </font></Text>
-      <Text layoutX="395.0" layoutY="426.0" strokeType="OUTSIDE" strokeWidth="0.0" text="宿舍号：" wrappingWidth="81.24022822082043">
+      <Text layoutX="311.0" layoutY="355.0" strokeType="OUTSIDE" strokeWidth="0.0" text="宿舍号：" wrappingWidth="81.24022822082043">
          <font>
             <Font size="18.0" />
          </font></Text>
 
-      <TextField fx:id="studengIDSeearch" layoutX="268.0" layoutY="233.0" prefHeight="30.0" prefWidth="148.0" />
-      <TextField fx:id="studentIDDel" layoutX="268.0" layoutY="592.0" prefHeight="30.0" prefWidth="148.0" />
-      <TextField fx:id="studengIDAdd" layoutX="269.0" layoutY="353.0" prefHeight="23.0" prefWidth="100.0" />
-      <TextField fx:id="classIDAdd" layoutX="269.0" layoutY="408.0" prefHeight="23.0" prefWidth="100.0" />
-      <TextField fx:id="studentNameAdd" layoutX="480.0" layoutY="351.0" prefHeight="23.0" prefWidth="100.0" />
-      <TextField fx:id="dormitoryAdd" layoutX="480.0" layoutY="408.0" prefHeight="23.0" prefWidth="100.0" />
-      <Button fx:id="studengtFind" layoutX="491.0" layoutY="233.0" mnemonicParsing="false" onAction="#searchStudent" prefHeight="30.0" prefWidth="50.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #00BFFF;" text="确认" />
-      <Button fx:id="studentDel" layoutX="491.0" layoutY="592.0" mnemonicParsing="false" onAction="#delStudent" prefHeight="30.0" prefWidth="50.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #00BFFF;" text="确认" />
-      <Button fx:id="studengtAdd" layoutX="530.0" layoutY="496.0" mnemonicParsing="false" onAction="#addStudent" prefHeight="30.0" prefWidth="50.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #00BFFF;" text="确认" />
-      <Text fill="#33abe8" layoutX="268.0" layoutY="228.0" strokeType="OUTSIDE" strokeWidth="0.0" text="请输入学号" wrappingWidth="127.24022752046585">
+      <TextField fx:id="studengIDSeearch" layoutX="163.0" layoutY="141.0" prefHeight="41.0" prefWidth="332.0">
+         <font>
+            <Font size="18.0" />
+         </font></TextField>
+      <TextField fx:id="studentIDDel" layoutX="160.0" layoutY="532.0" prefHeight="36.0" prefWidth="332.0">
+         <font>
+            <Font size="18.0" />
+         </font></TextField>
+      <TextField fx:id="studengIDAdd" layoutX="157.0" layoutY="269.0" prefHeight="36.0" prefWidth="118.0">
+         <font>
+            <Font size="18.0" />
+         </font></TextField>
+      <TextField fx:id="classIDAdd" layoutX="157.0" layoutY="329.0" prefHeight="36.0" prefWidth="118.0">
+         <font>
+            <Font size="18.0" />
+         </font></TextField>
+      <TextField fx:id="studentNameAdd" layoutX="388.0" layoutY="267.0" prefHeight="36.0" prefWidth="108.0">
+         <font>
+            <Font size="18.0" />
+         </font></TextField>
+      <TextField fx:id="dormitoryAdd" layoutX="388.0" layoutY="329.0" prefHeight="36.0" prefWidth="108.0">
+         <font>
+            <Font size="18.0" />
+         </font></TextField>
+      <Button fx:id="studengtFind" layoutX="515.0" layoutY="144.0" mnemonicParsing="false" onAction="#searchStudent" prefHeight="36.0" prefWidth="89.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #00BFFF;" text="确认">
+         <font>
+            <Font size="18.0" />
+         </font></Button>
+      <Button fx:id="studentDel" layoutX="514.0" layoutY="532.0" mnemonicParsing="false" onAction="#delStudent" prefHeight="36.0" prefWidth="89.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #00BFFF;" text="确认">
+         <font>
+            <Font size="18.0" />
+         </font></Button>
+      <Button fx:id="studengtAdd" layoutX="514.0" layoutY="387.0" mnemonicParsing="false" onAction="#addStudent" prefHeight="36.0" prefWidth="89.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #00BFFF;" text="确认">
+         <font>
+            <Font size="18.0" />
+         </font></Button>
+      <Text fill="#252525" layoutX="103.0" layoutY="169.0" strokeType="OUTSIDE" strokeWidth="0.0" text="学号：" wrappingWidth="72.24022752046585">
 
          <font>
             <Font size="18.0" />
          </font>
       </Text>
-      <Pane prefHeight="55.0" prefWidth="649.0" style="-fx-background-color: #87CEFA;" />
-      <Text layoutX="80.0" layoutY="112.0" strokeType="OUTSIDE" strokeWidth="0.0" text="学生管理" wrappingWidth="228.240234375">
-         <font>
-            <Font size="35.0" />
-         </font>
-      </Text>
-      <ImageView fitHeight="77.0" fitWidth="69.0" layoutX="14.0" layoutY="66.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="/images/manage2.png" />
-         </image>
-      </ImageView>
-      <ImageView fitHeight="45.0" fitWidth="50.0" layoutX="44.0" layoutY="170.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="/images/find2.png" />
-         </image>
-      </ImageView>
-      <ImageView fitHeight="74.0" fitWidth="69.0" layoutX="32.0" layoutY="294.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="/images/Stuadd.png" />
-         </image>
-      </ImageView>
-      <ImageView fitHeight="45.0" fitWidth="50.0" layoutX="44.0" layoutY="528.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="/images/Studelete.png" />
-         </image>
-      </ImageView>
-      <Text layoutX="174.0" layoutY="474.0" strokeType="OUTSIDE" strokeWidth="0.0" text="登录密码：" wrappingWidth="99.99999666959047">
+      <Pane prefHeight="55.0" prefWidth="657.0" style="-fx-background-color: #D8D8D8;">
+         <children>
+            <Text layoutX="59.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="学生管理" wrappingWidth="228.240234375">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Text>
+            <ImageView fitHeight="45.0" fitWidth="23.0" layoutX="22.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="/images/manage2.png" />
+               </image>
+            </ImageView>
+         </children></Pane>
+      <Text layoutX="62.0" layoutY="416.0" strokeType="OUTSIDE" strokeWidth="0.0" text="登录密码：" wrappingWidth="99.99999666959047">
          <font>
             <Font size="18.0" />
          </font>
       </Text>
-      <TextField fx:id="addPassword" layoutX="269.0" layoutY="452.0" prefHeight="23.0" prefWidth="100.0" />
-      <Text layoutX="376.0" layoutY="474.0" strokeType="OUTSIDE" strokeWidth="0.0" text="账户余额：" wrappingWidth="99.99999666959047">
+      <TextField fx:id="addPassword" layoutX="157.0" layoutY="390.0" prefHeight="36.0" prefWidth="118.0">
+         <font>
+            <Font size="18.0" />
+         </font></TextField>
+      <Text layoutX="294.0" layoutY="415.0" strokeType="OUTSIDE" strokeWidth="0.0" text="账户余额：" wrappingWidth="99.99999666959047">
          <font>
             <Font size="18.0" />
          </font>
       </Text>
-      <TextField fx:id="balanceAdd" layoutX="480.0" layoutY="452.0" prefHeight="23.0" prefWidth="100.0" />
+      <TextField fx:id="balanceAdd" layoutX="388.0" layoutY="390.0" prefHeight="36.0" prefWidth="108.0">
+         <font>
+            <Font size="18.0" />
+         </font></TextField>
+      <Pane layoutY="74.0" prefHeight="36.0" prefWidth="657.0" style="-fx-background-color: #E8E8E8;">
+         <children>
+            <Text layoutX="51.0" layoutY="29.0" strokeType="OUTSIDE" strokeWidth="0.0" text="查询学生信息" wrappingWidth="154.24022752046585">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Text>
+            <ImageView fitHeight="23.0" fitWidth="19.0" layoutX="26.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="/images/find2.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Pane layoutX="-2.0" layoutY="205.0" prefHeight="36.0" prefWidth="657.0" style="-fx-background-color: #E8E8E8;">
+         <children>
+            <Text layoutX="54.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="添加学生信息" wrappingWidth="154.24023154377937">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Text>
+            <ImageView fitHeight="28.0" fitWidth="23.0" layoutX="23.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="/images/Stuadd.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Pane layoutX="4.0" layoutY="458.0" prefHeight="36.0" prefWidth="649.0" style="-fx-background-color: #E8E8E8;">
+         <children>
+            <Text layoutX="50.0" layoutY="25.0" strokeType="OUTSIDE" strokeWidth="0.0" text="删除学生" wrappingWidth="154.24023154377937">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Text>
+            <ImageView fitHeight="27.0" fitWidth="19.0" layoutX="18.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="/images/Studelete.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
    </children>
 </AnchorPane>

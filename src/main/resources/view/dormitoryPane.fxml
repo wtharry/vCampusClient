@@ -32,5 +32,6 @@
             <Image url="/images/dormitory.png" />
          </image>
       </ImageView>
+
    </children>
 </AnchorPane>
