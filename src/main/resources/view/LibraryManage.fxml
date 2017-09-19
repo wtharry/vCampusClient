@@ -11,45 +11,62 @@
 
 <AnchorPane prefHeight="652.0" prefWidth="649.0" stylesheets="@Teacher.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="seu.controller.LibraryManage">
    <children>
-      <Pane prefHeight="55.0" prefWidth="649.0" style="-fx-background-color: #87CEFA;" />
-      <ImageView fitHeight="80.0" fitWidth="79.0" layoutX="24.0" layoutY="77.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="/images/manage7.png" />
-         </image>
-      </ImageView>
-      <Text layoutX="112.0" layoutY="130.0" strokeType="OUTSIDE" strokeWidth="0.0" text="图书馆管理" wrappingWidth="228.240234375">
-         <font>
-            <Font size="35.0" />
-         </font>
-      </Text>
-      <Text layoutX="112.0" layoutY="345.0" strokeType="OUTSIDE" strokeWidth="0.0" text="图书代码：" wrappingWidth="98.240234375">
-         <font>
-            <Font size="18.0" />
-         </font>
-      </Text>
-      <TextField fx:id="bookID" layoutX="203.0" layoutY="323.0" prefHeight="30.0" prefWidth="98.0" />
-      <Text layoutX="340.0" layoutY="345.0" strokeType="OUTSIDE" strokeWidth="0.0" text="书籍名称：" wrappingWidth="98.240234375">
+      <Pane prefHeight="55.0" prefWidth="649.0" style="-fx-background-color: #C0C0C0;">
+         <children>
+            <Text layoutX="42.0" layoutY="35.0" strokeType="OUTSIDE" strokeWidth="0.0" text="图书馆管理" wrappingWidth="228.240234375">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Text>
+            <ImageView fitHeight="28.0" fitWidth="20.0" layoutX="12.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="/images/manage7.png" />
+               </image>
+            </ImageView>
+         </children></Pane>
+      <Text layoutX="39.0" layoutY="284.0" strokeType="OUTSIDE" strokeWidth="0.0" text="图书代码：" wrappingWidth="98.240234375">
          <font>
             <Font size="18.0" />
          </font>
       </Text>
-      <TextField fx:id="bookName" layoutX="436.0" layoutY="323.0" prefHeight="30.0" prefWidth="98.0" />
-      <Text layoutX="144.0" layoutY="436.0" strokeType="OUTSIDE" strokeWidth="0.0" text="学号：" wrappingWidth="61.999987587332726">
+      <TextField fx:id="bookID" layoutX="130.0" layoutY="262.0" prefHeight="36.0" prefWidth="129.0">
+         <font>
+            <Font size="18.0" />
+         </font></TextField>
+      <Text layoutX="294.0" layoutY="286.0" strokeType="OUTSIDE" strokeWidth="0.0" text="书籍名称：" wrappingWidth="98.240234375">
          <font>
             <Font size="18.0" />
          </font>
       </Text>
-      <Text layoutX="340.0" layoutY="436.0" strokeType="OUTSIDE" strokeWidth="0.0" text="起始日期：" wrappingWidth="98.24023495614529">
+      <TextField fx:id="bookName" layoutX="390.0" layoutY="264.0" prefHeight="36.0" prefWidth="129.0">
+         <font>
+            <Font size="18.0" />
+         </font></TextField>
+      <Text layoutX="38.0" layoutY="378.0" strokeType="OUTSIDE" strokeWidth="0.0" text="学生学号：" wrappingWidth="98.2402446269989">
          <font>
             <Font size="18.0" />
          </font>
       </Text>
-      <TextField fx:id="studentID" layoutX="206.0" layoutY="414.0" prefHeight="30.0" prefWidth="98.0" />
-      <TextField fx:id="startDate" layoutX="438.0" layoutY="414.0" prefHeight="30.0" prefWidth="98.0" />
-      <Button fx:id="confirm" layoutX="472.0" layoutY="518.0" mnemonicParsing="false" onAction="#confirm" prefHeight="32.0" prefWidth="62.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #00BFFF;" text="确认" />
-      <Text layoutX="114.0" layoutY="253.0" strokeType="OUTSIDE" strokeWidth="0.0" text="修改图书信息：" wrappingWidth="183.240234375">
+      <Text layoutX="294.0" layoutY="377.0" strokeType="OUTSIDE" strokeWidth="0.0" text="起始日期：" wrappingWidth="98.24023495614529">
          <font>
-            <Font size="24.0" />
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <TextField fx:id="studentID" layoutX="133.0" layoutY="353.0" prefHeight="36.0" prefWidth="129.0">
+         <font>
+            <Font size="18.0" />
+         </font></TextField>
+      <TextField fx:id="startDate" layoutX="391.0" layoutY="355.0" prefHeight="36.0" prefWidth="129.0">
+         <font>
+            <Font size="18.0" />
+         </font></TextField>
+      <Button fx:id="confirm" layoutX="391.0" layoutY="460.0" mnemonicParsing="false" onAction="#confirm" prefHeight="32.0" prefWidth="129.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #00BFFF;" text="确认">
+         <font>
+            <Font size="18.0" />
+         </font></Button>
+      <Text layoutX="38.0" layoutY="177.0" strokeType="OUTSIDE" strokeWidth="0.0" text="修改图书信息：" wrappingWidth="183.240234375">
+         <font>
+            <Font size="22.0" />
          </font>
       </Text>
    </children>
