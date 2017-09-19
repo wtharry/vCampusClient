@@ -11,35 +11,52 @@
 
 <AnchorPane fx:id="adminTeacherInfo" prefHeight="652.0" prefWidth="649.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="seu.controller.AdminTeacherInfoManagePaneController">
     <children>
-        <Text layoutX="159.0" layoutY="228.0" strokeType="OUTSIDE" strokeWidth="0.0" text="教师ID" wrappingWidth="101.3359375">
+
+        <Text layoutX="121.0" layoutY="229.0" strokeType="OUTSIDE" strokeWidth="0.0" text="教师ID：" wrappingWidth="101.3359375">
+
             <font>
                 <Font size="18.0" />
             </font>
         </Text>
-        <TextField fx:id="teacherIDtext" layoutX="266.0" layoutY="210.0" />
-        <TextField fx:id="teacherName" layoutX="266.0" layoutY="301.0" />
-        <Text layoutX="140.0" layoutY="319.0" strokeType="OUTSIDE" strokeWidth="0.0" text="教师姓名" wrappingWidth="113.3359375">
+
+        <TextField fx:id="teacherIDtext" layoutX="228.0" layoutY="209.0">
+         <font>
+            <Font size="18.0" />
+         </font></TextField>
+        <TextField fx:id="teacherName" layoutX="228.0" layoutY="295.0">
+         <font>
+            <Font size="18.0" />
+         </font></TextField>
+        <Text layoutX="102.0" layoutY="320.0" strokeType="OUTSIDE" strokeWidth="0.0" text="教师姓名：" wrappingWidth="113.3359375">
+
             <font>
                 <Font size="18.0" />
             </font>
         </Text>
-        <TextField fx:id="teacherPhoneNumber" layoutX="266.0" layoutY="388.0" />
-        <Text layoutX="140.0" layoutY="406.0" strokeType="OUTSIDE" strokeWidth="0.0" text="联系电话" wrappingWidth="126.3359375">
+
+        <TextField fx:id="teacherPhoneNumber" layoutX="228.0" layoutY="385.0">
+         <font>
+            <Font size="18.0" />
+         </font></TextField>
+        <Text layoutX="102.0" layoutY="407.0" strokeType="OUTSIDE" strokeWidth="0.0" text="联系电话：" wrappingWidth="126.3359375">
+
             <font>
                 <Font size="18.0" />
             </font>
         </Text>
-        <Pane prefHeight="55.0" prefWidth="649.0" style="-fx-background-color: #87CEFA;" />
-        <Text layoutX="118.0" layoutY="134.0" strokeType="OUTSIDE" strokeWidth="0.0" text="教师基本信息" wrappingWidth="228.240234375">
-            <font>
-                <Font size="35.0" />
-            </font>
-        </Text>
-        <ImageView fitHeight="97.0" fitWidth="91.0" layoutX="14.0" layoutY="75.0" pickOnBounds="true" preserveRatio="true">
-            <image>
-                <Image url="/images/teacherinfo.png" />
-            </image>
-        </ImageView>
+        <Pane prefHeight="55.0" prefWidth="649.0" style="-fx-background-color: #C0C0C0;">
+         <children>
+              <Text layoutX="36.0" layoutY="32.0" strokeType="OUTSIDE" strokeWidth="0.0" text="教师基本信息" wrappingWidth="228.240234375">
+                  <font>
+                      <Font size="22.0" />
+                  </font>
+              </Text>
+              <ImageView fitHeight="25.0" fitWidth="20.0" layoutX="13.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                      <Image url="/images/teacherinfo.png" />
+                  </image>
+              </ImageView>
+         </children></Pane>
       <Button fx:id="returnAdmin" layoutX="19.0" layoutY="574.0" mnemonicParsing="false" onAction="#returnAdmin" text="返回上一级" />
     </children>
 </AnchorPane>
