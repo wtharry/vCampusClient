@@ -7,6 +7,7 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import org.springframework.stereotype.Component;
@@ -18,6 +19,9 @@ public class AdminController {
     @FXML
     private AnchorPane adminView;
 
+    @FXML
+    private ImageView adminTest;
+
     private int adminID;
 
     private String password;
@@ -25,8 +29,13 @@ public class AdminController {
 
     public void showStudentManage(ActionEvent actionEvent) throws IOException {
         adminView.getChildren().clear();
-        Parent child = FXMLLoader.load(getClass().getResource("/view//StudentManage.fxml"));
+
+        FXMLLoader loader=new FXMLLoader(getClass().getResource("/view//StudentManage.fxml"));
+        Parent child =loader.load();
+
         adminView.getChildren().add(child);
+
+
 
     }
 

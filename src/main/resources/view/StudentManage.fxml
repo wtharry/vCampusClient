@@ -63,7 +63,7 @@
             <Font size="18.0" />
          </font>
       </Text>
-      <Pane prefHeight="55.0" prefWidth="649.0" style="-fx-background-color: #87CEFA;" />
+      <Pane fx:id="studentManage" prefHeight="55.0" prefWidth="649.0" style="-fx-background-color: #87CEFA;" styleClass="studentManage" stylesheets="@info.css" />
       <Text layoutX="80.0" layoutY="112.0" strokeType="OUTSIDE" strokeWidth="0.0" text="学生管理" wrappingWidth="228.240234375">
          <font>
             <Font size="35.0" />
