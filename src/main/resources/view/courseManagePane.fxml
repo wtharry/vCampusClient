@@ -12,42 +12,42 @@
 <AnchorPane prefHeight="652.0" prefWidth="649.0" stylesheets="@Teacher.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="seu.controller.courseManageController">
 
    <children>
-      <Text layoutX="182.0" layoutY="173.0" strokeType="OUTSIDE" strokeWidth="0.0" text="      课程代码：" wrappingWidth="182.0">
+      <Text layoutX="144.0" layoutY="173.0" strokeType="OUTSIDE" strokeWidth="0.0" text="      课程代码" wrappingWidth="182.0">
          <font>
             <Font size="18.0" />
          </font>
       </Text>
-      <TextField fx:id="courseID" layoutX="302.0" layoutY="152.0" prefHeight="30.0" prefWidth="54.0" />
-      <Button fx:id="change" layoutX="505.0" layoutY="308.0" mnemonicParsing="false" onAction="#changeConfirm" prefHeight="30.0" prefWidth="105.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #00BFFF;" text="确认修改">
+      <TextField fx:id="courseID" layoutX="274.0" layoutY="151.0" prefHeight="30.0" prefWidth="105.0" />
+      <Button fx:id="change" layoutX="512.0" layoutY="321.0" mnemonicParsing="false" onAction="#changeConfirm" prefHeight="36.0" prefWidth="105.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #00BFFF;" text="确认修改">
          <font>
             <Font size="18.0" />
          </font>
       </Button>
       <Pane prefHeight="55.0" prefWidth="649.0" style="-fx-background-color: #87CEFA;" />
-      <Text layoutX="374.0" layoutY="173.0" strokeType="OUTSIDE" strokeWidth="0.0" text="      课程名称：" wrappingWidth="182.0">
+      <Text layoutX="374.0" layoutY="173.0" strokeType="OUTSIDE" strokeWidth="0.0" text="      课程名称" wrappingWidth="182.0">
          <font>
             <Font size="18.0" />
          </font>
       </Text>
-      <TextField fx:id="courseName" layoutX="503.0" layoutY="152.0" prefHeight="30.0" prefWidth="54.0" />
-      <Text layoutX="212.0" layoutY="235.0" strokeType="OUTSIDE" strokeWidth="0.0" text="课程学分：" wrappingWidth="121.0">
+      <TextField fx:id="courseName" layoutX="512.0" layoutY="152.0" prefHeight="30.0" prefWidth="105.0" />
+      <Text layoutX="175.0" layoutY="234.0" strokeType="OUTSIDE" strokeWidth="0.0" text="课程学分" wrappingWidth="121.0">
          <font>
             <Font size="18.0" />
          </font>
       </Text>
-      <TextField fx:id="coursecredit" layoutX="302.0" layoutY="214.0" prefHeight="30.0" prefWidth="54.0" />
-      <TextField fx:id="courseperiod" layoutX="503.0" layoutY="214.0" prefHeight="30.0" prefWidth="54.0" />
-      <Text layoutX="405.0" layoutY="235.0" strokeType="OUTSIDE" strokeWidth="0.0" text="课程学时：" wrappingWidth="121.0">
+      <TextField fx:id="coursecredit" layoutX="274.0" layoutY="212.0" prefHeight="30.0" prefWidth="105.0" />
+      <TextField fx:id="courseperiod" layoutX="512.0" layoutY="213.0" prefHeight="30.0" prefWidth="105.0" />
+      <Text layoutX="405.0" layoutY="235.0" strokeType="OUTSIDE" strokeWidth="0.0" text="课程学时" wrappingWidth="121.0">
          <font>
             <Font size="18.0" />
          </font>
       </Text>
-      <Text layoutX="91.0" layoutY="406.0" strokeType="OUTSIDE" strokeWidth="0.0" text="删除课程：" wrappingWidth="182.0">
+      <Text layoutX="91.0" layoutY="406.0" strokeType="OUTSIDE" strokeWidth="0.0" text="删除课程" wrappingWidth="182.0">
          <font>
             <Font size="24.0" />
          </font>
       </Text>
-      <Text layoutX="79.0" layoutY="455.0" strokeType="OUTSIDE" strokeWidth="0.0" text="      课程代码：" wrappingWidth="182.0">
+      <Text layoutX="79.0" layoutY="455.0" strokeType="OUTSIDE" strokeWidth="0.0" text="      课程代码" wrappingWidth="182.0">
          <font>
             <Font size="18.0" />
          </font>
@@ -60,12 +60,12 @@
             <Font size="18.0" />
          </font>
       </Button>
-      <Button fx:id="add" layoutX="312.0" layoutY="306.0" mnemonicParsing="false" onAction="#addConfirm" prefHeight="30.0" prefWidth="105.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #00BFFF;" text="确认添加">
+      <Button fx:id="add" layoutX="272.0" layoutY="321.0" mnemonicParsing="false" onAction="#addConfirm" prefHeight="30.0" prefWidth="105.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #00BFFF;" text="确认添加">
          <font>
             <Font size="18.0" />
          </font>
       </Button>
-      <Text layoutX="91.0" layoutY="113.0" strokeType="OUTSIDE" strokeWidth="0.0" text="修改/添加课程：" wrappingWidth="182.0000058338046">
+      <Text layoutX="91.0" layoutY="113.0" strokeType="OUTSIDE" strokeWidth="0.0" text="修改/添加课程" wrappingWidth="182.0000058338046">
          <font>
             <Font size="24.0" />
          </font>
@@ -81,11 +81,11 @@
             <Image url="/images/deletecourse.png" />
          </image>
       </ImageView>
-      <Text layoutX="213.0" layoutY="288.0" strokeType="OUTSIDE" strokeWidth="0.0" text="教师代码：" wrappingWidth="95.99999722838402">
+      <Text layoutX="175.0" layoutY="287.0" strokeType="OUTSIDE" strokeWidth="0.0" text="教师代码" wrappingWidth="95.99999722838402">
          <font>
             <Font size="18.0" />
          </font>
       </Text>
-      <TextField fx:id="teacherID" layoutX="302.0" layoutY="266.0" prefHeight="30.0" prefWidth="54.0" />
+      <TextField fx:id="teacherID" layoutX="274.0" layoutY="265.0" prefHeight="30.0" prefWidth="105.0" />
    </children>
 </AnchorPane>

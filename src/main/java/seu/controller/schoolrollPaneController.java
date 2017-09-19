@@ -130,6 +130,39 @@ public class schoolrollPaneController {
         //使用showAndWait()先处理这个窗口，而如果不处理，main中的那个窗口不能响应
         window.showAndWait();
 
+
+        nameField.setText( studentService.queryStudentByStudentId(studentID).getStudentName());
+        nameField.setEditable(false);
+
+        classIDField.setText(String.valueOf( studentService.queryStudentByStudentId(studentID).getClassId()));
+        classIDField.setEditable(false);
+
+        dormitoryIDField.setText(String.valueOf( studentService.queryStudentByStudentId(studentID).getDormitoryId()));
+        dormitoryIDField.setEditable(false);
+
+        balanceField.setText(String.valueOf( studentService.queryStudentByStudentId(studentID).getBalance()));
+        balanceField.setEditable(false);
+
+
+        classIDField.setText(String.valueOf( classService.queryClassByStudentId(studentID).getClassId()));
+        classIDField.setEditable(false);
+
+        classNameField.setText( classService.queryClassByStudentId(studentID).getClassName());
+        classNameField .setEditable(false);
+
+        majorField.setText( classService.queryClassByStudentId(studentID).getMajor());
+        majorField.setEditable(false);
+
+        classSizeField.setText(String.valueOf( classService.queryClassByStudentId(studentID).getClassSize()));
+        classSizeField .setEditable(false);
+
+        teacherField.setText(String.valueOf( classService.queryClassByStudentId(studentID).getTeacherId()));
+        teacherField.setEditable(false);
+
+        oldpassword.setEditable(false);
+        newpassword.setEditable(false);
+        newpasswordConfirm.setEditable(false);
+
     }
 
     public void passwordChecked(ActionEvent actionEvent) {

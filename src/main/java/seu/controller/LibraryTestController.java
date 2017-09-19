@@ -15,6 +15,7 @@ import javafx.util.Callback;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import seu.service.LibraryService;
+import seu.service.StudentService;
 
 import java.text.SimpleDateFormat;
 
@@ -23,6 +24,9 @@ public class LibraryTestController {
 
     @Autowired
     LibraryService libraryService=new LibraryService();
+
+    @Autowired
+    StudentService studentService=new StudentService();
     @FXML
     private TableView<studentLibraryTable> studentBookTable;
 
@@ -132,6 +136,7 @@ public class LibraryTestController {
         bookLists.remove(index);
         studentBookTable.refresh();
 
+       libraryService.returnBook(   libraryService.getAllBookList(studentID).get(index).getBookId());
     }
 
 

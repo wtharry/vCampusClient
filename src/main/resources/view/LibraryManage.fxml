@@ -47,7 +47,7 @@
       <TextField fx:id="studentID" layoutX="206.0" layoutY="414.0" prefHeight="30.0" prefWidth="98.0" />
       <TextField fx:id="startDate" layoutX="438.0" layoutY="414.0" prefHeight="30.0" prefWidth="98.0" />
       <Button fx:id="confirm" layoutX="472.0" layoutY="518.0" mnemonicParsing="false" onAction="#confirm" prefHeight="32.0" prefWidth="62.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #00BFFF;" text="确认" />
-      <Text layoutX="114.0" layoutY="253.0" strokeType="OUTSIDE" strokeWidth="0.0" text="修改图书信息：" wrappingWidth="183.240234375">
+      <Text layoutX="114.0" layoutY="253.0" strokeType="OUTSIDE" strokeWidth="0.0" text="修改图书信息" wrappingWidth="183.240234375">
          <font>
             <Font size="24.0" />
          </font>
