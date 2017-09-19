@@ -207,7 +207,7 @@ public class schoolrollPaneController {
         studentIDField.setEditable(false);
         password=pw;
         studentID=id;
-System.out.println(id);
+        System.out.println(id);
 
 
          nameField.setText( studentService.queryStudentByStudentId(id).getStudentName());

@@ -110,9 +110,9 @@ public class LibraryTestController {
     public void returnTab(Event event) {
 
         this.showBooksTable(this.getBooksData());
-       // int end= libraryService.getAllBookList(this.studentID).size()*2-1;
-       //int start=libraryService.getAllBookList(this.studentID).size()-1;
-       //bookLists.remove(start,end);
+        int end= libraryService.getAllBookList(this.studentID).size()*2-1;
+       int start=libraryService.getAllBookList(this.studentID).size()-1;
+       bookLists.remove(start,end);
         studentBookTable.refresh();
         System.out.print("图书馆");
     }
@@ -121,9 +121,9 @@ public class LibraryTestController {
     {
         this.studentID=id;
         this.showBooksTable(this.getBooksData());
-        // int end= libraryService.getAllBookList(this.studentID).size()*2-1;
-        //int start=libraryService.getAllBookList(this.studentID).size()-1;
-        //bookLists.remove(start,end);
+       int end= libraryService.getAllBookList(this.studentID).size()*2-1;
+       int start=libraryService.getAllBookList(this.studentID).size()-1;
+        bookLists.remove(start,end);
         studentBookTable.refresh();
         System.out.print("图书馆");
     }
