@@ -20,9 +20,18 @@ public class teacherSceneController {
     @FXML
     private AnchorPane teacherView;
 
+    private int teacherID;
+
+    private String password;
+
     public void showTeacherInfo(ActionEvent actionEvent) throws IOException {
        teacherView.getChildren().clear();
-        Parent child = FXMLLoader.load(getClass().getResource("/view//teacherInfoPane.fxml"));
+
+        FXMLLoader loader=new FXMLLoader(getClass().getResource("/view//teacherInfoPane.fxml"));
+        Parent child =loader.load();
+        teacherInfoPaneController teaInfo =loader.< teacherInfoPaneController>getController();
+        teaInfo.setData(this.teacherID,password);
+
         teacherView.getChildren().add(child);
     }
 
@@ -52,5 +61,12 @@ public class teacherSceneController {
         stg.getIcons().add(new Image("/images/01.png"));
         stg.setResizable(false);
         stg.show();
+    }
+
+    public void setData(int teacherID,String password)
+    {
+        this.teacherID=teacherID;
+        this.password=password;
+
     }
 }

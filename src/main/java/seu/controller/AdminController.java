@@ -14,9 +14,13 @@ import org.springframework.stereotype.Component;
 import java.io.IOException;
 
 @Component
-public class Controller {
+public class AdminController {
     @FXML
     private AnchorPane adminView;
+
+    private int adminID;
+
+    private String password;
 
 
     public void showStudentManage(ActionEvent actionEvent) throws IOException {
@@ -66,5 +70,11 @@ public class Controller {
         stg.getIcons().add(new Image("/images/01.png"));
         stg.setResizable(false);
         stg.show();
+    }
+
+    public void setData(int adminID,String password)
+    {
+        this.adminID=adminID;
+        this.password=password;
     }
 }
