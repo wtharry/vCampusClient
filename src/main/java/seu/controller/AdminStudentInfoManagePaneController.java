@@ -34,11 +34,11 @@ import java.io.IOException;
 public class AdminStudentInfoManagePaneController {
     @Autowired
 
-    StudentService studentService;
+    StudentService studentService=new StudentService();
 
     @Autowired
 
-    ClassService classService;
+    ClassService classService=new ClassService();
 
     @FXML
     private TextField studentIDField;
@@ -106,6 +106,7 @@ public class AdminStudentInfoManagePaneController {
 
         Student stu=new Student(Integer.valueOf(studentIDField.getText()),nameField.getText(),Integer.valueOf(classIDField.getText()),
         Integer.valueOf(dormitoryIDField.getText()),Integer.valueOf(balanceField.getText()), passwordField.getText());
+
 
         studentService.updateStudent(stu);
 

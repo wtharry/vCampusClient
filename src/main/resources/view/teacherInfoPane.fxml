@@ -28,12 +28,6 @@
             <Font size="18.0" />
          </font>
       </Text>
-      <Text layoutX="140.0" layoutY="481.0" strokeType="OUTSIDE" strokeWidth="0.0" text="邮箱地址：" wrappingWidth="126.3359375">
-         <font>
-            <Font size="18.0" />
-         </font>
-      </Text>
-      <TextField fx:id="emailAddress" layoutX="266.0" layoutY="463.0" />
       <Pane prefHeight="55.0" prefWidth="649.0" style="-fx-background-color: #87CEFA;" />
       <Text layoutX="118.0" layoutY="134.0" strokeType="OUTSIDE" strokeWidth="0.0" text="教师基本信息" wrappingWidth="228.240234375">
          <font>

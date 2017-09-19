@@ -16,7 +16,7 @@ public class classManageController {
 
 
     @Autowired
-    ClassService classService;
+    ClassService classService=new ClassService();
 
     @FXML
     private TextField classIDSearch;

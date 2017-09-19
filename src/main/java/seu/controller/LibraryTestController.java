@@ -22,7 +22,7 @@ import java.text.SimpleDateFormat;
 public class LibraryTestController {
 
     @Autowired
-    LibraryService libraryService;
+    LibraryService libraryService=new LibraryService();
     @FXML
     private TableView<studentLibraryTable> studentBookTable;
 
@@ -34,27 +34,27 @@ public class LibraryTestController {
 
    private  ObservableList<studentLibraryTable> bookLists= FXCollections.observableArrayList();
 
-
     private int studentID;
 
 
 
     public ObservableList<studentLibraryTable> getBooksData() {
-
-
-        for(int i=0;i< (libraryService.getBooksByStudentId(this.studentID).size());i++)
+       System.out.print(this.studentID);
+       System.out.print( libraryService.getAllBookList(this.studentID).size());
+        for(int i=0;i< libraryService.getAllBookList(this.studentID).size();i++)
        {
              SimpleDateFormat sdf=new SimpleDateFormat("yyyy-MM-dd");
-             String date=sdf.format( libraryService. getBooksByStudentId(this.studentID).get(i).getStartDate());
-             studentLibraryTable stu = new studentLibraryTable( libraryService. getBooksByStudentId(this.studentID).get(i).getBookName(),
-                     libraryService. getBooksByStudentId(this.studentID).get(i).getBookId(),date);
+             String date=sdf.format( libraryService.getAllBookList(this.studentID).get(i).getStartDate());
+             studentLibraryTable stu = new studentLibraryTable( libraryService. getAllBookList(this.studentID).get(i).getBookName(),
+                     libraryService.getAllBookList(this.studentID).get(i).getBookId(),date);
 
-           bookLists.add(stu);
-           return bookLists;
+               bookLists.add(stu);
+
+
          }
 
 
-
+        System.out.print(3);
 
         return bookLists;
     }
@@ -105,27 +105,27 @@ public class LibraryTestController {
         studentBookTable.setItems(this.getBooksData());
     }
 
-    public void searchBooks(ActionEvent actionEvent) {
 
-       // LibraryService lib = new LibraryService();
-        //
-
-    }
 
     public void returnTab(Event event) {
 
         this.showBooksTable(this.getBooksData());
-        bookLists.remove(2,5);
-
-        int end=libraryService. getBooksByStudentId(this.studentID).size()*2-1;
-        int start=libraryService. getBooksByStudentId(this.studentID).size()-1;
-        bookLists.remove(start,end);
+       // int end= libraryService.getAllBookList(this.studentID).size()*2-1;
+       //int start=libraryService.getAllBookList(this.studentID).size()-1;
+       //bookLists.remove(start,end);
         studentBookTable.refresh();
+        System.out.print("图书馆");
     }
 
     public void getStudentID( int id)
     {
-        studentID=id;
+        this.studentID=id;
+        this.showBooksTable(this.getBooksData());
+        // int end= libraryService.getAllBookList(this.studentID).size()*2-1;
+        //int start=libraryService.getAllBookList(this.studentID).size()-1;
+        //bookLists.remove(start,end);
+        studentBookTable.refresh();
+        System.out.print("图书馆");
     }
     public void show(int index)
     {

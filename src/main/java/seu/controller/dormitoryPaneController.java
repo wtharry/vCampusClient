@@ -14,7 +14,7 @@ import seu.service.DormitoryService;
 public class dormitoryPaneController {
 
  @Autowired
- DormitoryService dormitoryService;
+ DormitoryService dormitoryService =new DormitoryService();
     @FXML
    private TextField dormitoryID;
 
