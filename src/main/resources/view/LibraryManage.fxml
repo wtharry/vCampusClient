@@ -52,6 +52,7 @@
             <Font size="18.0" />
          </font>
       </Text>
+
       <TextField fx:id="studentID" layoutX="133.0" layoutY="353.0" prefHeight="36.0" prefWidth="129.0">
          <font>
             <Font size="18.0" />
@@ -65,6 +66,7 @@
             <Font size="18.0" />
          </font></Button>
       <Text layoutX="38.0" layoutY="177.0" strokeType="OUTSIDE" strokeWidth="0.0" text="修改图书信息：" wrappingWidth="183.240234375">
+
          <font>
             <Font size="22.0" />
          </font>

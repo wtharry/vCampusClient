@@ -97,8 +97,10 @@
             <font>
                 <Font size="15.0" />
             </font></Text>
+
         <Pane layoutX="-1.0" prefHeight="55.0" prefWidth="649.0" style="-fx-background-color: #C0C0C0;" />
         <Text layoutX="50.0" layoutY="35.0" strokeType="OUTSIDE" strokeWidth="0.0" text="学籍信息" wrappingWidth="126.240234375">
+
             <font>
                 <Font size="20.0" />
             </font>

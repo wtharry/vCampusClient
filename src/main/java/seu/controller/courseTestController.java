@@ -139,9 +139,6 @@ public class courseTestController {
 
     public ObservableList<studentCourseSelecTable> getCourseResultData() {
 
-
-
-
         for(int i=0;i<  courseSelectService.queryCourseByStudentId(studentID).size();i++)
        {
               studentCourseSelecTable stu = new   studentCourseSelecTable(  courseSelectService.queryCourseByStudentId(studentID).get(i).getCourseName(),

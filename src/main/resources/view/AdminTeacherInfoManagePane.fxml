@@ -11,11 +11,14 @@
 
 <AnchorPane fx:id="adminTeacherInfo" prefHeight="652.0" prefWidth="649.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="seu.controller.AdminTeacherInfoManagePaneController">
     <children>
+
         <Text layoutX="121.0" layoutY="229.0" strokeType="OUTSIDE" strokeWidth="0.0" text="教师ID：" wrappingWidth="101.3359375">
+
             <font>
                 <Font size="18.0" />
             </font>
         </Text>
+
         <TextField fx:id="teacherIDtext" layoutX="228.0" layoutY="209.0">
          <font>
             <Font size="18.0" />
@@ -25,15 +28,18 @@
             <Font size="18.0" />
          </font></TextField>
         <Text layoutX="102.0" layoutY="320.0" strokeType="OUTSIDE" strokeWidth="0.0" text="教师姓名：" wrappingWidth="113.3359375">
+
             <font>
                 <Font size="18.0" />
             </font>
         </Text>
+
         <TextField fx:id="teacherPhoneNumber" layoutX="228.0" layoutY="385.0">
          <font>
             <Font size="18.0" />
          </font></TextField>
         <Text layoutX="102.0" layoutY="407.0" strokeType="OUTSIDE" strokeWidth="0.0" text="联系电话：" wrappingWidth="126.3359375">
+
             <font>
                 <Font size="18.0" />
             </font>

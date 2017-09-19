@@ -64,7 +64,7 @@ public class StudentManage {
         Student stu=new Student(Integer.valueOf(studengIDAdd.getText()),studentNameAdd.getText(),Integer.valueOf(classIDAdd.getText()),
                 Integer.valueOf(dormitoryAdd.getText()),  Integer.valueOf(balanceAdd.getText()),addPassword.getText() );
         studentService.insertStudent(stu);
-
+System.out.print(stu.getBalance());
         Stage window = new Stage();
         window.setTitle("title");
         //modality要使用Modality.APPLICATION_MODEL

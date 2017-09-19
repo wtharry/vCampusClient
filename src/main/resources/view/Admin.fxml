@@ -15,6 +15,7 @@
 
   <items>
     <AnchorPane id="test" fx:id="adminView" minHeight="0.0" minWidth="0.0" prefHeight="652.0" prefWidth="158.0" style="-fx-background-color: #87CEEB;" stylesheets="@Teacher.css">
+
          <children>
             <Button fx:id="StudentManage" layoutX="34.0" layoutY="234.0" mnemonicParsing="false" onAction="#showStudentManage" prefHeight="30.0" prefWidth="123.0" stylesheets="@Teacher.css" text="学生管理">
                <font>
@@ -142,6 +143,8 @@
                </image>
             </ImageView>
          </children></AnchorPane>
-    <AnchorPane id="adminView" fx:id="adminView" minHeight="0.0" minWidth="0.0" prefHeight="658.0" prefWidth="653.0" stylesheets="@Teacher.css" />
+
+    <AnchorPane fx:id="adminView" minHeight="0.0" minWidth="0.0" prefHeight="652.0" prefWidth="604.0" />
+
   </items>
 </SplitPane>

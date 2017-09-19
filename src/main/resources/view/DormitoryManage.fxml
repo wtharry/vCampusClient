@@ -11,6 +11,7 @@
 
 <AnchorPane prefHeight="652.0" prefWidth="649.0" stylesheets="@Teacher.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="seu.controller.DormitoryManage">
    <children>
+
       <Text layoutX="190.0" layoutY="200.0" strokeType="OUTSIDE" strokeWidth="0.0" text="宿舍号：" wrappingWidth="73.29895842075348">
          <font>
             <Font size="18.0" />
@@ -20,6 +21,7 @@
             <Font size="18.0" />
          </font></Text>
       <TextField fx:id="dormitoryScoreChange" layoutX="282.0" layoutY="231.0" prefHeight="23.0" prefWidth="105.0">
+
          <font>
             <Font size="18.0" />
          </font></TextField>
@@ -36,20 +38,25 @@
             <Font size="20.0" />
          </font>
       </Text>
+
       <TextField fx:id="dormitoryAdd" layoutX="276.0" layoutY="361.0" prefHeight="23.0" prefWidth="105.0">
          <font>
             <Font size="18.0" />
          </font></TextField>
       <Text layoutX="184.0" layoutY="385.0" strokeType="OUTSIDE" strokeWidth="0.0" text="宿舍号：">
+
          <font>
             <Font size="18.0" />
          </font>
       </Text>
+
       <Text layoutX="165.0" layoutY="433.0" strokeType="OUTSIDE" strokeWidth="0.0" text="宿舍分数：">
+
          <font>
             <Font size="18.0" />
          </font>
       </Text>
+
       <TextField fx:id="scoreAdd" layoutX="276.0" layoutY="411.0" prefHeight="23.0" prefWidth="105.0">
          <font>
             <Font size="18.0" />
@@ -59,20 +66,26 @@
             <Font size="18.0" />
          </font></Button>
       <Text layoutX="62.0" layoutY="502.0" strokeType="OUTSIDE" strokeWidth="0.0" text="删除宿舍：" wrappingWidth="129.240234375">
+
          <font>
             <Font size="20.0" />
          </font>
       </Text>
+
       <Text layoutX="178.0" layoutY="547.0" strokeType="OUTSIDE" strokeWidth="0.0" text="宿舍号：">
+
          <font>
             <Font size="18.0" />
          </font>
       </Text>
+
       <TextField fx:id="deleteDormity" layoutX="275.0" layoutY="523.0" prefHeight="23.0" prefWidth="105.0">
          <font>
             <Font size="18.0" />
          </font></TextField>
       <Button fx:id="deleteDormitoryConfirm" layoutX="402.0" layoutY="526.0" mnemonicParsing="false" onAction="#deleteDormitoryConfirm" prefHeight="30.0" prefWidth="68.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #00BFFF;" text="确认">
+
+ 
          <font>
             <Font size="18.0" />
          </font></Button>

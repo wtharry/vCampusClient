@@ -53,7 +53,9 @@
 .button:hover {
     -fx-background-color: lightskyblue;
 }
-
+#welcome{
+  -fx-background-image: url('/images//7.jpg');
+}
 
 .label {
     -fx-font-size: 12px;

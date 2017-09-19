@@ -63,10 +63,16 @@ public class teacherSceneController {
         stg.show();
     }
 
-    public void setData(int teacherID,String password)
-    {
+    public void setData(int teacherID,String password) throws IOException {
         this.teacherID=teacherID;
         this.password=password;
+        teacherView.getChildren().clear();
 
+        FXMLLoader loader=new FXMLLoader(getClass().getResource("/view//teacherInfoPane.fxml"));
+        Parent child =loader.load();
+        teacherInfoPaneController teaInfo =loader.< teacherInfoPaneController>getController();
+        teaInfo.setData(this.teacherID,password);
+
+        teacherView.getChildren().add(child);
     }
 }

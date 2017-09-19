@@ -15,6 +15,7 @@ import javafx.util.Callback;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import seu.service.LibraryService;
+import seu.service.StudentService;
 
 import java.text.SimpleDateFormat;
 
@@ -23,6 +24,9 @@ public class LibraryTestController {
 
     @Autowired
     LibraryService libraryService=new LibraryService();
+
+    @Autowired
+    StudentService studentService=new StudentService();
     @FXML
     private TableView<studentLibraryTable> studentBookTable;
 
@@ -110,9 +114,9 @@ public class LibraryTestController {
     public void returnTab(Event event) {
 
         this.showBooksTable(this.getBooksData());
-       // int end= libraryService.getAllBookList(this.studentID).size()*2-1;
-       //int start=libraryService.getAllBookList(this.studentID).size()-1;
-       //bookLists.remove(start,end);
+        int end= libraryService.getAllBookList(this.studentID).size()*2-1;
+       int start=libraryService.getAllBookList(this.studentID).size()-1;
+       bookLists.remove(start,end);
         studentBookTable.refresh();
         System.out.print("图书馆");
     }
@@ -121,9 +125,9 @@ public class LibraryTestController {
     {
         this.studentID=id;
         this.showBooksTable(this.getBooksData());
-        // int end= libraryService.getAllBookList(this.studentID).size()*2-1;
-        //int start=libraryService.getAllBookList(this.studentID).size()-1;
-        //bookLists.remove(start,end);
+       int end= libraryService.getAllBookList(this.studentID).size()*2-1;
+       int start=libraryService.getAllBookList(this.studentID).size()-1;
+        bookLists.remove(start,end);
         studentBookTable.refresh();
         System.out.print("图书馆");
     }
@@ -132,6 +136,7 @@ public class LibraryTestController {
         bookLists.remove(index);
         studentBookTable.refresh();
 
+       libraryService.returnBook(   libraryService.getAllBookList(studentID).get(index).getBookId());
     }
 
 

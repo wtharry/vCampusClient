@@ -11,16 +11,18 @@
 
 <AnchorPane prefHeight="652.0" prefWidth="649.0" stylesheets="@Student.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="seu.controller.commodityPaneController">
    <children>
-      <Text layoutX="49.0" layoutY="567.0" strokeType="OUTSIDE" strokeWidth="0.0" text="账户余额：" wrappingWidth="139.30029296875">
+      <Text layoutX="49.0" layoutY="567.0" strokeType="OUTSIDE" strokeWidth="0.0" text="账户余额" wrappingWidth="139.30029296875">
          <font>
             <Font size="22.0" />
          </font>
       </Text>
+
       <TextField fx:id="balance" layoutX="189.0" layoutY="540.0" prefHeight="36.0" prefWidth="139.0">
          <font>
             <Font size="22.0" />
          </font></TextField>
       <Text layoutX="51.0" layoutY="516.0" strokeType="OUTSIDE" strokeWidth="0.0" text="购物总计：">
+
          <font>
             <Font size="22.0" />
          </font>
