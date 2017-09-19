@@ -11,15 +11,19 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
+import org.springframework.stereotype.Component;
 
 import java.io.IOException;
 
 import static com.sun.org.apache.xerces.internal.utils.SecuritySupport.getResourceAsStream;
 
+import seu.controller.MyController;
+import seu.controller.schoolrollPaneController;
 /**
  * Created by Q on 2017/9/9.
  */
 
+@Component
 public class studentController {
 
     @FXML
@@ -31,13 +35,16 @@ public class studentController {
     private Button Course;
 
     @FXML
-    private Button Library;
+    private Button library;
 
     @FXML
     private Button dormitory;
 
     @FXML
     private Button commodity;
+
+    private int ID;
+    private String password;
 
     public studentController() throws IOException {
         ImageView delICON = new ImageView(getClass().getResource("/images/information.png").toString());
@@ -46,8 +53,13 @@ public class studentController {
     }
 
     public void showSchoolrollInfo(ActionEvent actionEvent) throws IOException {
+
         changeView.getChildren().clear();
-        Parent child = FXMLLoader.load(getClass().getResource("/view//schoolrollPane.fxml"));
+        FXMLLoader loader=new FXMLLoader(getClass().getResource("/view//schoolrollPane.fxml"));
+        Parent child =loader.load();
+        schoolrollPaneController schroll =loader.<schoolrollPaneController>getController();
+        schroll.setData(this.ID,password);
+
         changeView.getChildren().add(child);
 
     }
@@ -87,14 +99,14 @@ public class studentController {
 
     }
 
-    public void courseSelectResult(ActionEvent actionEvent) throws IOException {
-
-        changeView.getChildren().clear();
-        Parent child = FXMLLoader.load(getClass().getResource("/view//courseSelectResultPane.fxml"));
-        changeView.getChildren().add(child);
 
 
+    public void getData( int id,String pw)
+    {
+       this.ID=id;
+       this.password=pw;
     }
+
 
 
     public void exit(ActionEvent actionEvent) throws IOException {

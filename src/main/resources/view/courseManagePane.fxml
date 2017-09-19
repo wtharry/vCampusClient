@@ -9,7 +9,9 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="652.0" prefWidth="649.0" stylesheets="@Teacher.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="seu.view.classManageController">
+
+<AnchorPane prefHeight="652.0" prefWidth="649.0" stylesheets="@Teacher.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="seu.controller.classManageController">
+
    <children>
       <Text layoutX="182.0" layoutY="173.0" strokeType="OUTSIDE" strokeWidth="0.0" text="      课程代码：" wrappingWidth="182.0">
          <font>
@@ -51,8 +53,10 @@
             <Font size="18.0" />
          </font>
       </Text>
-      <TextField fx:id="courseIDDel" layoutX="317.0" layoutY="438.0" prefHeight="30.0" prefWidth="169.0" />
-      <Button fx:id="findClass1" layoutX="504.0" layoutY="485.0" mnemonicParsing="false" onAction="#findClass" prefHeight="30.0" prefWidth="105.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #00BFFF;" text="确认删除">
+
+      <TextField fx:id="courseIDDel" layoutX="181.0" layoutY="109.0" prefHeight="30.0" prefWidth="224.0" />
+      <Button fx:id="del" layoutX="431.0" layoutY="105.0" mnemonicParsing="false" onAction="#delConfirm" prefHeight="38.0" prefWidth="121.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #00BFFF;" text="确认删除">
+
          <font>
             <Font size="18.0" />
          </font>
