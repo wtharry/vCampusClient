@@ -12,10 +12,8 @@ import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
-import org.springframework.stereotype.Component;
 
 import java.io.IOException;
-@Component
 public class teacherSceneController {
     @FXML
     private AnchorPane teacherView;
@@ -27,7 +25,7 @@ public class teacherSceneController {
     public void showTeacherInfo(ActionEvent actionEvent) throws IOException {
        teacherView.getChildren().clear();
 
-        FXMLLoader loader=new FXMLLoader(getClass().getResource("/view//teacherInfoPane.fxml"));
+        FXMLLoader loader=new FXMLLoader(getClass().getResource("/view/teacherInfoPane.fxml"));
         Parent child =loader.load();
         teacherInfoPaneController teaInfo =loader.< teacherInfoPaneController>getController();
         teaInfo.setData(this.teacherID,password);
@@ -37,26 +35,26 @@ public class teacherSceneController {
 
     public void classManage(ActionEvent actionEvent) throws IOException {
         teacherView.getChildren().clear();
-        Parent child = FXMLLoader.load(getClass().getResource("/view//classManagePane.fxml"));
+        Parent child = FXMLLoader.load(getClass().getResource("/view/classManagePane.fxml"));
         teacherView.getChildren().add(child);
     }
 
     public void CourseManage(ActionEvent actionEvent) throws IOException {
         teacherView.getChildren().clear();
-        Parent child = FXMLLoader.load(getClass().getResource("/view//courseManagePane.fxml"));
+        Parent child = FXMLLoader.load(getClass().getResource("/view/courseManagePane.fxml"));
         teacherView.getChildren().add(child);
     }
 
     public void exit(ActionEvent actionEvent) throws IOException {
         ((Node)(actionEvent.getSource())).getScene().getWindow().hide();
         Parent root = FXMLLoader.load(getClass()
-                .getResource("/view//MyScene.fxml"));
+                .getResource("/view/MyScene.fxml"));
         Stage stg = new Stage();
         stg.setTitle("虚拟校园登陆");
         Scene Scene = new Scene(root, 600, 400);
         stg.setScene(Scene);
         Scene.getStylesheets().add(
-                getClass().getResource("/view//login.css")
+                getClass().getResource("/view/login.css")
                         .toExternalForm());
         stg.getIcons().add(new Image("/images/01.png"));
         stg.setResizable(false);
@@ -68,7 +66,7 @@ public class teacherSceneController {
         this.password=password;
         teacherView.getChildren().clear();
 
-        FXMLLoader loader=new FXMLLoader(getClass().getResource("/view//teacherInfoPane.fxml"));
+        FXMLLoader loader=new FXMLLoader(getClass().getResource("/view/teacherInfoPane.fxml"));
         Parent child =loader.load();
         teacherInfoPaneController teaInfo =loader.< teacherInfoPaneController>getController();
         teaInfo.setData(this.teacherID,password);

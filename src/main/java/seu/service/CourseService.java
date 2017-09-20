@@ -1,19 +1,15 @@
 package seu.service;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
 import seu.domain.Course;
 import seu.socket.Client;
 import seu.socket.ClientRequest;
 
 import java.util.List;
 
-@Service
 public class CourseService {
 
     private Client client= new Client();
 
-    @Autowired
     public void setClient(Client client) {
         this.client = client;
     }

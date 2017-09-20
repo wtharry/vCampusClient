@@ -15,16 +15,12 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.VBox;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
 import seu.domain.Student;
 import seu.service.StudentService;
 
 import java.io.IOException;
 
-@Component
 public class StudentManage {
-    @Autowired
     StudentService studentService=new StudentService();
 
     @FXML
@@ -96,7 +92,7 @@ System.out.print(stu.getBalance());
     public void searchStudent(ActionEvent actionEvent) throws IOException {
 
         studentManage.getChildren().clear();
-        FXMLLoader loader=new FXMLLoader(getClass().getResource("/view//adminStudentInfoManagePane.fxml"));
+        FXMLLoader loader=new FXMLLoader(getClass().getResource("/view/adminStudentInfoManagePane.fxml"));
         Parent child =loader.load();
         AdminStudentInfoManagePaneController adminStu =loader.< AdminStudentInfoManagePaneController>getController();
         adminStu.setData(Integer.valueOf(studengIDSeearch.getText()));

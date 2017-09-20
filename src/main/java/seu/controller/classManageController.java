@@ -4,18 +4,14 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
 import seu.service.ClassService;
 
 /**
  * Created by Q on 2017/9/13.
  */
-@Component
 public class classManageController {
 
 
-    @Autowired
     ClassService classService=new ClassService();
 
     @FXML

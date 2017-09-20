@@ -1,39 +1,23 @@
 package seu.controller;
 
-import javafx.animation.Interpolator;
-import javafx.animation.Timeline;
-import javafx.animation.TranslateTransition;
-import javafx.animation.TranslateTransitionBuilder;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.geometry.VPos;
 import javafx.scene.*;
 import javafx.scene.control.Button;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
-import javafx.scene.image.ImageViewBuilder;
 import javafx.scene.layout.AnchorPane;
-import javafx.scene.layout.Pane;
-import javafx.scene.layout.PaneBuilder;
-import javafx.scene.paint.Color;
-import javafx.scene.shape.RectangleBuilder;
-import javafx.scene.text.*;
 import javafx.stage.Stage;
-import javafx.util.Duration;
-import org.springframework.stereotype.Component;
 
 import java.io.IOException;
 
-import static com.sun.org.apache.xerces.internal.utils.SecuritySupport.getResourceAsStream;
 
-import seu.controller.MyController;
 import seu.controller.schoolrollPaneController;
 /**
  * Created by Q on 2017/9/9.
  */
 
-@Component
 public class studentController {
 
     @FXML
@@ -66,7 +50,7 @@ public class studentController {
     public void showSchoolrollInfo(ActionEvent actionEvent) throws IOException {
 
         changeView.getChildren().clear();
-        FXMLLoader loader=new FXMLLoader(getClass().getResource("/view//schoolrollPane.fxml"));
+        FXMLLoader loader=new FXMLLoader(getClass().getResource("/view/schoolrollPane.fxml"));
         Parent child =loader.load();
         schoolrollPaneController schroll =loader.<schoolrollPaneController>getController();
         schroll.setData(this.studentID,password);
@@ -79,7 +63,7 @@ public class studentController {
 
     public void showLibraryInfo(ActionEvent actionEvent) throws IOException {
         changeView.getChildren().clear();
-        FXMLLoader loader=new FXMLLoader(getClass().getResource("/view//LibraryTest.fxml"));
+        FXMLLoader loader=new FXMLLoader(getClass().getResource("/view/LibraryTest.fxml"));
         Parent child =loader.load();
         LibraryTestController lib =loader.<     LibraryTestController>getController();
         lib.getStudentID(this.studentID);
@@ -92,7 +76,7 @@ public class studentController {
 
     public void showDormitoryInfo(ActionEvent actionEvent) throws IOException {
         changeView.getChildren().clear();
-        FXMLLoader loader=new FXMLLoader(getClass().getResource("/view//dormitoryPane.fxml"));
+        FXMLLoader loader=new FXMLLoader(getClass().getResource("/view/dormitoryPane.fxml"));
         Parent child =loader.load();
 
 
@@ -106,7 +90,7 @@ public class studentController {
 
     public void showCourseInfo(ActionEvent actionEvent) throws IOException {
         changeView.getChildren().clear();
-        FXMLLoader loader=new FXMLLoader(getClass().getResource("/view//CourseTest.fxml"));
+        FXMLLoader loader=new FXMLLoader(getClass().getResource("/view/CourseTest.fxml"));
         Parent child =loader.load();
         courseTestController cou =loader.<        courseTestController>getController();
         cou.getstudentID(this.studentID);
@@ -117,7 +101,7 @@ public class studentController {
 
     public void showCommodityInfo(ActionEvent actionEvent) throws IOException {
         changeView.getChildren().clear();
-        FXMLLoader loader=new FXMLLoader(getClass().getResource("/view//commodityPane.fxml"));
+        FXMLLoader loader=new FXMLLoader(getClass().getResource("/view/commodityPane.fxml"));
         Parent child =loader.load();
         commodityPaneController shop =loader.<       commodityPaneController>getController();
         shop.getStudentID(this.studentID);
@@ -134,7 +118,7 @@ public class studentController {
        this.studentID=id;
        this.password=pw;
         changeView.getChildren().clear();
-        FXMLLoader loader=new FXMLLoader(getClass().getResource("/view//schoolrollPane.fxml"));
+        FXMLLoader loader=new FXMLLoader(getClass().getResource("/view/schoolrollPane.fxml"));
         Parent child =loader.load();
         schoolrollPaneController schroll =loader.<schoolrollPaneController>getController();
         schroll.setData(this.studentID,password);
@@ -149,13 +133,13 @@ public class studentController {
     public void exit(ActionEvent actionEvent) throws IOException {
         ((Node)(actionEvent.getSource())).getScene().getWindow().hide();
         Parent root = FXMLLoader.load(getClass()
-                .getResource("/view//MyScene.fxml"));
+                .getResource("/view/MyScene.fxml"));
         Stage stg = new Stage();
       stg.setTitle("虚拟校园登陆");
         Scene Scene = new Scene(root, 600, 400);
        stg.setScene(Scene);
         Scene.getStylesheets().add(
-                getClass().getResource("/view//login.css")
+                getClass().getResource("/view/login.css")
                         .toExternalForm());
       stg.getIcons().add(new Image("/images/01.png"));
        stg.setResizable(false);

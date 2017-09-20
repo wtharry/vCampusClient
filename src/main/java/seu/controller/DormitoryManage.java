@@ -12,17 +12,11 @@ import javafx.scene.control.TextField;
 import javafx.scene.layout.VBox;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
 import seu.domain.Dormitory;
 import seu.service.DormitoryService;
 
-import static java.lang.String.valueOf;
-
-@Component
 public class DormitoryManage {
 
-    @Autowired
     DormitoryService dormitoryService=new DormitoryService();
 
     @FXML
