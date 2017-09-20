@@ -21,7 +21,7 @@
          <font>
             <Font size="22.0" />
          </font></TextField>
-      <Text layoutX="51.0" layoutY="516.0" strokeType="OUTSIDE" strokeWidth="0.0" text="购物总计：">
+      <Text layoutX="51.0" layoutY="516.0" strokeType="OUTSIDE" strokeWidth="0.0" text="购物总计">
 
          <font>
             <Font size="22.0" />
@@ -132,7 +132,7 @@
             <Font size="20.0" />
          </font>
       </Button>
-      <Pane prefHeight="55.0" prefWidth="649.0" style="-fx-background-color: #87CEFA;" />
+      <Pane prefHeight="55.0" prefWidth="649.0" style="-fx-background-color: #E8E8E8;" />
       <ImageView fitHeight="64.0" fitWidth="69.0" layoutX="21.0" layoutY="92.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="/images/water.png" />

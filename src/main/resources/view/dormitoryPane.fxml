@@ -28,17 +28,19 @@
             <Font size="18.0" />
          </font></Text>
 
-      <Pane layoutY="-5.0" prefHeight="55.0" prefWidth="649.0" style="-fx-background-color: #87CEFA;" />
-      <Text layoutX="127.0" layoutY="116.0" strokeType="OUTSIDE" strokeWidth="0.0" text="学生宿舍信息" wrappingWidth="228.240234375">
-         <font>
-            <Font size="35.0" />
-         </font>
-      </Text>
-      <ImageView fitHeight="81.0" fitWidth="85.0" layoutX="24.0" layoutY="62.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="/images/dormitory.png" />
-         </image>
-      </ImageView>
+      <Pane layoutY="-5.0" prefHeight="55.0" prefWidth="649.0" style="-fx-background-color: #E8E8E8;">
+         <children>
+            <Text layoutX="57.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="学生宿舍信息" wrappingWidth="228.240234375">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Text>
+            <ImageView fitHeight="36.0" fitWidth="49.0" layoutX="14.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="/images/dormitory.png" />
+               </image>
+            </ImageView>
+         </children></Pane>
 
 
    </children>

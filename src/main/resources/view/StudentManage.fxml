@@ -140,15 +140,24 @@
             </ImageView>
          </children>
       </Pane>
-      <Text layoutX="26.0" layoutY="112.0" strokeType="OUTSIDE" strokeWidth="0.0" text="查询学生信息" wrappingWidth="154.24022752046585">
-         <font>
-            <Font size="20.0" />
-         </font>
-      </Text>
       <Text layoutX="62.0" layoutY="412.0" strokeType="OUTSIDE" strokeWidth="0.0" text="登录密码" wrappingWidth="81.24023565649986">
          <font>
             <Font size="18.0" />
          </font>
       </Text>
+      <Pane layoutX="1.0" layoutY="92.0" prefHeight="36.0" prefWidth="657.0" style="-fx-background-color: #E8E8E8;">
+         <children>
+            <Text layoutX="56.0" layoutY="29.0" strokeType="OUTSIDE" strokeWidth="0.0" text="查询学生信息" wrappingWidth="154.24022752046585">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Text>
+            <ImageView fitHeight="30.0" fitWidth="22.0" layoutX="23.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="/images/find3.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
    </children>
 </AnchorPane>
