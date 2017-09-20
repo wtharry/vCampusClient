@@ -1,14 +1,11 @@
 package seu.socket;
 
-import org.springframework.stereotype.Component;
-
 import java.io.BufferedInputStream;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.net.Socket;
 
-@Component
 public class Client {
 
     public ServerResponse send(ClientRequest clientRequest) {

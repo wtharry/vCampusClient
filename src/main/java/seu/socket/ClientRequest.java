@@ -1,11 +1,8 @@
 package seu.socket;
 
-import org.springframework.stereotype.Component;
-
 import java.io.Serializable;
 import java.util.Arrays;
 
-@Component
 public class ClientRequest implements Serializable {
 
     private String serviceName;

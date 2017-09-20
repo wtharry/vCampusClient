@@ -1,42 +1,29 @@
 package seu.controller;
 
-import javafx.event.ActionEvent;
-import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
-import javafx.scene.control.PasswordField;
-import javafx.scene.control.TextField;
 
 
 import javafx.event.ActionEvent;
 
 import javafx.fxml.FXML;
-import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
-import seu.service.StudentService;
-import seu.service.ClassService;
-import seu.domain.Student;
 
 import javafx.scene.layout.AnchorPane;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
 import seu.domain.Student;
 import seu.service.ClassService;
 import seu.service.StudentService;
 
 import java.io.IOException;
 
-@Component
 
 /**
  * Created by Q on 2017/9/18.
  */
 public class AdminStudentInfoManagePaneController {
-    @Autowired
 
     StudentService studentService=new StudentService();
 
-    @Autowired
 
     ClassService classService=new ClassService();
 
@@ -161,7 +148,7 @@ public class AdminStudentInfoManagePaneController {
     public void returnPane(ActionEvent actionEvent) throws IOException {
 
         adminStudentInfoManage.getChildren().clear();
-        Parent child = FXMLLoader.load(getClass().getResource("/view//StudentManage.fxml"));
+        Parent child = FXMLLoader.load(getClass().getResource("/view/StudentManage.fxml"));
         adminStudentInfoManage.getChildren().add(child);
     }
 }

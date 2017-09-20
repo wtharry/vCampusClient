@@ -12,20 +12,15 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.util.Callback;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
 import seu.service.LibraryService;
 import seu.service.StudentService;
 
 import java.text.SimpleDateFormat;
 
-@Component
 public class LibraryTestController {
 
-    @Autowired
     LibraryService libraryService=new LibraryService();
 
-    @Autowired
     StudentService studentService=new StudentService();
     @FXML
     private TableView<studentLibraryTable> studentBookTable;
