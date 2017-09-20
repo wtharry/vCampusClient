@@ -18,12 +18,12 @@
          <font>
             <Font size="18.0" />
          </font></TextField>
-      <Text layoutX="112.0" layoutY="225.0" strokeType="OUTSIDE" strokeWidth="0.0" text="宿舍号:" wrappingWidth="74.0">
+      <Text layoutX="112.0" layoutY="225.0" strokeType="OUTSIDE" strokeWidth="0.0" text="宿舍号" wrappingWidth="74.0">
          <font>
             <Font size="18.0" />
          </font></Text>
       <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
-      <Text layoutX="112.0" layoutY="303.0" strokeType="OUTSIDE" strokeWidth="0.0" text="宿舍分:" wrappingWidth="67.99999701976776">
+      <Text layoutX="112.0" layoutY="303.0" strokeType="OUTSIDE" strokeWidth="0.0" text="宿舍分" wrappingWidth="67.99999701976776">
          <font>
             <Font size="18.0" />
          </font></Text>

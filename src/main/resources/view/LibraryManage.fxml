@@ -24,7 +24,7 @@
                </image>
             </ImageView>
          </children></Pane>
-      <Text layoutX="39.0" layoutY="284.0" strokeType="OUTSIDE" strokeWidth="0.0" text="图书代码：" wrappingWidth="98.240234375">
+      <Text layoutX="39.0" layoutY="284.0" strokeType="OUTSIDE" strokeWidth="0.0" text="图书代码" wrappingWidth="98.240234375">
          <font>
             <Font size="18.0" />
          </font>
@@ -33,7 +33,7 @@
          <font>
             <Font size="18.0" />
          </font></TextField>
-      <Text layoutX="294.0" layoutY="286.0" strokeType="OUTSIDE" strokeWidth="0.0" text="书籍名称：" wrappingWidth="98.240234375">
+      <Text layoutX="294.0" layoutY="286.0" strokeType="OUTSIDE" strokeWidth="0.0" text="书籍名称" wrappingWidth="98.240234375">
          <font>
             <Font size="18.0" />
          </font>
@@ -42,12 +42,12 @@
          <font>
             <Font size="18.0" />
          </font></TextField>
-      <Text layoutX="38.0" layoutY="378.0" strokeType="OUTSIDE" strokeWidth="0.0" text="学生学号：" wrappingWidth="98.2402446269989">
+      <Text layoutX="38.0" layoutY="378.0" strokeType="OUTSIDE" strokeWidth="0.0" text="学生学号" wrappingWidth="98.2402446269989">
          <font>
             <Font size="18.0" />
          </font>
       </Text>
-      <Text layoutX="294.0" layoutY="377.0" strokeType="OUTSIDE" strokeWidth="0.0" text="起始日期：" wrappingWidth="98.24023495614529">
+      <Text layoutX="294.0" layoutY="377.0" strokeType="OUTSIDE" strokeWidth="0.0" text="起始日期" wrappingWidth="98.24023495614529">
          <font>
             <Font size="18.0" />
          </font>
@@ -65,7 +65,7 @@
          <font>
             <Font size="18.0" />
          </font></Button>
-      <Text layoutX="38.0" layoutY="177.0" strokeType="OUTSIDE" strokeWidth="0.0" text="修改图书信息：" wrappingWidth="183.240234375">
+      <Text layoutX="38.0" layoutY="177.0" strokeType="OUTSIDE" strokeWidth="0.0" text="修改图书信息" wrappingWidth="183.240234375">
 
          <font>
             <Font size="22.0" />

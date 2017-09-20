@@ -133,4 +133,6 @@ System.out.print(stu.getBalance());
         //使用showAndWait()先处理这个窗口，而如果不处理，main中的那个窗口不能响应
         window.showAndWait();
     }
+
+
 }

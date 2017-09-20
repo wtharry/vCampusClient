@@ -12,19 +12,19 @@
 <AnchorPane fx:id="teacherManagePane" prefHeight="652.0" prefWidth="649.0" stylesheets="@Teacher.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="seu.controller.TeacherManage">
    <children>
 
-      <Text layoutX="125.0" layoutY="279.0" strokeType="OUTSIDE" strokeWidth="0.0" text="工号：" wrappingWidth="58.24023048579693">
+      <Text layoutX="125.0" layoutY="279.0" strokeType="OUTSIDE" strokeWidth="0.0" text="工号" wrappingWidth="58.24023048579693">
 
          <font>
             <Font size="18.0" />
          </font></Text>
 
-      <Text layoutX="125.0" layoutY="330.0" strokeType="OUTSIDE" strokeWidth="0.0" text="姓名：" wrappingWidth="58.240234375">
+      <Text layoutX="125.0" layoutY="330.0" strokeType="OUTSIDE" strokeWidth="0.0" text="姓名" wrappingWidth="58.240234375">
 
          <font>
             <Font size="18.0" />
          </font></Text>
 
-      <Text layoutX="90.0" layoutY="380.0" strokeType="OUTSIDE" strokeWidth="0.0" text="联系电话：" wrappingWidth="99.99999666959047">
+      <Text layoutX="90.0" layoutY="380.0" strokeType="OUTSIDE" strokeWidth="0.0" text="联系电话" wrappingWidth="99.99999666959047">
 
          <font>
             <Font size="18.0" />
@@ -46,8 +46,10 @@
 
          <font>
             <Font size="18.0" />
+
          </font></TextField>
       <TextField fx:id="teacherNameAdd" layoutX="191.0" layoutY="305.0" prefHeight="36.0" prefWidth="228.0">
+
          <font>
             <Font size="18.0" />
          </font></TextField>
@@ -63,11 +65,11 @@
          <font>
             <Font size="18.0" />
          </font></Button>
-      <Text fill="#242424" layoutX="90.0" layoutY="160.0" strokeType="OUTSIDE" strokeWidth="0.0" text="教师工号：" wrappingWidth="99.99999666959047">
+      <Text fill="#242424" layoutX="90.0" layoutY="160.0" strokeType="OUTSIDE" strokeWidth="0.0" text="教师工号" wrappingWidth="99.99999666959047">
          <font>
             <Font size="18.0" />
          </font></Text>
-      <Text fill="#171717" layoutX="87.0" layoutY="554.0" strokeType="OUTSIDE" strokeWidth="0.0" text="教师工号：" wrappingWidth="106.240234375">
+      <Text fill="#171717" layoutX="87.0" layoutY="554.0" strokeType="OUTSIDE" strokeWidth="0.0" text="教师工号" wrappingWidth="106.240234375">
          <font>
             <Font size="18.0" />
          </font>
@@ -85,7 +87,7 @@
                </image>
             </ImageView>
          </children></Pane>
-      <Text layoutX="90.0" layoutY="430.0" strokeType="OUTSIDE" strokeWidth="0.0" text="登录密码：" wrappingWidth="99.99999666959047">
+      <Text layoutX="90.0" layoutY="430.0" strokeType="OUTSIDE" strokeWidth="0.0" text="登录密码" wrappingWidth="99.99999666959047">
          <font>
             <Font size="18.0" />
          </font>
