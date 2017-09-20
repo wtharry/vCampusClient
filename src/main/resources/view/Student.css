@@ -1,19 +1,18 @@
-
+﻿
 
 /*button类型选择器设置所有Button的背景色*/
 
 #schoolroll{
 
-    -fx-background-color:  #87CEEB;
-
-    -fx-padding: 5;
+    -fx-background-color:  #FFFFFF;
+ -fx-border-radius: 20;
 
 
 
 }
 
 #Course{
- -fx-background-color:  #87CEEB;
+ -fx-background-color:  #FFFFFF;
 
     -fx-border-radius: 20;
 
@@ -21,7 +20,7 @@
 }
 
 #library{
- -fx-background-color:  #87CEEB;
+ -fx-background-color:  #FFFFFF;
 
     -fx-border-radius: 20;
 
@@ -29,7 +28,7 @@
 }
 
 #commodity{
- -fx-background-color:  #87CEEB;
+ -fx-background-color:  #FFFFFF;
 
     -fx-padding: 5;
 
@@ -37,7 +36,7 @@
 }
 
 #dormitory{
- -fx-background-color:  #87CEEB;
+ -fx-background-color:  #FFFFFF;
 
     -fx-padding: 5;
 
@@ -45,7 +44,7 @@
 }
 
 #exit{
- -fx-background-color: #87CEEB;
+ -fx-background-color: #FFFFFF;
 
     -fx-padding: 5;
 
@@ -54,7 +53,9 @@
 .button:hover {
     -fx-background-color: lightskyblue;
 }
-
+#welcome{
+  -fx-background-image: url('/images//7.jpg');
+}
 
 .label {
     -fx-font-size: 12px;
@@ -63,3 +64,10 @@
     -fx-effect: dropshadow( gaussian , rgba(255,255,255,0.5) , 0,0,0,1 );
 }
 
+#changeView1{
+    -fx-background-image:url("/images//22.jpg");
+}
+
+#changeView2{
+    -fx-background-image:url("/images//22.jpg");
+}

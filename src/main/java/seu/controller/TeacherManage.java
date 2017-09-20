@@ -94,7 +94,7 @@ public class TeacherManage {
         Teacher tea=new Teacher(Integer.valueOf(teacherIDAdd.getText()),teacherNameAdd.getText(),
                 Integer.valueOf(teacherPhoneNumberAdd.getText()),passwordAdd.getText());
         teacherService.insertTeacher(tea);
-
+        System.out.print(tea.getTeacherId());
         Stage window = new Stage();
         window.setTitle("title");
         //modality要使用Modality.APPLICATION_MODEL

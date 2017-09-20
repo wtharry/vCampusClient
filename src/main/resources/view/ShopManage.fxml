@@ -11,7 +11,9 @@
 
 <AnchorPane prefHeight="652.0" prefWidth="649.0" stylesheets="@Teacher.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="seu.controller.ShopManage">
    <children>
+
       <Text layoutX="46.0" layoutY="176.0" strokeType="OUTSIDE" strokeWidth="0.0" text="商品查询" wrappingWidth="107.99999756366014">
+
          <font>
             <Font size="20.0" />
          </font></Text>

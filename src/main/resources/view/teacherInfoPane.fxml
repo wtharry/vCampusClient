@@ -10,16 +10,20 @@
 
 <AnchorPane prefHeight="652.0" prefWidth="649.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="seu.controller.teacherInfoPaneController">
    <children>
+
       <Text layoutX="85.0" layoutY="207.0" strokeType="OUTSIDE" strokeWidth="0.0" text="教师ID" wrappingWidth="101.3359375">
+
          <font>
             <Font size="20.0" />
          </font>
       </Text>
+
       <TextField fx:id="teacherIDtext" layoutX="190.0" layoutY="179.0">
          <font>
             <Font size="20.0" />
          </font></TextField>
       <TextField fx:id="teacherName" layoutX="190.0" layoutY="270.0">
+
          <font>
             <Font size="20.0" />
          </font></TextField>

@@ -1,16 +1,26 @@
 package seu.controller;
 
+import javafx.animation.Interpolator;
+import javafx.animation.Timeline;
+import javafx.animation.TranslateTransition;
+import javafx.animation.TranslateTransitionBuilder;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.Node;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
+import javafx.geometry.VPos;
+import javafx.scene.*;
 import javafx.scene.control.Button;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.image.ImageViewBuilder;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.Pane;
+import javafx.scene.layout.PaneBuilder;
+import javafx.scene.paint.Color;
+import javafx.scene.shape.RectangleBuilder;
+import javafx.scene.text.*;
 import javafx.stage.Stage;
+import javafx.util.Duration;
 import org.springframework.stereotype.Component;
 
 import java.io.IOException;
@@ -48,6 +58,7 @@ public class studentController {
 
     public studentController() throws IOException {
         ImageView delICON = new ImageView(getClass().getResource("/images/information.png").toString());
+
 
 
     }
@@ -119,10 +130,18 @@ public class studentController {
 
 
 
-    public void getData( int id,String pw)
-    {
+    public void getData( int id,String pw) throws IOException {
        this.studentID=id;
        this.password=pw;
+        changeView.getChildren().clear();
+        FXMLLoader loader=new FXMLLoader(getClass().getResource("/view//schoolrollPane.fxml"));
+        Parent child =loader.load();
+        schoolrollPaneController schroll =loader.<schoolrollPaneController>getController();
+        schroll.setData(this.studentID,password);
+
+
+        changeView.getChildren().add(child);
+
     }
 
 

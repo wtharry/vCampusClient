@@ -1,5 +1,7 @@
 
 
+
+
 /*button类型选择器设置所有Button的背景色*/
 
 .button{
@@ -12,7 +14,7 @@
 }
 
 #teacherInfo{
-    -fx-background-color:   #87CEEB;
+    -fx-background-color:   #FFFFFF;
 
 
 
@@ -22,7 +24,7 @@
 }
 
 #classManage{
- -fx-background-color:   	 #87CEEB;
+ -fx-background-color:   	 #FFFFFF;
 
 
 
@@ -32,7 +34,7 @@
 }
 
 #courseManage{
- -fx-background-color:   	 #87CEEB;
+ -fx-background-color:   	 #FFFFFF;
 
 
 
@@ -42,7 +44,7 @@
 }
 
 #exit{
- -fx-background-color:   	 #87CEEB;
+ -fx-background-color:   	 #FFFFFF;
 
 
     -fx-padding: 5;
@@ -51,7 +53,7 @@
 }
 
 #StudentManage{
- -fx-background-color:  #87CEEB;
+ -fx-background-color:  #FFFFFF;
 
 
 
@@ -60,7 +62,7 @@
 }
 
 #TeacherManage{
- -fx-background-color:  #87CEEB;
+ -fx-background-color:  #FFFFFF;
 
 
 
@@ -69,7 +71,7 @@
 }
 
 #DormitoryManage{
- -fx-background-color:  #87CEEB;
+ -fx-background-color:  #FFFFFF;
 
 
 
@@ -79,7 +81,7 @@
 }
 
 #ShopManage{
- -fx-background-color:  #87CEEB;
+ -fx-background-color:  #FFFFFF;
 
 
 
@@ -89,7 +91,7 @@
 }
 
 #LibraryManage{
- -fx-background-color:  #87CEEB;
+ -fx-background-color:  #FFFFFF;
 
 
 
@@ -111,4 +113,20 @@
     -fx-font-weight: bold;
     -fx-text-fill: #333333;
     -fx-effect: dropshadow( gaussian , rgba(255,255,255,0.5) , 0,0,0,1 );
+}
+
+#adminView{
+    -fx-background-image:url("/images//22.jpg");
+}
+
+#test{
+    -fx-background-image:url("/images//22.jpg");
+}
+
+#teacherView1{
+    -fx-background-image:url("/images//22.jpg");
+}
+
+#teacherView2{
+    -fx-background-image:url("/images//22.jpg");
 }

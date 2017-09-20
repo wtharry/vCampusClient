@@ -11,7 +11,9 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
+
 <AnchorPane prefHeight="652.0" prefWidth="642.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="seu.controller.schoolrollPaneController">
+
    <children>
       <TextField fx:id="studentIDField" layoutX="413.0" layoutY="85.0" prefHeight="30.0" prefWidth="148.0" />
 
@@ -68,6 +70,7 @@
          <font>
             <Font size="15.0" />
          </font></Text>
+
       <Pane prefHeight="55.0" prefWidth="649.0" style="-fx-background-color: #D8D8D8;">
          <children>
             <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="18.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true">
@@ -82,6 +85,7 @@
             </Text>
          </children></Pane>
       <Text layoutX="348.0" layoutY="486.0" strokeType="OUTSIDE" strokeWidth="0.0" text="新密码" wrappingWidth="59.99998736381531">
+
          <font>
             <Font size="15.0" />
          </font>
@@ -91,6 +95,7 @@
             <Font size="15.0" />
          </font>
       </Text>
+
       <PasswordField fx:id="newpassword" layoutX="412.0" layoutY="466.0" prefHeight="30.0" prefWidth="148.0" text="" />
       <PasswordField fx:id="newpasswordConfirm" layoutX="107.0" layoutY="517.0" prefHeight="30.0" prefWidth="148.0" text="" />
       <Pane layoutY="381.0" prefHeight="55.0" prefWidth="649.0" style="-fx-background-color: #D8D8D8;">
@@ -107,6 +112,7 @@
             </ImageView>
          </children>
       </Pane>
+
 
    </children>
    <stylesheets>

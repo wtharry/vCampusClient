@@ -11,77 +11,116 @@
 
 <AnchorPane prefHeight="652.0" prefWidth="649.0" stylesheets="@Teacher.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="seu.controller.DormitoryManage">
    <children>
-      <Text layoutX="327.0" layoutY="245.0" strokeType="OUTSIDE" strokeWidth="0.0" text="宿舍号：" wrappingWidth="73.29895842075348">
+
+      <Text layoutX="190.0" layoutY="200.0" strokeType="OUTSIDE" strokeWidth="0.0" text="宿舍号：" wrappingWidth="73.29895842075348">
          <font>
             <Font size="18.0" />
          </font></Text>
-      <Text layoutX="283.0" layoutY="299.0" strokeType="OUTSIDE" strokeWidth="0.0" text="宿舍分数修改：" wrappingWidth="175.240240290761">
+      <Text layoutX="138.0" layoutY="256.0" strokeType="OUTSIDE" strokeWidth="0.0" text="宿舍分数修改：" wrappingWidth="175.240240290761">
          <font>
             <Font size="18.0" />
          </font></Text>
-      <TextField fx:id="dormitoryScoreChange" layoutX="419.0" layoutY="281.0" prefHeight="23.0" prefWidth="105.0" />
-      <TextField fx:id="dormitoryID" layoutX="419.0" layoutY="226.0" prefHeight="23.0" prefWidth="105.0" />
-      <Button fx:id="changeConfirm" layoutX="547.0" layoutY="278.0" mnemonicParsing="false" onAction="#changeConfirm" prefHeight="30.0" prefWidth="68.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #00BFFF;" text="确认" />
-      <Text layoutX="172.0" layoutY="380.0" strokeType="OUTSIDE" strokeWidth="0.0" text="增加宿舍：" wrappingWidth="129.240234375">
+      <TextField fx:id="dormitoryScoreChange" layoutX="282.0" layoutY="231.0" prefHeight="23.0" prefWidth="105.0">
+
          <font>
-            <Font size="24.0" />
+            <Font size="18.0" />
+         </font></TextField>
+      <TextField fx:id="dormitoryID" layoutX="282.0" layoutY="176.0" prefHeight="23.0" prefWidth="105.0">
+         <font>
+            <Font size="18.0" />
+         </font></TextField>
+      <Button fx:id="changeConfirm" layoutX="410.0" layoutY="234.0" mnemonicParsing="false" onAction="#changeConfirm" prefHeight="30.0" prefWidth="68.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #00BFFF;" text="确认">
+         <font>
+            <Font size="18.0" />
+         </font></Button>
+      <Text layoutX="60.0" layoutY="330.0" strokeType="OUTSIDE" strokeWidth="0.0" text="增加宿舍：" wrappingWidth="129.240234375">
+         <font>
+            <Font size="20.0" />
          </font>
       </Text>
-      <TextField fx:id="dormitoryAdd" layoutX="419.0" layoutY="413.0" prefHeight="23.0" prefWidth="105.0" />
-      <Text layoutX="335.0" layoutY="431.0" strokeType="OUTSIDE" strokeWidth="0.0" text="宿舍号：">
+
+      <TextField fx:id="dormitoryAdd" layoutX="276.0" layoutY="361.0" prefHeight="23.0" prefWidth="105.0">
+         <font>
+            <Font size="18.0" />
+         </font></TextField>
+      <Text layoutX="184.0" layoutY="385.0" strokeType="OUTSIDE" strokeWidth="0.0" text="宿舍号：">
+
          <font>
             <Font size="18.0" />
          </font>
       </Text>
-      <Text layoutX="319.0" layoutY="479.0" strokeType="OUTSIDE" strokeWidth="0.0" text="宿舍分数：">
+
+      <Text layoutX="165.0" layoutY="433.0" strokeType="OUTSIDE" strokeWidth="0.0" text="宿舍分数：">
+
          <font>
             <Font size="18.0" />
          </font>
       </Text>
-      <TextField fx:id="scoreAdd" layoutX="419.0" layoutY="461.0"  prefHeight="23.0" prefWidth="105.0" />
-      <Button fx:id="addConfirm" layoutX="547.0" layoutY="488.0" mnemonicParsing="false" onAction="#addConfirm" prefHeight="30.0" prefWidth="68.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #00BFFF;" text="确认" />
-      <Text layoutX="174.0" layoutY="552.0" strokeType="OUTSIDE" strokeWidth="0.0" text="删除宿舍：" wrappingWidth="129.240234375">
+
+      <TextField fx:id="scoreAdd" layoutX="276.0" layoutY="411.0" prefHeight="23.0" prefWidth="105.0">
          <font>
-            <Font size="24.0" />
+            <Font size="18.0" />
+         </font></TextField>
+      <Button fx:id="addConfirm" layoutX="404.0" layoutY="408.0" mnemonicParsing="false" onAction="#addConfirm" prefHeight="30.0" prefWidth="68.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #00BFFF;" text="确认">
+         <font>
+            <Font size="18.0" />
+         </font></Button>
+      <Text layoutX="62.0" layoutY="502.0" strokeType="OUTSIDE" strokeWidth="0.0" text="删除宿舍：" wrappingWidth="129.240234375">
+
+         <font>
+            <Font size="20.0" />
          </font>
       </Text>
-      <Text layoutX="337.0" layoutY="590.0" strokeType="OUTSIDE" strokeWidth="0.0" text="宿舍号：">
+
+      <Text layoutX="178.0" layoutY="547.0" strokeType="OUTSIDE" strokeWidth="0.0" text="宿舍号：">
+
          <font>
             <Font size="18.0" />
          </font>
       </Text>
-      <TextField fx:id="deleteDormity" layoutX="421.0" layoutY="572.0" prefHeight="23.0" prefWidth="105.0" />
-      <Button fx:id="deleteDormitoryConfirm" layoutX="548.0" layoutY="612.0" mnemonicParsing="false" onAction="#deleteDormitoryConfirm" prefHeight="30.0" prefWidth="68.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #00BFFF;" text="确认" />
-      <Pane prefHeight="55.0" prefWidth="649.0" style="-fx-background-color: #87CEFA;" />
-      <Text layoutX="172.0" layoutY="204.0" strokeType="OUTSIDE" strokeWidth="0.0" text="修改信息：" wrappingWidth="129.240234375">
+
+      <TextField fx:id="deleteDormity" layoutX="275.0" layoutY="523.0" prefHeight="23.0" prefWidth="105.0">
          <font>
-            <Font size="24.0" />
+            <Font size="18.0" />
+         </font></TextField>
+      <Button fx:id="deleteDormitoryConfirm" layoutX="402.0" layoutY="526.0" mnemonicParsing="false" onAction="#deleteDormitoryConfirm" prefHeight="30.0" prefWidth="68.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #00BFFF;" text="确认">
+
+ 
+         <font>
+            <Font size="18.0" />
+         </font></Button>
+      <Pane prefHeight="55.0" prefWidth="649.0" style="-fx-background-color: #C0C0C0;">
+         <children>
+            <ImageView fitHeight="28.0" fitWidth="20.0" layoutX="31.0" layoutY="23.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="/images/manage6.png" />
+               </image>
+            </ImageView>
+            <Text layoutX="58.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" text="宿舍管理" wrappingWidth="228.240234375">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Text>
+         </children></Pane>
+      <Text layoutX="60.0" layoutY="154.0" strokeType="OUTSIDE" strokeWidth="0.0" text="修改信息：" wrappingWidth="129.240234375">
+         <font>
+            <Font size="20.0" />
          </font>
       </Text>
-      <ImageView fitHeight="90.0" fitWidth="81.0" layoutX="79.0" layoutY="154.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="23.0" fitWidth="20.0" layoutX="32.0" layoutY="138.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="/images/find.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="81.0" fitWidth="81.0" layoutX="79.0" layoutY="331.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="28.0" fitWidth="20.0" layoutX="32.0" layoutY="314.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="/images/add1.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="81.0" fitWidth="90.0" layoutX="80.0" layoutY="502.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="28.0" fitWidth="20.0" layoutX="32.0" layoutY="482.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="/images/delete.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="80.0" fitWidth="79.0" layoutX="16.0" layoutY="67.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="/images/manage6.png" />
-         </image>
-      </ImageView>
-      <Text layoutX="104.0" layoutY="120.0" strokeType="OUTSIDE" strokeWidth="0.0" text="宿舍管理" wrappingWidth="228.240234375">
-         <font>
-            <Font size="35.0" />
-         </font>
-      </Text>
    </children>
 </AnchorPane>

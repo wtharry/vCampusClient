@@ -9,20 +9,28 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="652.0" prefWidth="649.0" stylesheets="@Student.css" xmlns="http://javafx.com/javafx/8.0.112" xmlns:fx="http://javafx.com/fxml/1" fx:controller="seu.controller.commodityPaneController">
+<AnchorPane prefHeight="652.0" prefWidth="649.0" stylesheets="@Student.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="seu.controller.commodityPaneController">
    <children>
-      <Text layoutX="49.0" layoutY="567.0" strokeType="OUTSIDE" strokeWidth="0.0" text="账户余额：" wrappingWidth="139.30029296875">
+      <Text layoutX="49.0" layoutY="567.0" strokeType="OUTSIDE" strokeWidth="0.0" text="账户余额" wrappingWidth="139.30029296875">
          <font>
-            <Font size="24.0" />
+            <Font size="22.0" />
          </font>
       </Text>
-      <TextField fx:id="balance" layoutX="189.0" layoutY="540.0" prefHeight="36.0" prefWidth="139.0" />
+
+      <TextField fx:id="balance" layoutX="189.0" layoutY="540.0" prefHeight="36.0" prefWidth="139.0">
+         <font>
+            <Font size="22.0" />
+         </font></TextField>
       <Text layoutX="51.0" layoutY="516.0" strokeType="OUTSIDE" strokeWidth="0.0" text="购物总计：">
+
          <font>
-            <Font size="24.0" />
+            <Font size="22.0" />
          </font>
       </Text>
-      <TextField fx:id="totalBought" layoutX="189.0" layoutY="490.0" prefHeight="36.0" prefWidth="139.0" text="0" />
+      <TextField fx:id="totalBought" layoutX="189.0" layoutY="487.0" prefHeight="36.0" prefWidth="139.0" text="0">
+         <font>
+            <Font size="22.0" />
+         </font></TextField>
       <Button fx:id="subWater" layoutX="81.0" layoutY="119.0" mnemonicParsing="false" onAction="#subWater" prefHeight="48.0" prefWidth="50.0" scaleX="0.5" scaleY="0.5" style="-fx-background-color: #FFFFFF; -fx-border-color: #00BFFF;" text="-" wrapText="true">
          <font>
             <Font size="24.0" />
@@ -121,7 +129,7 @@
       </Button>
       <Button fx:id="confirmBuy" layoutX="434.0" layoutY="539.0" mnemonicParsing="false" onAction="#confirmBuy" prefHeight="36.0" prefWidth="169.0" scaleX="0.7" scaleY="0.7" style="-fx-background-color: #FFFFFF; -fx-border-color: #00BFFF;" text="确认购买">
          <font>
-            <Font size="18.0" />
+            <Font size="20.0" />
          </font>
       </Button>
       <Pane prefHeight="55.0" prefWidth="649.0" style="-fx-background-color: #87CEFA;" />

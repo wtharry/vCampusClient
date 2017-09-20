@@ -72,9 +72,11 @@ public class AdminController {
         stg.show();
     }
 
-    public void setData(int adminID,String password)
-    {
+    public void setData(int adminID,String password) throws IOException {
         this.adminID=adminID;
         this.password=password;
+        adminView.getChildren().clear();
+        Parent child = FXMLLoader.load(getClass().getResource("/view//StudentManage.fxml"));
+        adminView.getChildren().add(child);
     }
 }
