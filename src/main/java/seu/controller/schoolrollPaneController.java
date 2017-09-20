@@ -24,10 +24,10 @@ import org.springframework.stereotype.Component;
 @Component
 public class schoolrollPaneController {
     @Autowired
-    StudentService studentService;
+    StudentService studentService=new StudentService();
 
     @Autowired
-    ClassService classService;
+    ClassService classService=new ClassService();
 
     @FXML
     private  TextField studentIDField;
@@ -130,14 +130,74 @@ public class schoolrollPaneController {
         //使用showAndWait()先处理这个窗口，而如果不处理，main中的那个窗口不能响应
         window.showAndWait();
 
+
+        nameField.setText( studentService.queryStudentByStudentId(studentID).getStudentName());
+        nameField.setEditable(false);
+
+        classIDField.setText(String.valueOf( studentService.queryStudentByStudentId(studentID).getClassId()));
+        classIDField.setEditable(false);
+
+        dormitoryIDField.setText(String.valueOf( studentService.queryStudentByStudentId(studentID).getDormitoryId()));
+        dormitoryIDField.setEditable(false);
+
+        balanceField.setText(String.valueOf( studentService.queryStudentByStudentId(studentID).getBalance()));
+        balanceField.setEditable(false);
+
+
+        classIDField.setText(String.valueOf( classService.queryClassByStudentId(studentID).getClassId()));
+        classIDField.setEditable(false);
+
+        classNameField.setText( classService.queryClassByStudentId(studentID).getClassName());
+        classNameField .setEditable(false);
+
+        majorField.setText( classService.queryClassByStudentId(studentID).getMajor());
+        majorField.setEditable(false);
+
+        classSizeField.setText(String.valueOf( classService.queryClassByStudentId(studentID).getClassSize()));
+        classSizeField .setEditable(false);
+
+        teacherField.setText(String.valueOf( classService.queryClassByStudentId(studentID).getTeacherId()));
+        teacherField.setEditable(false);
+
+        oldpassword.setEditable(false);
+        newpassword.setEditable(false);
+        newpasswordConfirm.setEditable(false);
+
     }
 
     public void passwordChecked(ActionEvent actionEvent) {
 
 
-        if( studentService.login( studentID,oldpassword.getText())==1&&newpassword.getText()==newpasswordConfirm.getText())
+        if( studentService.login( studentID,oldpassword.getText())==1&&(Integer.valueOf(newpassword.getText())==Integer.valueOf(newpasswordConfirm.getText())))
         {
             studentService.updateStudentPassword(studentID,newpassword.getText());
+
+            Stage window = new Stage();
+            window.setTitle("title");
+            //modality要使用Modality.APPLICATION_MODEL
+            window.initModality(Modality.APPLICATION_MODAL);
+            window.setMinWidth(300);
+            window.setMinHeight(150);
+
+            Button button = new Button("确认");
+            button.setOnAction(new EventHandler<ActionEvent>() {
+                @Override
+                public void handle(ActionEvent event) {
+                    ((Node)(event.getSource())).getScene().getWindow().hide();
+                }
+
+            });
+
+            Label label = new Label("修改成功");
+
+            VBox layout = new VBox(10);
+            layout.getChildren().addAll(label , button);
+            layout.setAlignment(Pos.CENTER);
+
+            Scene scene = new Scene(layout);
+            window.setScene(scene);
+            //使用showAndWait()先处理这个窗口，而如果不处理，main中的那个窗口不能响应
+            window.showAndWait();
          }
 
          else
@@ -180,7 +240,8 @@ public class schoolrollPaneController {
         studentIDField.setEditable(false);
         password=pw;
         studentID=id;
-System.out.println(id);
+        System.out.println(id);
+
 
          nameField.setText( studentService.queryStudentByStudentId(id).getStudentName());
          nameField.setEditable(false);

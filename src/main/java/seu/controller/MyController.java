@@ -41,13 +41,13 @@ import seu.service.TeacherService;
 public class MyController implements Initializable
     {
         @Autowired
-        StudentService studentService;
+        StudentService studentService=new StudentService();
 
         @Autowired
-        TeacherService  teacherService;
+        TeacherService  teacherService=new TeacherService();
 
         @Autowired
-        AdminService  adminService;
+        AdminService  adminService=new AdminService();
 
         @FXML
         private Button signIn;
@@ -110,7 +110,10 @@ public class MyController implements Initializable
                     scene.getStylesheets().add(
                             getClass().getResource("/view//Student.css")
                                     .toExternalForm());
+
+                    stg.getIcons().add(new Image("/images/01.png"));
                     stg.setResizable(false);
+
                     stg.show(); //显示窗口；
 
 
@@ -175,6 +178,8 @@ public class MyController implements Initializable
                             scene.getStylesheets().add(
                                     getClass().getResource("/view//Teacher.css")
                                             .toExternalForm());
+
+                            stg.getIcons().add(new Image("/images/01.png"));
                             stg.setResizable(false);
                             stg.show(); //显示窗口；
                         }
@@ -239,6 +244,7 @@ public class MyController implements Initializable
                                             .toExternalForm());
                             stg.setTitle("管理员管理界面");
                             stg.setScene(scene); //将场景载入舞台；
+                            stg.getIcons().add(new Image("/images/01.png"));
                             stg.setResizable(false);
                             stg.show(); //显示窗口；
                         }

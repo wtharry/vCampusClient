@@ -24,7 +24,7 @@ import java.io.IOException;
 @Component
 public class TeacherManage {
     @FXML
-    TeacherService teacherService;
+    TeacherService teacherService=new TeacherService();
 
     @FXML
     private TextField teacherIDDel;
@@ -52,7 +52,7 @@ public class TeacherManage {
 
         teacherManagePane.getChildren().clear();
         FXMLLoader loader=new FXMLLoader(getClass().getResource("/view//AdminTeacherInfoManagePane.fxml"));
-        Parent child =loader.load();
+        Parent child = (Parent) loader.load();
         AdminTeacherInfoManagePaneController admin =loader.<AdminTeacherInfoManagePaneController>getController();
         admin.setData(Integer.valueOf(teacherIDSearch.getText()));
         teacherManagePane.getChildren().add(child);
@@ -94,7 +94,7 @@ public class TeacherManage {
         Teacher tea=new Teacher(Integer.valueOf(teacherIDAdd.getText()),teacherNameAdd.getText(),
                 Integer.valueOf(teacherPhoneNumberAdd.getText()),passwordAdd.getText());
         teacherService.insertTeacher(tea);
-
+        System.out.print(tea.getTeacherId());
         Stage window = new Stage();
         window.setTitle("title");
         //modality要使用Modality.APPLICATION_MODEL

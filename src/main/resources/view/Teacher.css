@@ -1,7 +1,6 @@
 
-.{
--fx-background-color: #87CEFA;
-}
+
+
 
 /*button类型选择器设置所有Button的背景色*/
 
@@ -9,163 +8,99 @@
 
     -fx-background-color: #FFFFFF;
 
-    -fx-border-radius: 20;
-
-    -fx-background-radius: 20;
 
     -fx-padding: 5;
 
 }
 
 #teacherInfo{
-    -fx-background-color: #FFFFFF;
+    -fx-background-color:   #FFFFFF;
 
-    -fx-border-radius: 20;
 
-    -fx-background-radius: 20;
 
     -fx-padding: 5;
 
-    -fx-background-image: url('/images//Teacher.png');
-        -fx-background-size: 21px;
-        -fx-background-repeat: no-repeat;
-        -fx-background-position: 10%;
+
 }
 
 #classManage{
- -fx-background-color: #FFFFFF;
+ -fx-background-color:   	 #FFFFFF;
 
-    -fx-border-radius: 20;
 
-    -fx-background-radius: 20;
 
     -fx-padding: 5;
 
-    -fx-background-image: url('/images//class.png');
-        -fx-background-size: 22px;
-        -fx-background-repeat: no-repeat;
-        -fx-background-position: 10%;
+
 }
 
 #courseManage{
- -fx-background-color: #FFFFFF;
+ -fx-background-color:   	 #FFFFFF;
 
-    -fx-border-radius: 20;
 
-    -fx-background-radius: 20;
 
     -fx-padding: 5;
 
-    -fx-background-image: url('/images//course2.png');
-        -fx-background-size: 21px;
-        -fx-background-repeat: no-repeat;
-        -fx-background-position: 10%;
+
 }
 
 #exit{
- -fx-background-color: #FFFFFF;
+ -fx-background-color:   	 #FFFFFF;
 
-    -fx-border-radius: 20;
-
-    -fx-background-radius: 20;
 
     -fx-padding: 5;
 
-    -fx-background-image: url('/images//undo.png');
-        -fx-background-size: 23px;
-        -fx-background-repeat: no-repeat;
-        -fx-background-position: 10%;
+
 }
 
 #StudentManage{
- -fx-background-color: #FFFFFF;
+ -fx-background-color:  #FFFFFF;
 
-    -fx-border-radius: 20;
 
-    -fx-background-radius: 20;
 
     -fx-padding: 5;
 
-    -fx-background-image: url('/images//Student.png');
-        -fx-background-size: 19px;
-        -fx-background-repeat: no-repeat;
-        -fx-background-position: 10%;
 }
 
 #TeacherManage{
- -fx-background-color: #FFFFFF;
+ -fx-background-color:  #FFFFFF;
 
-    -fx-border-radius: 20;
 
-    -fx-background-radius: 20;
 
     -fx-padding: 5;
 
-    -fx-background-image: url('/images//teacher2.png');
-        -fx-background-size: 21px;
-        -fx-background-repeat: no-repeat;
-        -fx-background-position: 10%;
 }
 
 #DormitoryManage{
- -fx-background-color: #FFFFFF;
+ -fx-background-color:  #FFFFFF;
 
-    -fx-border-radius: 20;
 
-    -fx-background-radius: 20;
 
     -fx-padding: 5;
 
-    -fx-background-image: url('/images//homepage.png');
-        -fx-background-size: 26px;
-        -fx-background-repeat: no-repeat;
-        -fx-background-position: 10%;
+
 }
 
 #ShopManage{
- -fx-background-color: #FFFFFF;
+ -fx-background-color:  #FFFFFF;
 
-    -fx-border-radius: 20;
 
-    -fx-background-radius: 20;
 
     -fx-padding: 5;
 
-    -fx-background-image: url('/images//shop.png');
-        -fx-background-size: 23px;
-        -fx-background-repeat: no-repeat;
-        -fx-background-position: 10%;
+
 }
 
 #LibraryManage{
- -fx-background-color: #FFFFFF;
+ -fx-background-color:  #FFFFFF;
 
-    -fx-border-radius: 20;
 
-    -fx-background-radius: 20;
 
     -fx-padding: 5;
 
-    -fx-background-image: url('/images//library.png');
-        -fx-background-size: 20px;
-        -fx-background-repeat: no-repeat;
-        -fx-background-position: 10%;
+
 }
 
-#exit{
- -fx-background-color: #FFFFFF;
 
-    -fx-border-radius: 20;
-
-    -fx-background-radius: 20;
-
-    -fx-padding: 5;
-
-    -fx-background-image: url('/images//undo.png');
-        -fx-background-size: 23px;
-        -fx-background-repeat: no-repeat;
-        -fx-background-position: 10%;
-}
 /*hover伪类选择器设置鼠标移过Button时的背景色*/
 .button:hover {
     -fx-background-color: lightskyblue;
@@ -178,4 +113,20 @@
     -fx-font-weight: bold;
     -fx-text-fill: #333333;
     -fx-effect: dropshadow( gaussian , rgba(255,255,255,0.5) , 0,0,0,1 );
+}
+
+#adminView{
+    -fx-background-image:url("/images//22.jpg");
+}
+
+#test{
+    -fx-background-image:url("/images//22.jpg");
+}
+
+#teacherView1{
+    -fx-background-image:url("/images//22.jpg");
+}
+
+#teacherView2{
+    -fx-background-image:url("/images//22.jpg");
 }

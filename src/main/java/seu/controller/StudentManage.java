@@ -25,7 +25,7 @@ import java.io.IOException;
 @Component
 public class StudentManage {
     @Autowired
-    StudentService studentService;
+    StudentService studentService=new StudentService();
 
     @FXML
     private AnchorPane studentManage;
@@ -64,7 +64,7 @@ public class StudentManage {
         Student stu=new Student(Integer.valueOf(studengIDAdd.getText()),studentNameAdd.getText(),Integer.valueOf(classIDAdd.getText()),
                 Integer.valueOf(dormitoryAdd.getText()),  Integer.valueOf(balanceAdd.getText()),addPassword.getText() );
         studentService.insertStudent(stu);
-
+System.out.print(stu.getBalance());
         Stage window = new Stage();
         window.setTitle("title");
         //modality要使用Modality.APPLICATION_MODEL
@@ -133,4 +133,6 @@ public class StudentManage {
         //使用showAndWait()先处理这个窗口，而如果不处理，main中的那个窗口不能响应
         window.showAndWait();
     }
+
+
 }

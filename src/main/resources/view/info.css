@@ -22,8 +22,9 @@
 }
 
 .root {
-     -fx-background-image: url("/iamges//16.jpg");
+     -fx-background-image: url("/images//16.jpg");
 }
+
 
 .label {
     -fx-font-size: 12px;

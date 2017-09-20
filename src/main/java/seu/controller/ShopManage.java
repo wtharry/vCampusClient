@@ -20,7 +20,7 @@ import seu.service.ShopService;
 @Component
 public class ShopManage {
     @Autowired
-    ShopService shopservice;
+    ShopService shopservice=new ShopService();
 
     @FXML
     private TextField commodityIDSearch;
@@ -49,7 +49,7 @@ public class ShopManage {
     public void confirm(ActionEvent actionEvent) {
         Commodity commodity=new Commodity(Integer.valueOf(commodityID.getText()),commodityName.getText(),
                 Integer.valueOf(commodityPrize.getText()),Integer.valueOf(commodityInventory.getText()));
-       shopservice.addCommodity(commodity);
+       shopservice.updateCommodity(commodity);
 
         Stage window = new Stage();
         window.setTitle("title");

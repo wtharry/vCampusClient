@@ -1,5 +1,6 @@
 package seu.controller;
 
+import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -21,10 +22,10 @@ import seu.service.CourseService;
 @Component
 public class courseTestController {
     @Autowired
-    CourseService courseService;
+    CourseService courseService=new CourseService();
 
     @Autowired
-    CourseSelectService     courseSelectService;
+    CourseSelectService     courseSelectService=new CourseSelectService();
     @FXML
     private TableView<studentSelectCourseTable> courseTable;
 
@@ -49,7 +50,8 @@ public class courseTestController {
 
     private int studentID;
     private ObservableList<studentCourseSelecTable> couResultLists =FXCollections.observableArrayList();
-    private ObservableList<studentSelectCourseTable> couLists= FXCollections.observableArrayList();
+     private ObservableList<studentSelectCourseTable> couLists= FXCollections.observableArrayList();
+
 
     public ObservableList<studentSelectCourseTable> getCourseData() {
 
@@ -57,12 +59,12 @@ public class courseTestController {
         courseService.queryAll();
         for(int i=0;i<courseService.queryAll().size();i++)
        {
-               studentSelectCourseTable cou= new studentSelectCourseTable(courseService.queryAll().get(i).getCourseName(),
+                       studentSelectCourseTable cou= new studentSelectCourseTable(courseService.queryAll().get(i).getCourseName(),
                        courseService.queryAll().get(i).getCourseId(), courseService.queryAll().get(i).getCredit(),courseService.queryAll().get(i).getPeriod(),
                        courseService.queryAll().get(i).getTeacherId());
 
-               couLists.add(cou);
-               return couLists;
+               couLists.add(i,cou);
+
          }
 
 
@@ -73,7 +75,7 @@ public class courseTestController {
 
 
 
-    public void showCourseTable(ObservableList<studentSelectCourseTable> couLists) {
+    public void showCourseTable(final ObservableList<studentSelectCourseTable> couLists) {
         courseName.setCellValueFactory(new PropertyValueFactory<studentSelectCourseTable,String>("courseName"));
 
         CourseID.setCellValueFactory(new PropertyValueFactory<studentSelectCourseTable,Integer>("CourseID"));
@@ -105,7 +107,7 @@ public class courseTestController {
                                             System.out.println("Button clicked");
                                             btn.setDisable(true);
                                             // CourseSelectService cou = new CourseSelectService();
-                                            //cou. insertCourseSelect(studentID,CourseID.getCellObservableValue(getIndex()));
+                                            courseSelectService. insertCourseSelect(studentID,couLists.get(getIndex()).getCourseID());
 
                                         }
                                     });
@@ -124,15 +126,11 @@ public class courseTestController {
         courseTable.setItems(this.getCourseData());
     }
     public void selectCourse(Event event) {
-
-
+        couLists =FXCollections.observableArrayList();
         this.showCourseTable(this.getCourseData());
-
-
-
         int end=courseService.queryAll().size()*2-1;
         int start=courseService.queryAll().size()-1;
-       couLists.remove(start,end);
+        couLists.remove(start,end);
         courseTable.refresh();
 
     }
@@ -141,9 +139,6 @@ public class courseTestController {
 
     public ObservableList<studentCourseSelecTable> getCourseResultData() {
 
-
-
-
         for(int i=0;i<  courseSelectService.queryCourseByStudentId(studentID).size();i++)
        {
               studentCourseSelecTable stu = new   studentCourseSelecTable(  courseSelectService.queryCourseByStudentId(studentID).get(i).getCourseName(),
@@ -151,7 +146,7 @@ public class courseTestController {
                       courseSelectService.queryCourseByStudentId(studentID).get(i).getTeacherId(), courseSelectService.queryGradeByCourseIDAndStudentID(studentID,courseSelectService.queryCourseByStudentId(studentID).get(i).getCourseId()));
 
             couResultLists.add(stu);
-              return  couResultLists;
+
          }
 
         return  couResultLists;
@@ -212,21 +207,22 @@ public class courseTestController {
 
     public void show(int a)
     {
+
+
+        courseSelectService.deleteCourseSelectByCourseIDAndStudentID(studentID, couResultLists.get(a).getCourseID());
         couResultLists.remove(a);
         resultTable.refresh();
-        courseSelectService.deleteCourseSelectByCourseIDAndStudentID(studentID,courseID.getCellObservableValue(a));
 
 
     }
 
     public void courseResult(Event event) {
+        couResultLists =FXCollections.observableArrayList();
         this.showCourseResultTable(this.getCourseResultData());
 
-
-
-        int end=  courseSelectService.queryCourseByStudentId(this.studentID).size()*2-1;
+        int end=  courseSelectService.queryCourseByStudentId(studentID).size()*2-1;
         int start=  courseSelectService.queryCourseByStudentId(this.studentID).size()-1;
-        couLists.remove(start,end);
+        couResultLists.remove(start,end);
         resultTable.refresh();
 
     }

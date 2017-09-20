@@ -12,7 +12,7 @@ import seu.service.TeacherService;
 
 @Component
 public class teacherInfoPaneController {
-@Autowired TeacherService teacherService;
+@Autowired TeacherService teacherService=new TeacherService();
 
     @FXML
     private  TextField teacherIDtext;
