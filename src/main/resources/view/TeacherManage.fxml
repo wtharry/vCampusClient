@@ -44,9 +44,9 @@
       <TextField fx:id="teacherIDAdd" layoutX="356.0" layoutY="328.0" prefHeight="23.0" prefWidth="121.0" />
       <TextField fx:id="teacherPhoneNumberAdd" layoutX="356.0" layoutY="400.0" prefHeight="23.0" prefWidth="121.0" />
       <TextField fx:id="teacherNameAdd" layoutX="356.0" layoutY="366.0" prefHeight="23.0" prefWidth="121.0" />
-      <Button fx:id="teacherInfoFind" layoutX="504.0" layoutY="182.0" mnemonicParsing="false" onAction="#teacherInfoFind" prefHeight="23.0" prefWidth="50.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #00BFFF;" text="确认" />
-      <Button fx:id="delConfirm" layoutX="504.0" layoutY="542.0" mnemonicParsing="false" onAction="#delConfirm" prefHeight="23.0" prefWidth="50.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #00BFFF;" text="确认" />
-      <Button fx:id="teacherAddConfirm" layoutX="504.0" layoutY="456.0" mnemonicParsing="false" onAction="#teacherAddConfirm" prefHeight="0.0" prefWidth="50.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #00BFFF;" text="确认" />
+      <Button fx:id="teacherInfoFind" layoutX="504.0" layoutY="182.0" mnemonicParsing="false" onAction="#teacherInfoFind" prefHeight="32.0" prefWidth="58.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #00BFFF;" text="确认" />
+      <Button fx:id="delConfirm" layoutX="504.0" layoutY="542.0" mnemonicParsing="false" onAction="#delConfirm" prefHeight="32.0" prefWidth="58.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #00BFFF;" text="确认" />
+      <Button fx:id="teacherAddConfirm" layoutX="504.0" layoutY="456.0" mnemonicParsing="false" onAction="#teacherAddConfirm" prefHeight="32.0" prefWidth="58.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #00BFFF;" text="确认" />
       <Text fill="#33abe8" layoutX="347.0" layoutY="177.0" strokeType="OUTSIDE" strokeWidth="0.0" text="请输入教师工号" wrappingWidth="166.240234375">
          <font>
             <Font size="14.0" />
