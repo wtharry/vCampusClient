@@ -11,82 +11,132 @@
 
 <AnchorPane fx:id="teacherManagePane" prefHeight="652.0" prefWidth="649.0" stylesheets="@Teacher.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="seu.controller.TeacherManage">
    <children>
-      <Text layoutX="122.0" layoutY="202.0" strokeType="OUTSIDE" strokeWidth="0.0" text="教师信息查询" wrappingWidth="188.99999901652336">
-         <font>
-            <Font size="24.0" />
-         </font></Text>
-      <Text layoutX="122.0" layoutY="562.0" strokeType="OUTSIDE" strokeWidth="0.0" text="删除教师信息" wrappingWidth="205.99999991059303">
-         <font>
-            <Font size="24.0" />
-         </font></Text>
-      <Text layoutX="120.0" layoutY="304.0" strokeType="OUTSIDE" strokeWidth="0.0" text="添加教师信息" wrappingWidth="196.0000008046627">
-         <font>
-            <Font size="24.0" />
-         </font></Text>
-      <Text fill="#33abe8" layoutX="354.0" layoutY="324.0" strokeType="OUTSIDE" strokeWidth="0.0" text="请输入教师基本信息" wrappingWidth="158.240234375">
-         <font>
-            <Font size="14.0" />
-         </font></Text>
-      <Text layoutX="296.0" layoutY="346.0" strokeType="OUTSIDE" strokeWidth="0.0" text="工号" wrappingWidth="58.24023048579693">
+
+      <Text layoutX="125.0" layoutY="279.0" strokeType="OUTSIDE" strokeWidth="0.0" text="工号：" wrappingWidth="58.24023048579693">
+
          <font>
             <Font size="18.0" />
          </font></Text>
-      <Text layoutX="296.0" layoutY="381.0" strokeType="OUTSIDE" strokeWidth="0.0" text="姓名" wrappingWidth="58.240234375">
+
+      <Text layoutX="125.0" layoutY="330.0" strokeType="OUTSIDE" strokeWidth="0.0" text="姓名：" wrappingWidth="58.240234375">
+
          <font>
             <Font size="18.0" />
          </font></Text>
-      <Text layoutX="261.0" layoutY="422.0" strokeType="OUTSIDE" strokeWidth="0.0" text="联系电话" wrappingWidth="99.99999666959047">
+
+      <Text layoutX="90.0" layoutY="380.0" strokeType="OUTSIDE" strokeWidth="0.0" text="联系电话：" wrappingWidth="99.99999666959047">
+
          <font>
             <Font size="18.0" />
          </font></Text>
-      <TextField fx:id="teacherIDSearch" layoutX="347.0" layoutY="182.0" prefHeight="23.0" prefWidth="100.0" />
-      <TextField fx:id="teacherIDDel" layoutX="347.0" layoutY="542.0" prefHeight="23.0" prefWidth="100.0" />
-      <TextField fx:id="teacherIDAdd" layoutX="356.0" layoutY="328.0" prefHeight="23.0" prefWidth="121.0" />
-      <TextField fx:id="teacherPhoneNumberAdd" layoutX="356.0" layoutY="400.0" prefHeight="23.0" prefWidth="121.0" />
-      <TextField fx:id="teacherNameAdd" layoutX="356.0" layoutY="366.0" prefHeight="23.0" prefWidth="121.0" />
-      <Button fx:id="teacherInfoFind" layoutX="504.0" layoutY="182.0" mnemonicParsing="false" onAction="#teacherInfoFind" prefHeight="23.0" prefWidth="50.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #00BFFF;" text="确认" />
-      <Button fx:id="delConfirm" layoutX="504.0" layoutY="542.0" mnemonicParsing="false" onAction="#delConfirm" prefHeight="23.0" prefWidth="50.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #00BFFF;" text="确认" />
-      <Button fx:id="teacherAddConfirm" layoutX="504.0" layoutY="456.0" mnemonicParsing="false" onAction="#teacherAddConfirm" prefHeight="0.0" prefWidth="50.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #00BFFF;" text="确认" />
-      <Text fill="#33abe8" layoutX="347.0" layoutY="177.0" strokeType="OUTSIDE" strokeWidth="0.0" text="请输入教师工号" wrappingWidth="166.240234375">
+      <TextField fx:id="teacherIDSearch" layoutX="190.0" layoutY="138.0" prefHeight="36.0" prefWidth="228.0">
          <font>
-            <Font size="14.0" />
+
+            <Font size="18.0" />
+         </font></TextField>
+      <TextField fx:id="teacherIDDel" layoutX="191.0" layoutY="532.0" prefHeight="36.0" prefWidth="228.0">
+         <font>
+            <Font size="18.0" />
+         </font></TextField>
+      <TextField fx:id="teacherIDAdd" layoutX="191.0" layoutY="254.0" prefHeight="36.0" prefWidth="228.0">
+         <font>
+            <Font size="18.0" />
+         </font></TextField>
+      <TextField fx:id="teacherPhoneNumberAdd" layoutX="190.0" layoutY="355.0" prefHeight="36.0" prefWidth="228.0">
+
+         <font>
+            <Font size="18.0" />
+         </font></TextField>
+      <TextField fx:id="teacherNameAdd" layoutX="191.0" layoutY="305.0" prefHeight="36.0" prefWidth="228.0">
+         <font>
+            <Font size="18.0" />
+         </font></TextField>
+      <Button fx:id="teacherInfoFind" layoutX="447.0" layoutY="138.0" mnemonicParsing="false" onAction="#teacherInfoFind" prefHeight="36.0" prefWidth="100.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #00BFFF;" text="确认">
+         <font>
+            <Font size="18.0" />
+         </font></Button>
+      <Button fx:id="delConfirm" layoutX="445.0" layoutY="532.0" mnemonicParsing="false" onAction="#delConfirm" prefHeight="36.0" prefWidth="100.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #00BFFF;" text="确认">
+         <font>
+            <Font size="18.0" />
+         </font></Button>
+      <Button fx:id="teacherAddConfirm" layoutX="447.0" layoutY="405.0" mnemonicParsing="false" onAction="#teacherAddConfirm" prefHeight="36.0" prefWidth="100.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #00BFFF;" text="确认">
+         <font>
+            <Font size="18.0" />
+         </font></Button>
+      <Text fill="#242424" layoutX="90.0" layoutY="160.0" strokeType="OUTSIDE" strokeWidth="0.0" text="教师工号：" wrappingWidth="99.99999666959047">
+         <font>
+            <Font size="18.0" />
          </font></Text>
-      <Text fill="#33abe8" layoutX="347.0" layoutY="537.0" strokeType="OUTSIDE" strokeWidth="0.0" text="请输入教师工号" wrappingWidth="166.240234375">
-         <font>
-            <Font size="14.0" />
-         </font>
-      </Text>
-      <Pane prefHeight="55.0" prefWidth="649.0" style="-fx-background-color: #87CEFA;" />
-      <ImageView fitHeight="80.0" fitWidth="79.0" layoutX="11.0" layoutY="69.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="/images/manage1.png" />
-         </image>
-      </ImageView>
-      <Text layoutX="90.0" layoutY="122.0" strokeType="OUTSIDE" strokeWidth="0.0" text="教师管理" wrappingWidth="228.240234375">
-         <font>
-            <Font size="35.0" />
-         </font>
-      </Text>
-      <ImageView fitHeight="55.0" fitWidth="58.0" layoutX="58.0" layoutY="166.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="/images/find3.png" />
-         </image>
-      </ImageView>
-      <ImageView fitHeight="55.0" fitWidth="56.0" layoutX="59.0" layoutY="267.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="/images/addtea.png" />
-         </image>
-      </ImageView>
-      <ImageView fitHeight="55.0" fitWidth="56.0" layoutX="59.0" layoutY="525.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="/images/deletetea.png" />
-         </image>
-      </ImageView>
-      <Text layoutX="261.0" layoutY="460.0" strokeType="OUTSIDE" strokeWidth="0.0" text="登录密码" wrappingWidth="99.99999666959047">
+      <Text fill="#171717" layoutX="87.0" layoutY="554.0" strokeType="OUTSIDE" strokeWidth="0.0" text="教师工号：" wrappingWidth="106.240234375">
          <font>
             <Font size="18.0" />
          </font>
       </Text>
-      <TextField fx:id="passwordAdd" layoutX="356.0" layoutY="438.0" prefHeight="23.0" prefWidth="121.0" />
+      <Pane prefHeight="55.0" prefWidth="656.0" style="-fx-background-color: #D8D8D8;">
+         <children>
+            <Text layoutX="64.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="教师管理" wrappingWidth="228.240234375">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Text>
+            <ImageView fitHeight="30.0" fitWidth="28.0" layoutX="24.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="/images/manage1.png" />
+               </image>
+            </ImageView>
+         </children></Pane>
+      <Text layoutX="90.0" layoutY="430.0" strokeType="OUTSIDE" strokeWidth="0.0" text="登录密码：" wrappingWidth="99.99999666959047">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+
+      <TextField fx:id="passwordAdd" layoutX="190.0" layoutY="405.0" prefHeight="36.0" prefWidth="228.0">
+
+         <font>
+            <Font size="18.0" />
+         </font></TextField>
+      <Pane layoutY="76.0" prefHeight="36.0" prefWidth="656.0" style="-fx-background-color: #E8E8E8;">
+         <children>
+            <Text layoutX="62.0" layoutY="25.0" strokeType="OUTSIDE" strokeWidth="0.0" text="教师信息查询" wrappingWidth="188.99999901652336">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Text>
+            <ImageView fitHeight="30.0" fitWidth="22.0" layoutX="30.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="/images/find3.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Pane layoutY="195.0" prefHeight="36.0" prefWidth="656.0" style="-fx-background-color: #E8E8E8;">
+         <children>
+            <Text layoutX="64.0" layoutY="28.0" strokeType="OUTSIDE" strokeWidth="0.0" text="添加教师信息" wrappingWidth="196.0000008046627">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Text>
+            <ImageView fitHeight="25.0" fitWidth="24.0" layoutX="30.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="/images/addtea.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Pane layoutY="468.0" prefHeight="36.0" prefWidth="656.0" style="-fx-background-color: #E8E8E8;">
+         <children>
+            <Text layoutX="68.0" layoutY="25.0" strokeType="OUTSIDE" strokeWidth="0.0" text="删除教师信息" wrappingWidth="205.99999991059303">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Text>
+            <ImageView fitHeight="30.0" fitWidth="24.0" layoutX="29.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="/images/deletetea.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
    </children>
 </AnchorPane>
