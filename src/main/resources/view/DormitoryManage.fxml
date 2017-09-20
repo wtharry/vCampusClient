@@ -12,11 +12,11 @@
 <AnchorPane prefHeight="652.0" prefWidth="649.0" stylesheets="@Teacher.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="seu.controller.DormitoryManage">
    <children>
 
-      <Text layoutX="190.0" layoutY="200.0" strokeType="OUTSIDE" strokeWidth="0.0" text="宿舍号：" wrappingWidth="73.29895842075348">
+      <Text layoutX="190.0" layoutY="200.0" strokeType="OUTSIDE" strokeWidth="0.0" text="宿舍号" wrappingWidth="73.29895842075348">
          <font>
             <Font size="18.0" />
          </font></Text>
-      <Text layoutX="138.0" layoutY="256.0" strokeType="OUTSIDE" strokeWidth="0.0" text="宿舍分数修改：" wrappingWidth="175.240240290761">
+      <Text layoutX="138.0" layoutY="256.0" strokeType="OUTSIDE" strokeWidth="0.0" text="宿舍分数修改" wrappingWidth="175.240240290761">
          <font>
             <Font size="18.0" />
          </font></Text>
@@ -43,14 +43,14 @@
          <font>
             <Font size="18.0" />
          </font></TextField>
-      <Text layoutX="184.0" layoutY="385.0" strokeType="OUTSIDE" strokeWidth="0.0" text="宿舍号：">
+      <Text layoutX="184.0" layoutY="385.0" strokeType="OUTSIDE" strokeWidth="0.0" text="宿舍号">
 
          <font>
             <Font size="18.0" />
          </font>
       </Text>
 
-      <Text layoutX="165.0" layoutY="433.0" strokeType="OUTSIDE" strokeWidth="0.0" text="宿舍分数：">
+      <Text layoutX="165.0" layoutY="433.0" strokeType="OUTSIDE" strokeWidth="0.0" text="宿舍分数">
 
          <font>
             <Font size="18.0" />
@@ -72,7 +72,7 @@
          </font>
       </Text>
 
-      <Text layoutX="178.0" layoutY="547.0" strokeType="OUTSIDE" strokeWidth="0.0" text="宿舍号：">
+      <Text layoutX="178.0" layoutY="547.0" strokeType="OUTSIDE" strokeWidth="0.0" text="宿舍号">
 
          <font>
             <Font size="18.0" />
@@ -102,7 +102,7 @@
                </font>
             </Text>
          </children></Pane>
-      <Text layoutX="60.0" layoutY="154.0" strokeType="OUTSIDE" strokeWidth="0.0" text="修改信息：" wrappingWidth="129.240234375">
+      <Text layoutX="60.0" layoutY="154.0" strokeType="OUTSIDE" strokeWidth="0.0" text="修改信息" wrappingWidth="129.240234375">
          <font>
             <Font size="20.0" />
          </font>

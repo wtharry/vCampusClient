@@ -12,7 +12,7 @@
 <AnchorPane prefHeight="651.0" prefWidth="650.0" stylesheets="@Teacher.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="seu.controller.classManageController">
    <children>
 
-      <Text layoutX="36.0" layoutY="158.0" strokeType="OUTSIDE" strokeWidth="0.0" text="      班级代码：" wrappingWidth="182.0">
+      <Text layoutX="36.0" layoutY="158.0" strokeType="OUTSIDE" strokeWidth="0.0" text="      班级代码" wrappingWidth="182.0">
 
          <font>
             <Font size="18.0" />
@@ -43,7 +43,7 @@
                </image>
             </ImageView>
          </children></Pane>
-      <Text layoutX="39.0" layoutY="398.0" strokeType="OUTSIDE" strokeWidth="0.0" text="      班级代码：" wrappingWidth="122.0">
+      <Text layoutX="39.0" layoutY="398.0" strokeType="OUTSIDE" strokeWidth="0.0" text="      班级代码" wrappingWidth="122.0">
 
          <font>
             <Font size="18.0" />
@@ -54,7 +54,7 @@
          <font>
             <Font size="18.0" />
          </font></TextField>
-      <Text layoutX="363.0" layoutY="398.0" strokeType="OUTSIDE" strokeWidth="0.0" text="      班级名称：" wrappingWidth="122.0">
+      <Text layoutX="363.0" layoutY="398.0" strokeType="OUTSIDE" strokeWidth="0.0" text="      班级名称" wrappingWidth="122.0">
 
          <font>
             <Font size="18.0" />
@@ -65,7 +65,7 @@
          <font>
             <Font size="18.0" />
          </font></TextField>
-      <Text layoutX="70.0" layoutY="461.0" strokeType="OUTSIDE" strokeWidth="0.0" text="      专业：" wrappingWidth="87.0">
+      <Text layoutX="70.0" layoutY="461.0" strokeType="OUTSIDE" strokeWidth="0.0" text="      专业" wrappingWidth="87.0">
 
          <font>
             <Font size="18.0" />
@@ -76,7 +76,7 @@
          <font>
             <Font size="18.0" />
          </font></TextField>
-      <Text layoutX="363.0" layoutY="464.0" strokeType="OUTSIDE" strokeWidth="0.0" text="      班级大小：" wrappingWidth="122.0">
+      <Text layoutX="363.0" layoutY="464.0" strokeType="OUTSIDE" strokeWidth="0.0" text="      班级大小" wrappingWidth="122.0">
 
          <font>
             <Font size="18.0" />
@@ -87,7 +87,7 @@
          <font>
             <Font size="18.0" />
          </font></TextField>
-      <Text layoutX="33.0" layoutY="520.0" strokeType="OUTSIDE" strokeWidth="0.0" text="      教师代码：" wrappingWidth="122.0">
+      <Text layoutX="33.0" layoutY="520.0" strokeType="OUTSIDE" strokeWidth="0.0" text="      教师代码" wrappingWidth="122.0">
 
          <font>
             <Font size="18.0" />

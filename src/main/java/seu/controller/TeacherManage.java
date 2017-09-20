@@ -52,7 +52,7 @@ public class TeacherManage {
 
         teacherManagePane.getChildren().clear();
         FXMLLoader loader=new FXMLLoader(getClass().getResource("/view//AdminTeacherInfoManagePane.fxml"));
-        Parent child =loader.load();
+        Parent child = (Parent) loader.load();
         AdminTeacherInfoManagePaneController admin =loader.<AdminTeacherInfoManagePaneController>getController();
         admin.setData(Integer.valueOf(teacherIDSearch.getText()));
         teacherManagePane.getChildren().add(child);

@@ -18,27 +18,28 @@
          <font>
             <Font size="18.0" />
          </font></TextField>
-      <Text layoutX="112.0" layoutY="225.0" strokeType="OUTSIDE" strokeWidth="0.0" text="宿舍号:" wrappingWidth="74.0">
+      <Text layoutX="112.0" layoutY="225.0" strokeType="OUTSIDE" strokeWidth="0.0" text="宿舍号" wrappingWidth="74.0">
          <font>
             <Font size="18.0" />
          </font></Text>
       <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
-      <Text layoutX="112.0" layoutY="303.0" strokeType="OUTSIDE" strokeWidth="0.0" text="宿舍分:" wrappingWidth="67.99999701976776">
+      <Text layoutX="112.0" layoutY="303.0" strokeType="OUTSIDE" strokeWidth="0.0" text="宿舍分" wrappingWidth="67.99999701976776">
          <font>
             <Font size="18.0" />
          </font></Text>
-      <Pane layoutY="-11.0" prefHeight="76.0" prefWidth="690.0" style="-fx-background-color: #C0C0C0;">
-         <children>
-            <ImageView fitHeight="29.0" fitWidth="24.0" layoutX="24.0" layoutY="29.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="/images/dormitory.png" />
-               </image>
-            </ImageView>
-            <Text layoutX="53.0" layoutY="52.0" strokeType="OUTSIDE" strokeWidth="0.0" text="学生宿舍信息" wrappingWidth="228.240234375">
-               <font>
-                  <Font size="22.0" />
-               </font>
-            </Text>
-         </children></Pane>
+
+      <Pane layoutY="-5.0" prefHeight="55.0" prefWidth="649.0" style="-fx-background-color: #87CEFA;" />
+      <Text layoutX="127.0" layoutY="116.0" strokeType="OUTSIDE" strokeWidth="0.0" text="学生宿舍信息" wrappingWidth="228.240234375">
+         <font>
+            <Font size="35.0" />
+         </font>
+      </Text>
+      <ImageView fitHeight="81.0" fitWidth="85.0" layoutX="24.0" layoutY="62.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="/images/dormitory.png" />
+         </image>
+      </ImageView>
+
+
    </children>
 </AnchorPane>
