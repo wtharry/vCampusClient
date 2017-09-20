@@ -14,19 +14,13 @@ import javafx.scene.control.TextField;
 import javafx.scene.layout.VBox;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
-import org.springframework.beans.factory.annotation.Autowired;
 import seu.service.StudentService;
 import seu.service.ClassService;
 import seu.domain.Student;
 
-import org.springframework.stereotype.Component;
-
-@Component
 public class schoolrollPaneController {
-    @Autowired
     StudentService studentService=new StudentService();
 
-    @Autowired
     ClassService classService=new ClassService();
 
     @FXML

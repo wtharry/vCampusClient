@@ -1,10 +1,7 @@
 package seu.domain;
 
-import org.springframework.stereotype.Component;
-
 import java.io.Serializable;
 
-@Component
 public class Commodity implements Serializable {
     private int commodityId;
     private String commodityName;

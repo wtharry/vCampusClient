@@ -2,17 +2,14 @@ package seu.controller;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.TextField;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
 import seu.service.TeacherService;
 /**
  * Created by Q on 2017/9/13.
  */
 
 
-@Component
 public class teacherInfoPaneController {
-@Autowired TeacherService teacherService=new TeacherService();
+TeacherService teacherService=new TeacherService();
 
     @FXML
     private  TextField teacherIDtext;

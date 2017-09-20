@@ -1,11 +1,8 @@
 package seu.controller;
 
-import org.springframework.stereotype.Component;
-
 /**
  * Created by Q on 2017/9/13.
  */
-@Component
 public class studentCourseSelecTable {
     private String courseName;
     private int courseID,credit,period,teacherID,grades;

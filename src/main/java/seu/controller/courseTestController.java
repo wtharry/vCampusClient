@@ -1,6 +1,5 @@
 package seu.controller;
 
-import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -13,18 +12,12 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.util.Callback;
-import org.springframework.beans.factory.annotation.Autowired;
 import seu.service.CourseSelectService;
-import org.springframework.stereotype.Component;
-import seu.domain.Course;
 import seu.service.CourseService;
 
-@Component
 public class courseTestController {
-    @Autowired
     CourseService courseService=new CourseService();
 
-    @Autowired
     CourseSelectService     courseSelectService=new CourseSelectService();
     @FXML
     private TableView<studentSelectCourseTable> courseTable;
