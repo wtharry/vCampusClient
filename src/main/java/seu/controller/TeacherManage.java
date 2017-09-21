@@ -57,10 +57,10 @@ public class TeacherManage {
     }
 
     public void delConfirm(ActionEvent actionEvent) {
-        teacherService.deleteTeacher(Integer.valueOf(teacherIDDel.getText()));
+        if(teacherService.deleteTeacher(Integer.valueOf(teacherIDDel.getText()))==1)
 
 
-        Stage window = new Stage();
+        {Stage window = new Stage();
         window.setTitle("title");
         //modality要使用Modality.APPLICATION_MODEL
         window.initModality(Modality.APPLICATION_MODAL);
@@ -85,14 +85,43 @@ public class TeacherManage {
         Scene scene = new Scene(layout);
         window.setScene(scene);
         //使用showAndWait()先处理这个窗口，而如果不处理，main中的那个窗口不能响应
-        window.showAndWait();
+        window.showAndWait();}
+        else
+        {
+            Stage window = new Stage();
+            window.setTitle("title");
+            //modality要使用Modality.APPLICATION_MODEL
+            window.initModality(Modality.APPLICATION_MODAL);
+            window.setMinWidth(300);
+            window.setMinHeight(150);
+
+            Button button = new Button("确认");
+            button.setOnAction(new EventHandler<ActionEvent>() {
+                @Override
+                public void handle(ActionEvent event) {
+                    ((Node) (event.getSource())).getScene().getWindow().hide();
+                }
+
+            });
+
+            Label label = new Label("删除失败");
+
+            VBox layout = new VBox(10);
+            layout.getChildren().addAll(label, button);
+            layout.setAlignment(Pos.CENTER);
+
+            Scene scene = new Scene(layout);
+            window.setScene(scene);
+            //使用showAndWait()先处理这个窗口，而如果不处理，main中的那个窗口不能响应
+            window.showAndWait();
+        }
     }
 
     public void teacherAddConfirm(ActionEvent actionEvent) {
         Teacher tea=new Teacher(Integer.valueOf(teacherIDAdd.getText()),teacherNameAdd.getText(),
                 Integer.valueOf(teacherPhoneNumberAdd.getText()),passwordAdd.getText());
-        teacherService.insertTeacher(tea);
-        System.out.print(tea.getTeacherId());
+      if( teacherService.insertTeacher(tea)==1)
+      {System.out.print(tea.getTeacherId());
         Stage window = new Stage();
         window.setTitle("title");
         //modality要使用Modality.APPLICATION_MODEL
@@ -118,6 +147,35 @@ public class TeacherManage {
         Scene scene = new Scene(layout);
         window.setScene(scene);
         //使用showAndWait()先处理这个窗口，而如果不处理，main中的那个窗口不能响应
-        window.showAndWait();
+        window.showAndWait();}
+        else
+      {
+          Stage window = new Stage();
+          window.setTitle("title");
+          //modality要使用Modality.APPLICATION_MODEL
+          window.initModality(Modality.APPLICATION_MODAL);
+          window.setMinWidth(300);
+          window.setMinHeight(150);
+
+          Button button = new Button("确认");
+          button.setOnAction(new EventHandler<ActionEvent>() {
+              @Override
+              public void handle(ActionEvent event) {
+                  ((Node) (event.getSource())).getScene().getWindow().hide();
+              }
+
+          });
+
+          Label label = new Label("添加失败");
+
+          VBox layout = new VBox(10);
+          layout.getChildren().addAll(label, button);
+          layout.setAlignment(Pos.CENTER);
+
+          Scene scene = new Scene(layout);
+          window.setScene(scene);
+          //使用showAndWait()先处理这个窗口，而如果不处理，main中的那个窗口不能响应
+          window.showAndWait();
+      }
     }
 }

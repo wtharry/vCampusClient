@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.image.Image?>
@@ -9,35 +11,48 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="613.0" prefWidth="608.0" stylesheets="@Teacher.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="seu.controller.LibraryTestController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="664.0" prefWidth="635.0" stylesheets="@Teacher.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="seu.controller.LibraryTestController">
    <children>
-      <Pane layoutY="-14.0" prefHeight="96.0" prefWidth="635.0" style="-fx-background-color: #C0C0C0;">
-
-
+      <TabPane layoutY="84.0" prefHeight="580.0" prefWidth="635.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab fx:id="ReturnBook" onSelectionChanged="#returnTab" text="        学生还书">
+               <content>
+                  <TableView fx:id="studentBookTable" prefHeight="580.0" prefWidth="635.0">
+                     <columns>
+                        <TableColumn fx:id="bookID" prefWidth="162.0" text="图书代码" />
+                        <TableColumn fx:id="startDate" prefWidth="147.0" text="起始日期" />
+                        <TableColumn fx:id="bookName" prefWidth="146.0" text="图书名称" />
+                        <TableColumn fx:id="returnBook" prefWidth="196.0" text="归还书籍" />
+                     </columns>
+                  </TableView>
+               </content>
+            </Tab>
+          <Tab fx:id="borrowTab" onSelectionChanged="#borrowTab" text="       学生借书">
+               <content>
+                  <TableView fx:id="borrowBookTable" prefHeight="580.0" prefWidth="635.0">
+                     <columns>
+                        <TableColumn fx:id="bookIDBorrow" prefWidth="227.0" text="图书代码" />
+                        <TableColumn fx:id="bookNameBorrow" prefWidth="169.0" text="图书名称" />
+                        <TableColumn fx:id="borrowConfirm" prefWidth="212.0" text="借书" />
+                     </columns>
+                  </TableView>
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+      <Pane prefHeight="84.0" prefWidth="635.0" style="-fx-background-color: #C0C0C0;">
          <children>
-            <ImageView fitHeight="30.0" fitWidth="28.0" layoutX="21.0" layoutY="34.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="30.0" fitWidth="28.0" layoutX="21.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="/images/library3.png" />
+                  <Image url="@../images/library3.png" />
                </image>
             </ImageView>
-            <Text layoutX="58.0" layoutY="59.0" strokeType="OUTSIDE" strokeWidth="0.0" text="学生图书服务" wrappingWidth="228.240234375">
+            <Text layoutX="58.0" layoutY="52.0" strokeType="OUTSIDE" strokeWidth="0.0" text="学生图书服务" wrappingWidth="151.240234375">
                <font>
                   <Font size="24.0" />
                </font>
             </Text>
-
-         </children></Pane>
-       <TableView fx:id="studentBookTable" layoutY="81.0" prefHeight="580.0" prefWidth="635.0">
-
-           <columns>
-               <TableColumn fx:id="bookID" prefWidth="162.0" text="图书代码" />
-
-               <TableColumn fx:id="startDate" prefWidth="147.0" text="起始日期" />
-
-               <TableColumn fx:id="bookName" prefWidth="146.0" text="图书名称" />
-               <TableColumn fx:id="returnBook" prefWidth="196.0" text="归还书籍" />
-           </columns>
-       </TableView>
+         </children>
+      </Pane>
    </children>
 </AnchorPane>

@@ -36,6 +36,7 @@ public class classManageController {
     private TextField teacherIDFound;
 
     public void findClass(ActionEvent actionEvent) {
+
         classIDFound.setText(String.valueOf(classService.queryClassByClassId(Integer.valueOf(classIDSearch.getText())).getClassId()));
         classNameFound.setText(classService.queryClassByClassId(Integer.valueOf(classIDSearch.getText())).getClassName());
         majorFound.setText(classService.queryClassByClassId(Integer.valueOf(classIDSearch.getText())).getMajor());

@@ -59,34 +59,67 @@ public class StudentManage {
     public void addStudent(ActionEvent actionEvent) {
         Student stu=new Student(Integer.valueOf(studengIDAdd.getText()),studentNameAdd.getText(),Integer.valueOf(classIDAdd.getText()),
                 Integer.valueOf(dormitoryAdd.getText()),  Integer.valueOf(balanceAdd.getText()),addPassword.getText() );
-        studentService.insertStudent(stu);
-System.out.print(stu.getBalance());
-        Stage window = new Stage();
-        window.setTitle("title");
-        //modality要使用Modality.APPLICATION_MODEL
-        window.initModality(Modality.APPLICATION_MODAL);
-        window.setMinWidth(300);
-        window.setMinHeight(150);
+        if(studentService.insertStudent(stu)==1) {
+            System.out.print(stu.getBalance());
+            Stage window = new Stage();
+            window.setTitle("title");
+            //modality要使用Modality.APPLICATION_MODEL
+            window.initModality(Modality.APPLICATION_MODAL);
+            window.setMinWidth(300);
+            window.setMinHeight(150);
 
-        Button button = new Button("确认");
-        button.setOnAction(new EventHandler<ActionEvent>() {
-            @Override
-            public void handle(ActionEvent event) {
-                ((Node)(event.getSource())).getScene().getWindow().hide();
-            }
+            Button button = new Button("确认");
+            button.setOnAction(new EventHandler<ActionEvent>() {
+                @Override
+                public void handle(ActionEvent event) {
+                    ((Node) (event.getSource())).getScene().getWindow().hide();
+                }
 
-        });
+            });
 
-        Label label = new Label("添加成功");
+            Label label = new Label("添加成功");
 
-        VBox layout = new VBox(10);
-        layout.getChildren().addAll(label , button);
-        layout.setAlignment(Pos.CENTER);
+            VBox layout = new VBox(10);
+            layout.getChildren().addAll(label, button);
+            layout.setAlignment(Pos.CENTER);
 
-        Scene scene = new Scene(layout);
-        window.setScene(scene);
-        //使用showAndWait()先处理这个窗口，而如果不处理，main中的那个窗口不能响应
-        window.showAndWait();
+            Scene scene = new Scene(layout);
+            window.setScene(scene);
+            //使用showAndWait()先处理这个窗口，而如果不处理，main中的那个窗口不能响应
+            window.showAndWait();
+        }
+        else
+        {
+            System.out.print(stu.getBalance());
+            Stage window = new Stage();
+            window.setTitle("title");
+            //modality要使用Modality.APPLICATION_MODEL
+            window.initModality(Modality.APPLICATION_MODAL);
+            window.setMinWidth(300);
+            window.setMinHeight(150);
+
+            Button button = new Button("确认");
+            button.setOnAction(new EventHandler<ActionEvent>() {
+                @Override
+                public void handle(ActionEvent event) {
+                    ((Node) (event.getSource())).getScene().getWindow().hide();
+                }
+
+            });
+
+            Label label = new Label("添加失败");
+
+            VBox layout = new VBox(10);
+            layout.getChildren().addAll(label, button);
+            layout.setAlignment(Pos.CENTER);
+
+            Scene scene = new Scene(layout);
+            window.setScene(scene);
+            //使用showAndWait()先处理这个窗口，而如果不处理，main中的那个窗口不能响应
+            window.showAndWait();
+
+        }
+
     }
 
     public void searchStudent(ActionEvent actionEvent) throws IOException {
@@ -101,33 +134,64 @@ System.out.print(stu.getBalance());
 
     public void delStudent(ActionEvent actionEvent) {
 
-        studentService.deleteStudent(Integer.valueOf(studentIDDel.getText()));
-        Stage window = new Stage();
-        window.setTitle("title");
-        //modality要使用Modality.APPLICATION_MODEL
-        window.initModality(Modality.APPLICATION_MODAL);
-        window.setMinWidth(300);
-        window.setMinHeight(150);
+       if( studentService.deleteStudent(Integer.valueOf(studentIDDel.getText()))==1)
+       {
+           Stage window = new Stage();
+           window.setTitle("title");
+           //modality要使用Modality.APPLICATION_MODEL
+           window.initModality(Modality.APPLICATION_MODAL);
+           window.setMinWidth(300);
+           window.setMinHeight(150);
 
-        Button button = new Button("确认");
-        button.setOnAction(new EventHandler<ActionEvent>() {
-            @Override
-            public void handle(ActionEvent event) {
-                ((Node)(event.getSource())).getScene().getWindow().hide();
-            }
+           Button button = new Button("确认");
+           button.setOnAction(new EventHandler<ActionEvent>() {
+               @Override
+               public void handle(ActionEvent event) {
+                   ((Node) (event.getSource())).getScene().getWindow().hide();
+               }
 
-        });
+           });
 
-        Label label = new Label("删除成功");
+           Label label = new Label("删除成功");
 
-        VBox layout = new VBox(10);
-        layout.getChildren().addAll(label , button);
-        layout.setAlignment(Pos.CENTER);
+           VBox layout = new VBox(10);
+           layout.getChildren().addAll(label, button);
+           layout.setAlignment(Pos.CENTER);
 
-        Scene scene = new Scene(layout);
-        window.setScene(scene);
-        //使用showAndWait()先处理这个窗口，而如果不处理，main中的那个窗口不能响应
-        window.showAndWait();
+           Scene scene = new Scene(layout);
+           window.setScene(scene);
+           //使用showAndWait()先处理这个窗口，而如果不处理，main中的那个窗口不能响应
+           window.showAndWait();
+       }
+       else
+       {
+           Stage window = new Stage();
+           window.setTitle("title");
+           //modality要使用Modality.APPLICATION_MODEL
+           window.initModality(Modality.APPLICATION_MODAL);
+           window.setMinWidth(300);
+           window.setMinHeight(150);
+
+           Button button = new Button("确认");
+           button.setOnAction(new EventHandler<ActionEvent>() {
+               @Override
+               public void handle(ActionEvent event) {
+                   ((Node) (event.getSource())).getScene().getWindow().hide();
+               }
+
+           });
+
+           Label label = new Label("删除失败");
+
+           VBox layout = new VBox(10);
+           layout.getChildren().addAll(label, button);
+           layout.setAlignment(Pos.CENTER);
+
+           Scene scene = new Scene(layout);
+           window.setScene(scene);
+           //使用showAndWait()先处理这个窗口，而如果不处理，main中的那个窗口不能响应
+           window.showAndWait();
+       }
     }
 
 

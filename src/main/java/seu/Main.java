@@ -19,7 +19,7 @@ public class Main  extends Application {
             Scene.getStylesheets().add(
                     getClass().getResource("/view/login.css")
                             .toExternalForm());
-            primaryStage.getIcons().add(new Image("/images/01.png"));
+            primaryStage.getIcons().add(new Image("/images/666.png"));
             primaryStage.setResizable(false);
             primaryStage.show();
         } catch(Exception e) {
