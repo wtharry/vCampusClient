@@ -67,6 +67,11 @@ public class LibraryService {
         return (int) client.send(new ClientRequest(serviceName, "updateBook", new Class[]{Library.class}, new Object[]{book})).getData();
     }
 
+    //学生获取所有可以借的书
+    public List<Library> getAllAvailableBook(){
+        return (List<Library>) client.send(new ClientRequest(serviceName, "getAllAvailableBook")).getData();
+    }
+
     //管理员获取所有学生所借图书全部信息
     public List<Library> getLibraryAll() {
         return (List<Library>) client.send(new ClientRequest(serviceName, "getLibraryAll")).getData();
