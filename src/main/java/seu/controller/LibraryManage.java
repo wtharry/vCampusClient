@@ -12,16 +12,12 @@ import javafx.scene.control.TextField;
 import javafx.scene.layout.VBox;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
 import seu.domain.Library;
 import seu.service.LibraryService;
 
 import java.util.Date;
 
-@Component
 public class LibraryManage {
-    @Autowired
     LibraryService libraryService=new LibraryService();
 
 

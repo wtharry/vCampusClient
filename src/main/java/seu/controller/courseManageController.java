@@ -11,8 +11,6 @@ import javafx.scene.control.TextField;
 import javafx.scene.layout.VBox;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
 import seu.domain.Course;
 import seu.service.CourseService;
 
@@ -20,11 +18,9 @@ import seu.service.CourseService;
 /**
  * Created by Q on 2017/9/13.
  */
-@Component
 public class courseManageController {
 
 
-    @Autowired
     CourseService courseService=new CourseService();
     @FXML
     private TextField courseID;

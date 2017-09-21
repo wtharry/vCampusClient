@@ -21,10 +21,6 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
-import javafx.scene.control.Button;
-import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.layout.VBox;
 import javafx.stage.Modality;
@@ -37,16 +33,12 @@ import seu.service.TeacherService;
 
 
 
-@Component
 public class MyController implements Initializable
     {
-        @Autowired
         StudentService studentService=new StudentService();
 
-        @Autowired
         TeacherService  teacherService=new TeacherService();
 
-        @Autowired
         AdminService  adminService=new AdminService();
 
         @FXML
@@ -95,7 +87,7 @@ public class MyController implements Initializable
                 System.out.println("Button Clicked!");
                 System.out.println("student");
                 try {
-                    FXMLLoader loader=new FXMLLoader(getClass().getResource("/view//studentScene.fxml"));
+                    FXMLLoader loader=new FXMLLoader(getClass().getResource("/view/studentScene.fxml"));
                     Parent target = (Parent) loader.load();
 
                   studentController stu =loader.<studentController>getController();
@@ -108,9 +100,12 @@ public class MyController implements Initializable
 
 
                     scene.getStylesheets().add(
-                            getClass().getResource("/view//Student.css")
+                            getClass().getResource("/view/Student.css")
                                     .toExternalForm());
+
+                    stg.getIcons().add(new Image("/images/01.png"));
                     stg.setResizable(false);
+
                     stg.show(); //显示窗口；
 
 
@@ -164,7 +159,7 @@ public class MyController implements Initializable
                         System.out.println("teacher");
                         try {
 
-                            FXMLLoader loader=new FXMLLoader(getClass().getResource("/view//teacherScene.fxml"));
+                            FXMLLoader loader=new FXMLLoader(getClass().getResource("/view/teacherScene.fxml"));
                             Parent target = (Parent) loader.load();
                             teacherSceneController tea =loader.< teacherSceneController>getController();
                             tea.setData(Integer.valueOf(accountNumber.getText()).intValue(),password.getText());
@@ -173,8 +168,10 @@ public class MyController implements Initializable
                             stg.setTitle("教师服务界面");
                             stg.setScene(scene); //将场景载入舞台；
                             scene.getStylesheets().add(
-                                    getClass().getResource("/view//Teacher.css")
+                                    getClass().getResource("/view/Teacher.css")
                                             .toExternalForm());
+
+                            stg.getIcons().add(new Image("/images/01.png"));
                             stg.setResizable(false);
                             stg.show(); //显示窗口；
                         }
@@ -226,7 +223,7 @@ public class MyController implements Initializable
                         System.out.println("admin");
                         try {
 
-                            FXMLLoader loader=new FXMLLoader(getClass().getResource("/view//admin.fxml"));
+                            FXMLLoader loader=new FXMLLoader(getClass().getResource("/view/Admin.fxml"));
                             Parent target = (Parent) loader.load();
 
                             AdminController adm =loader.<    AdminController>getController();
@@ -235,10 +232,11 @@ public class MyController implements Initializable
                             Scene scene = new Scene(target); //创建场景；
                             Stage stg = new Stage();//创建舞台；
                             scene.getStylesheets().add(
-                                    getClass().getResource("/view//Teacher.css")
+                                    getClass().getResource("/view/Teacher.css")
                                             .toExternalForm());
                             stg.setTitle("管理员管理界面");
                             stg.setScene(scene); //将场景载入舞台；
+                            stg.getIcons().add(new Image("/images/01.png"));
                             stg.setResizable(false);
                             stg.show(); //显示窗口；
                         }

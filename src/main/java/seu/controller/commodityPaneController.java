@@ -12,8 +12,6 @@ import javafx.scene.control.TextField;
 import javafx.scene.layout.VBox;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
 import seu.service.ShopService;
 import seu.service.StudentService;
 
@@ -21,13 +19,10 @@ import seu.service.StudentService;
 /**
  * Created by Q on 2017/9/11.
  */
-@Component
 public class commodityPaneController {
 
-    @Autowired
     StudentService studentService=new StudentService();
 
-    @Autowired
     ShopService shopService=new ShopService();
     @FXML
     private TextField balance;

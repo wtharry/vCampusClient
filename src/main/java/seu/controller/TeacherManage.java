@@ -15,13 +15,11 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.VBox;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
-import org.springframework.stereotype.Component;
 import seu.domain.Teacher;
 import seu.service.TeacherService;
 
 import java.io.IOException;
 
-@Component
 public class TeacherManage {
     @FXML
     TeacherService teacherService=new TeacherService();
@@ -51,8 +49,8 @@ public class TeacherManage {
     public void teacherInfoFind(ActionEvent actionEvent) throws IOException {
 
         teacherManagePane.getChildren().clear();
-        FXMLLoader loader=new FXMLLoader(getClass().getResource("/view//AdminTeacherInfoManagePane.fxml"));
-        Parent child =loader.load();
+        FXMLLoader loader=new FXMLLoader(getClass().getResource("/view/AdminTeacherInfoManagePane.fxml"));
+        Parent child = (Parent) loader.load();
         AdminTeacherInfoManagePaneController admin =loader.<AdminTeacherInfoManagePaneController>getController();
         admin.setData(Integer.valueOf(teacherIDSearch.getText()));
         teacherManagePane.getChildren().add(child);
@@ -94,7 +92,7 @@ public class TeacherManage {
         Teacher tea=new Teacher(Integer.valueOf(teacherIDAdd.getText()),teacherNameAdd.getText(),
                 Integer.valueOf(teacherPhoneNumberAdd.getText()),passwordAdd.getText());
         teacherService.insertTeacher(tea);
-
+        System.out.print(tea.getTeacherId());
         Stage window = new Stage();
         window.setTitle("title");
         //modality要使用Modality.APPLICATION_MODEL

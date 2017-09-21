@@ -2,21 +2,91 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
-<SplitPane dividerPositions="0.1298342541436464" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="654.0" prefWidth="751.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="seu.controller.teacherSceneController">
+<SplitPane dividerPositions="0.2052505966587112" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="654.0" prefWidth="807.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="seu.controller.teacherSceneController">
   <items>
-    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" style="-fx-background-color: #F5F5F5;" stylesheets="@Teacher.css">
+    <AnchorPane id="teacherView2" fx:id="teacherView" minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="169.0" style="-fx-background-color: #87CEEB;" stylesheets="@Teacher.css">
          <children>
-            <Button fx:id="teacherInfo" layoutY="14.0" mnemonicParsing="false" onAction="#showTeacherInfo" prefHeight="30.0" prefWidth="123.0" text="教师信息" />
-            <Button fx:id="classManage" layoutY="180.0" mnemonicParsing="false" onAction="#classManage" prefHeight="30.0" prefWidth="123.0" text="班级管理" />
-            <Button fx:id="courseManage" layoutY="385.0" mnemonicParsing="false" onAction="#CourseManage" prefHeight="30.0" prefWidth="123.0" text="课程管理" />
-            <Button fx:id="exit" layoutY="593.0" mnemonicParsing="false" onAction="#exit" prefHeight="30.0" prefWidth="123.0" text="退出登录" />
+            <Button fx:id="teacherInfo" layoutX="27.0" layoutY="290.0" mnemonicParsing="false" onAction="#showTeacherInfo" prefHeight="30.0" prefWidth="123.0" text="教师信息">
+               <font>
+                  <Font size="23.0" />
+               </font>
+               <textFill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop color="#b02838" />
+                        <Stop color="#b02838" offset="0.00749063670411985" />
+                        <Stop color="#602ac7" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </textFill></Button>
+            <Button fx:id="classManage" layoutX="27.0" layoutY="395.0" mnemonicParsing="false" onAction="#classManage" prefHeight="30.0" prefWidth="123.0" text="班级管理">
+               <font>
+                  <Font size="24.0" />
+               </font>
+               <textFill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop color="#c5cc12" />
+                        <Stop color="#c5cc12" offset="0.00749063670411985" />
+                        <Stop color="#c7692a" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </textFill></Button>
+            <Button fx:id="courseManage" layoutX="27.0" layoutY="495.0" mnemonicParsing="false" onAction="#CourseManage" prefHeight="30.0" prefWidth="123.0" text="课程管理">
+               <font>
+                  <Font size="23.0" />
+               </font>
+               <textFill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop color="#19c414" />
+                        <Stop color="#19c414" offset="0.00749063670411985" />
+                        <Stop color="#9c2ac7" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </textFill></Button>
+            <Button fx:id="exit" layoutX="27.0" layoutY="599.0" mnemonicParsing="false" onAction="#exit" prefHeight="30.0" prefWidth="123.0" text="退出登录">
+               <font>
+                  <Font size="23.0" />
+               </font>
+               <textFill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop color="#2b2ac7" />
+                        <Stop color="#2b2ac7" offset="0.00749063670411985" />
+                        <Stop color="#c72a62" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </textFill></Button>
+            <ImageView fitHeight="128.0" fitWidth="138.0" layoutX="24.0" layoutY="111.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="/images/Start2.png" />
+               </image>
+            </ImageView>
+            <Text layoutX="3.0" layoutY="66.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Vcampus" wrappingWidth="170.240234375">
+               <font>
+                  <Font size="38.0" />
+               </font>
+               <fill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop color="#ff4d38" />
+                        <Stop color="#c873eb" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </fill>
+            </Text>
          </children></AnchorPane>
-    <AnchorPane fx:id="teacherView" minHeight="0.0" minWidth="0.0" prefHeight="652.0" prefWidth="649.0" style="-fx-background-color: #FFFFFF;">
-         <children>
-            <Pane layoutX="-5.0" prefHeight="55.0" prefWidth="660.0" style="-fx-background-color: #87CEFA;" />
-         </children></AnchorPane>
+
+    <AnchorPane id="teacherView1" fx:id="teacherView" minHeight="0.0" minWidth="0.0" prefHeight="652.0" prefWidth="633.0" style="-fx-background-color: #FFFFFF;" stylesheets="@Teacher.css" />
+
   </items>
 </SplitPane>

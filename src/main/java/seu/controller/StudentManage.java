@@ -15,16 +15,12 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.VBox;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
 import seu.domain.Student;
 import seu.service.StudentService;
 
 import java.io.IOException;
 
-@Component
 public class StudentManage {
-    @Autowired
     StudentService studentService=new StudentService();
 
     @FXML
@@ -64,7 +60,7 @@ public class StudentManage {
         Student stu=new Student(Integer.valueOf(studengIDAdd.getText()),studentNameAdd.getText(),Integer.valueOf(classIDAdd.getText()),
                 Integer.valueOf(dormitoryAdd.getText()),  Integer.valueOf(balanceAdd.getText()),addPassword.getText() );
         studentService.insertStudent(stu);
-
+System.out.print(stu.getBalance());
         Stage window = new Stage();
         window.setTitle("title");
         //modality要使用Modality.APPLICATION_MODEL
@@ -96,7 +92,7 @@ public class StudentManage {
     public void searchStudent(ActionEvent actionEvent) throws IOException {
 
         studentManage.getChildren().clear();
-        FXMLLoader loader=new FXMLLoader(getClass().getResource("/view//adminStudentInfoManagePane.fxml"));
+        FXMLLoader loader=new FXMLLoader(getClass().getResource("/view/adminStudentInfoManagePane.fxml"));
         Parent child =loader.load();
         AdminStudentInfoManagePaneController adminStu =loader.< AdminStudentInfoManagePaneController>getController();
         adminStu.setData(Integer.valueOf(studengIDSeearch.getText()));
@@ -133,4 +129,6 @@ public class StudentManage {
         //使用showAndWait()先处理这个窗口，而如果不处理，main中的那个窗口不能响应
         window.showAndWait();
     }
+
+
 }
