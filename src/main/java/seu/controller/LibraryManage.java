@@ -39,34 +39,65 @@ public class LibraryManage {
         Date startdate=new Date(startDate.getText());
 
         Library library=new Library(Integer.valueOf(bookID.getText()),bookName.getText(),Integer.valueOf(studentID.getText()),startdate);
-        libraryService.updateBook(library);
+       if(libraryService.updateBook(library)==1)
 
-        Stage window = new Stage();
-        window.setTitle("title");
-        //modality要使用Modality.APPLICATION_MODEL
-        window.initModality(Modality.APPLICATION_MODAL);
-        window.setMinWidth(300);
-        window.setMinHeight(150);
+       {
+           Stage window = new Stage();
+           window.setTitle("title");
+           //modality要使用Modality.APPLICATION_MODEL
+           window.initModality(Modality.APPLICATION_MODAL);
+           window.setMinWidth(300);
+           window.setMinHeight(150);
 
-        Button button = new Button("确认");
-        button.setOnAction(new EventHandler<ActionEvent>() {
-            @Override
-            public void handle(ActionEvent event) {
-                ((Node)(event.getSource())).getScene().getWindow().hide();
-            }
+           Button button = new Button("确认");
+           button.setOnAction(new EventHandler<ActionEvent>() {
+               @Override
+               public void handle(ActionEvent event) {
+                   ((Node) (event.getSource())).getScene().getWindow().hide();
+               }
 
-        });
+           });
 
-        Label label = new Label("修改成功");
+           Label label = new Label("修改成功");
 
-        VBox layout = new VBox(10);
-        layout.getChildren().addAll(label , button);
-        layout.setAlignment(Pos.CENTER);
+           VBox layout = new VBox(10);
+           layout.getChildren().addAll(label, button);
+           layout.setAlignment(Pos.CENTER);
 
-        Scene scene = new Scene(layout);
-        window.setScene(scene);
-        //使用showAndWait()先处理这个窗口，而如果不处理，main中的那个窗口不能响应
-        window.showAndWait();
+           Scene scene = new Scene(layout);
+           window.setScene(scene);
+           //使用showAndWait()先处理这个窗口，而如果不处理，main中的那个窗口不能响应
+           window.showAndWait();
+       }
+       else
+       {
+           Stage window = new Stage();
+           window.setTitle("title");
+           //modality要使用Modality.APPLICATION_MODEL
+           window.initModality(Modality.APPLICATION_MODAL);
+           window.setMinWidth(300);
+           window.setMinHeight(150);
+
+           Button button = new Button("确认");
+           button.setOnAction(new EventHandler<ActionEvent>() {
+               @Override
+               public void handle(ActionEvent event) {
+                   ((Node)(event.getSource())).getScene().getWindow().hide();
+               }
+
+           });
+
+           Label label = new Label("修改失败");
+
+           VBox layout = new VBox(10);
+           layout.getChildren().addAll(label , button);
+           layout.setAlignment(Pos.CENTER);
+
+           Scene scene = new Scene(layout);
+           window.setScene(scene);
+           //使用showAndWait()先处理这个窗口，而如果不处理，main中的那个窗口不能响应
+           window.showAndWait();
+       }
     }
 
 }

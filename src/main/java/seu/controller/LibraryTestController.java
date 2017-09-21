@@ -23,6 +23,9 @@ public class LibraryTestController {
 
     StudentService studentService=new StudentService();
     @FXML
+    private TableView<studentLibraryTable> borrowBookTable;
+
+    @FXML
     private TableView<studentLibraryTable> studentBookTable;
 
     @FXML
@@ -31,7 +34,15 @@ public class LibraryTestController {
     @FXML
     private TableColumn<studentLibraryTable, Integer> bookID;
 
+    @FXML
+    private TableColumn<studentLibraryTable, String> bookNameBorrow,borrowConfirm;
+
+    @FXML
+    private TableColumn<studentLibraryTable, Integer> bookIDBorrow;
+
    private  ObservableList<studentLibraryTable> bookLists= FXCollections.observableArrayList();
+
+    private  ObservableList<studentLibraryTable> borrowbookLists= FXCollections.observableArrayList();
 
     private int studentID;
 
@@ -107,7 +118,7 @@ public class LibraryTestController {
 
 
     public void returnTab(Event event) {
-
+        bookLists= FXCollections.observableArrayList();
         this.showBooksTable(this.getBooksData());
         int end= libraryService.getAllBookList(this.studentID).size()*2-1;
        int start=libraryService.getAllBookList(this.studentID).size()-1;
@@ -119,12 +130,14 @@ public class LibraryTestController {
     public void getStudentID( int id)
     {
         this.studentID=id;
+        bookLists= FXCollections.observableArrayList();
         this.showBooksTable(this.getBooksData());
-       int end= libraryService.getAllBookList(this.studentID).size()*2-1;
-       int start=libraryService.getAllBookList(this.studentID).size()-1;
+        int end= libraryService.getAllBookList(this.studentID).size()*2-1;
+        int start=libraryService.getAllBookList(this.studentID).size()-1;
         bookLists.remove(start,end);
         studentBookTable.refresh();
         System.out.print("图书馆");
+
     }
     public void show(int index)
     {
@@ -136,4 +149,91 @@ public class LibraryTestController {
 
 
 
+
+
+
+   public ObservableList<studentLibraryTable> getborrowBooksData() {
+        System.out.print(this.studentID);
+        System.out.print( libraryService.getLibraryAll().size());
+        for(int i=0;i< libraryService.getLibraryAll().size();i++)
+        {
+            SimpleDateFormat sdf=new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+
+            studentLibraryTable stu = new studentLibraryTable( libraryService.getLibraryAll().get(i).getBookName(),
+                    libraryService.getLibraryAll().get(i).getBookId(),"1997.09.11");
+
+            borrowbookLists.add(stu);
+
+
+        }
+
+
+        System.out.print(3);
+
+        return  borrowbookLists;
+    }
+
+
+    public void showborrowBooksTable(final ObservableList<studentLibraryTable> borrowbookLists) {
+        bookNameBorrow.setCellValueFactory(new PropertyValueFactory<studentLibraryTable, String>("bookName"));
+        bookIDBorrow.setCellValueFactory(new PropertyValueFactory<studentLibraryTable, Integer>("bookID"));
+
+       borrowConfirm.setCellValueFactory(new PropertyValueFactory<studentLibraryTable, String>("DUMMY"));
+
+        Callback<TableColumn<studentLibraryTable, String>, TableCell<studentLibraryTable, String>> cellFactory
+                = //
+                new Callback<TableColumn<studentLibraryTable, String>, TableCell<studentLibraryTable, String>>() {
+                    @Override
+                    public TableCell call(final TableColumn<studentLibraryTable, String> param) {
+                        final TableCell<studentLibraryTable, String> cell = new TableCell<studentLibraryTable, String>() {
+
+                            final Button btn = new Button("借书");
+
+                            @Override
+                            public void updateItem(String item, boolean empty) {
+                                super.updateItem(item, empty);
+                                if (empty) {
+                                    setGraphic(null);
+                                    setText(null);
+                                } else {
+                                    btn.setOnAction(new EventHandler<ActionEvent>(){
+                                        @Override
+                                        public void handle(ActionEvent event) {
+                                            System.out.println("Button clicked");
+                                            System.out.println(getIndex());
+                                            showBorrow(getIndex());
+                                        }
+                                    });
+
+                                    setGraphic(btn);
+                                    setText(null);
+                                }
+                            }
+                        };
+                        return cell;
+                    }
+                };
+
+       borrowConfirm.setCellFactory(cellFactory);
+
+        borrowBookTable.setItems(this.getborrowBooksData());
+    }
+
+    public void showBorrow(int index)
+    {
+        borrowbookLists.remove(index);
+        borrowBookTable.refresh();
+
+        libraryService.borrowBook(   this.studentID,libraryService.getLibraryAll().get(index).getBookId());
+    }
+
+    public void borrowTab(Event event) {
+        borrowbookLists= FXCollections.observableArrayList();
+        this.showborrowBooksTable(this.getborrowBooksData());
+        int end= libraryService.getLibraryAll().size()*2-1;
+        int start=libraryService.getLibraryAll().size()-1;
+        borrowbookLists.remove(start,end);
+        borrowBookTable.refresh();
+        System.out.print("图书馆");
+    }
 }
