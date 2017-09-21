@@ -38,6 +38,11 @@ public class LibraryService {
         return (List<Library>) client.send(new ClientRequest(serviceName, "getAllBookList", new Class[]{int.class}, new Object[]{studentID})).getData();
     }
 
+    //管理员根据bookID,bookName增加图书
+    public int insertBook(int bookID,String bookName){
+        return (int) client.send(new ClientRequest(serviceName,"insertBook",new Class[]{int.class,String.class},new Object[]{bookID,bookName})).getData();
+    }
+
     //管理员删除借书记录，以及图书
     public int deleteBook(int bookID) {
         return (int) client.send(new ClientRequest(serviceName, "deleteBook", new Class[]{int.class}, new Object[]{bookID})).getData();
