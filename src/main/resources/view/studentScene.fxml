@@ -16,7 +16,7 @@
   <items>
     <AnchorPane id="changeView2" fx:id="changeView" minHeight="0.0" minWidth="0.0" prefHeight="650.0" prefWidth="146.0" style="-fx-background-color: #87CEEB;" stylesheets="@Student.css">
          <children>
-            <Button fx:id="schoolroll" layoutX="20.0" layoutY="235.0" mnemonicParsing="false" onAction="#showSchoolrollInfo" prefHeight="46.0" prefWidth="138.0" style="-fx-background-color: #ffffff;" text="学籍信息">
+            <Button fx:id="schoolroll" layoutX="24.0" layoutY="235.0" mnemonicParsing="false" onAction="#showSchoolrollInfo" prefHeight="46.0" prefWidth="138.0" style="-fx-background-color: #ffffff;" text="学籍信息">
                <font>
                   <Font size="23.0" />
                </font>
@@ -32,7 +32,7 @@
                   <URL value="@Student.css" />
                   <URL value="@Student.css" />
                </stylesheets></Button>
-            <Button fx:id="Course" layoutX="20.0" layoutY="308.0" mnemonicParsing="false" onAction="#showCourseInfo" prefHeight="46.0" prefWidth="138.0" text="学生选课">
+            <Button fx:id="Course" layoutX="24.0" layoutY="308.0" mnemonicParsing="false" onAction="#showCourseInfo" prefHeight="46.0" prefWidth="138.0" text="学生选课">
                <font>
                   <Font size="23.0" />
                </font>
@@ -44,7 +44,7 @@
                      </stops>
                   </LinearGradient>
                </textFill></Button>
-            <Button fx:id="library" layoutX="20.0" layoutY="381.0" mnemonicParsing="false" onAction="#showLibraryInfo" prefHeight="46.0" prefWidth="138.0" text="图书服务">
+            <Button fx:id="library" layoutX="24.0" layoutY="381.0" mnemonicParsing="false" onAction="#showLibraryInfo" prefHeight="46.0" prefWidth="138.0" text="图书服务">
                <font>
                   <Font size="23.0" />
                </font>
@@ -57,7 +57,7 @@
                      </stops>
                   </LinearGradient>
                </textFill></Button>
-            <Button fx:id="dormitory" layoutX="27.0" layoutY="531.0" mnemonicParsing="false" onAction="#showDormitoryInfo" prefHeight="45.0" prefWidth="123.0" text="宿舍信息">
+            <Button fx:id="dormitory" layoutX="-1.0" layoutY="517.0" mnemonicParsing="false" onAction="#showDormitoryInfo" prefHeight="75.0" prefWidth="188.0" text="宿舍信息">
                <font>
                   <Font size="23.0" />
                </font>
@@ -70,7 +70,7 @@
                      </stops>
                   </LinearGradient>
                </textFill></Button>
-            <Button fx:id="commodity" layoutX="28.0" layoutY="457.0" mnemonicParsing="false" onAction="#showCommodityInfo" prefHeight="45.0" prefWidth="123.0" text="商店购物">
+            <Button fx:id="commodity" layoutX="24.0" layoutY="457.0" mnemonicParsing="false" onAction="#showCommodityInfo" prefHeight="45.0" prefWidth="138.0" text="商店购物">
                <font>
                   <Font size="23.0" />
                </font>
@@ -82,7 +82,7 @@
                      </stops>
                   </LinearGradient>
                </textFill></Button>
-            <Button fx:id="exit" layoutX="28.0" layoutY="599.0" mnemonicParsing="false" onAction="#exit" prefHeight="45.0" prefWidth="123.0" text="退出登陆">
+            <Button fx:id="exit" layoutX="-2.0" layoutY="591.0" mnemonicParsing="false" onAction="#exit" prefHeight="67.0" prefWidth="188.0" text="退出登录">
                <font>
                   <Font size="23.0" />
                </font>
@@ -95,7 +95,7 @@
                      </stops>
                   </LinearGradient>
                </textFill></Button>
-            <Text layoutX="4.0" layoutY="65.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Vcampus" wrappingWidth="168.99999618530273">
+            <Text layoutX="9.0" layoutY="65.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Vcampus" wrappingWidth="168.99999618530273">
                <font>
                   <Font size="38.0" />
                </font>
@@ -108,7 +108,7 @@
                   </LinearGradient>
                </fill>
             </Text>
-            <ImageView fitHeight="128.0" fitWidth="138.0" layoutX="25.0" layoutY="98.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="128.0" fitWidth="138.0" layoutX="30.0" layoutY="98.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="/images/Start2.png" />
                </image>
@@ -116,7 +116,7 @@
 
          </children></AnchorPane>
 
-    <AnchorPane id="changeView1" fx:id="changeView" minHeight="0.0" minWidth="0.0" prefHeight="650.0" prefWidth="579.0" style="-fx-background-color: #FFFFFF;" stylesheets="@Student.css" />
+    <AnchorPane id="changeView1" fx:id="changeView" minHeight="0.0" minWidth="0.0" prefHeight="650.0" prefWidth="624.0" style="-fx-background-color: #FFFFFF;" stylesheets="@Student.css" />
 
   </items>
 </SplitPane>

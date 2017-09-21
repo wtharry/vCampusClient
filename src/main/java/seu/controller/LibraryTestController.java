@@ -154,13 +154,13 @@ public class LibraryTestController {
 
    public ObservableList<studentLibraryTable> getborrowBooksData() {
         System.out.print(this.studentID);
-        System.out.print( libraryService.getLibraryAll().size());
-        for(int i=0;i< libraryService.getLibraryAll().size();i++)
+        System.out.print( libraryService.getAllAvailableBook().size());
+        for(int i=0;i< libraryService.getAllAvailableBook().size();i++)
         {
             SimpleDateFormat sdf=new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 
-            studentLibraryTable stu = new studentLibraryTable( libraryService.getLibraryAll().get(i).getBookName(),
-                    libraryService.getLibraryAll().get(i).getBookId(),"1997.09.11");
+            studentLibraryTable stu = new studentLibraryTable( libraryService.getAllAvailableBook().get(i).getBookName(),
+                    libraryService.getAllAvailableBook().get(i).getBookId(),"1997.09.11");
 
             borrowbookLists.add(stu);
 
@@ -223,15 +223,14 @@ public class LibraryTestController {
     {
         borrowbookLists.remove(index);
         borrowBookTable.refresh();
-
-        libraryService.borrowBook(   this.studentID,libraryService.getLibraryAll().get(index).getBookId());
+        libraryService.borrowBook(   this.studentID,libraryService.getAllAvailableBook().get(index).getBookId());
     }
 
     public void borrowTab(Event event) {
         borrowbookLists= FXCollections.observableArrayList();
         this.showborrowBooksTable(this.getborrowBooksData());
-        int end= libraryService.getLibraryAll().size()*2-1;
-        int start=libraryService.getLibraryAll().size()-1;
+        int end= libraryService.getAllAvailableBook().size()*2-1;
+        int start=libraryService.getAllAvailableBook().size()-1;
         borrowbookLists.remove(start,end);
         borrowBookTable.refresh();
         System.out.print("图书馆");

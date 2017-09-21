@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -11,41 +12,41 @@
 <AnchorPane prefHeight="652.0" prefWidth="649.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="seu.controller.teacherInfoPaneController">
    <children>
 
-      <Text layoutX="85.0" layoutY="207.0" strokeType="OUTSIDE" strokeWidth="0.0" text="教师ID" wrappingWidth="101.3359375">
+      <Text layoutX="80.0" layoutY="137.0" strokeType="OUTSIDE" strokeWidth="0.0" text="教师ID" wrappingWidth="101.3359375">
 
          <font>
-            <Font size="20.0" />
+            <Font size="18.0" />
          </font>
       </Text>
 
-      <TextField fx:id="teacherIDtext" layoutX="190.0" layoutY="179.0">
+      <TextField fx:id="teacherIDtext" layoutX="185.0" layoutY="115.0" prefHeight="30.0" prefWidth="280.0">
          <font>
-            <Font size="20.0" />
+            <Font size="15.0" />
          </font></TextField>
-      <TextField fx:id="teacherName" layoutX="190.0" layoutY="270.0">
+      <TextField fx:id="teacherName" layoutX="185.0" layoutY="182.0" prefHeight="30.0" prefWidth="280.0">
 
          <font>
-            <Font size="20.0" />
+            <Font size="15.0" />
          </font></TextField>
-      <Text layoutX="66.0" layoutY="298.0" strokeType="OUTSIDE" strokeWidth="0.0" text="教师姓名" wrappingWidth="113.3359375">
+      <Text layoutX="61.0" layoutY="204.0" strokeType="OUTSIDE" strokeWidth="0.0" text="教师姓名" wrappingWidth="113.3359375">
          <font>
-            <Font size="20.0" />
+            <Font size="18.0" />
          </font>
       </Text>
-      <TextField fx:id="teacherPhoneNumber" layoutX="190.0" layoutY="357.0">
+      <TextField fx:id="teacherPhoneNumber" layoutX="185.0" layoutY="249.0" prefHeight="30.0" prefWidth="280.0">
          <font>
-            <Font size="20.0" />
+            <Font size="15.0" />
          </font></TextField>
-      <Text layoutX="66.0" layoutY="385.0" strokeType="OUTSIDE" strokeWidth="0.0" text="联系电话" wrappingWidth="126.3359375">
+      <Text layoutX="61.0" layoutY="271.0" strokeType="OUTSIDE" strokeWidth="0.0" text="联系电话" wrappingWidth="126.3359375">
          <font>
-            <Font size="20.0" />
+            <Font size="18.0" />
          </font>
       </Text>
       <Pane prefHeight="55.0" prefWidth="649.0" style="-fx-background-color: #D8D8D8;">
          <children>
             <Text layoutX="65.0" layoutY="35.0" strokeType="OUTSIDE" strokeWidth="0.0" text="教师基本信息" wrappingWidth="228.240234375">
                <font>
-                  <Font size="24.0" />
+                  <Font size="22.0" />
                </font>
             </Text>
             <ImageView fitHeight="30.0" fitWidth="38.0" layoutX="24.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true">
@@ -54,5 +55,69 @@
                </image>
             </ImageView>
          </children></Pane>
+      <Pane layoutY="373.0" prefHeight="55.0" prefWidth="649.0" style="-fx-background-color: #D8D8D8;">
+         <children>
+            <Text layoutX="65.0" layoutY="35.0" strokeType="OUTSIDE" strokeWidth="0.0" text="密码修改" wrappingWidth="228.240234375">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Text>
+            <ImageView fitHeight="30.0" fitWidth="38.0" layoutX="24.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="/images/teacherinfo.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Text layoutX="74.0" layoutY="487.0" strokeType="OUTSIDE" strokeWidth="0.0" text="旧密码" wrappingWidth="113.33594423532486">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <Text layoutX="74.0" layoutY="537.0" strokeType="OUTSIDE" strokeWidth="0.0" text="新密码" wrappingWidth="113.33594423532486">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <Text layoutX="345.0" layoutY="536.0" strokeType="OUTSIDE" strokeWidth="0.0" text="确认密码" wrappingWidth="82.33594423532486">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <TextField fx:id="oldPassword" layoutX="150.0" layoutY="465.0" prefHeight="24.0" prefWidth="161.0">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="newPasswordConfirm" layoutX="437.0" layoutY="517.0" prefHeight="24.0" prefWidth="161.0">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="newPassword" layoutX="150.0" layoutY="516.0" prefHeight="24.0" prefWidth="161.0">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </TextField>
+      <Button fx:id="changePassword" layoutX="209.0" layoutY="578.0" mnemonicParsing="false" onAction="#changePassword" prefHeight="32.0" prefWidth="102.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #00BFFF;" text="修改密码">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+      <Button fx:id="passwordChangeConfirm" layoutX="376.0" layoutY="578.0" mnemonicParsing="false" onAction="#passwordChangeConfirm" prefHeight="32.0" prefWidth="102.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #00BFFF;" text="确认修改">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+      <Button fx:id="changeInfo" layoutX="209.0" layoutY="310.0" mnemonicParsing="false" onAction="#changeInfo" prefHeight="32.0" prefWidth="102.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #00BFFF;" text="修改信息">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+      <Button fx:id="infoChangeConfirm" layoutX="363.0" layoutY="310.0" mnemonicParsing="false" onAction="#confirmChange" prefHeight="32.0" prefWidth="102.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #00BFFF;" text="确认修改">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
    </children>
 </AnchorPane>
