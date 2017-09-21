@@ -151,7 +151,7 @@ public class courseManageController {
 
             });
 
-            Label label = new Label("已有人选课");
+            Label label = new Label("删除失败");
 
             VBox layout = new VBox(10);
             layout.getChildren().addAll(label , button);
