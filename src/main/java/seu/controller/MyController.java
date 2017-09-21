@@ -223,7 +223,7 @@ public class MyController implements Initializable
                         System.out.println("admin");
                         try {
 
-                            FXMLLoader loader=new FXMLLoader(getClass().getResource("/view/admin.fxml"));
+                            FXMLLoader loader=new FXMLLoader(getClass().getResource("/view/Admin.fxml"));
                             Parent target = (Parent) loader.load();
 
                             AdminController adm =loader.<    AdminController>getController();
